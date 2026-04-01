@@ -101,6 +101,10 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 6
 .footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 .footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
 @media(max-width:768px){footer{padding:60px 24px 32px}}
+.sp-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:48px}
+.sp-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-top:40px}
+.sp-grid-2b{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:36px}
+@media(max-width:768px){.sp-grid-2,.sp-grid-2b,.sp-grid-3{grid-template-columns:1fr}.prog-grid{grid-template-columns:1fr!important}.values-grid{grid-template-columns:1fr 1fr!important}.toc-list{grid-template-columns:1fr!important}.indicators{grid-template-columns:1fr!important}.section{padding-left:24px!important;padding-right:24px!important}.toc{margin:40px 24px!important}}
 </style>
 </head>
 <body>
@@ -163,7 +167,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 6
 <section class="section" id="vision-mission">
   <div class="section-label">Section 02</div>
   <h2 class="section-title">Vision, Mission &amp; <em>Core Values</em></h2>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:48px">
+  <div class="sp-grid-2">
     <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
       <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:16px">Our Vision</div>
       <p style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.5;color:#fff">A prosperous, free, and stable Africa partnered with a globally engaged United States, united through shared values and strategic collaboration.</p>
@@ -175,11 +179,11 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 6
   </div>
   <div class="section-label" style="margin-top:0">Core Values</div>
   <div class="values-grid">
-    <div class="value-card"><div style="font-size:26px">🙏</div><div class="value-card-title">Faith, Family &amp; Human Dignity</div></div>
-    <div class="value-card"><div style="font-size:26px">🗽</div><div class="value-card-title">Freedom &amp; Responsibility</div></div>
-    <div class="value-card"><div style="font-size:26px">⚖️</div><div class="value-card-title">Democracy &amp; Rule of Law</div></div>
-    <div class="value-card"><div style="font-size:26px">🚀</div><div class="value-card-title">Entrepreneurship &amp; Self-Reliance</div></div>
-    <div class="value-card"><div style="font-size:26px">🤝</div><div class="value-card-title">Mutual Respect &amp; Strategic Partnership</div></div>
+    <div class="value-card"><div class="value-card-title">Faith, Family &amp; Human Dignity</div></div>
+    <div class="value-card"><div class="value-card-title">Freedom &amp; Responsibility</div></div>
+    <div class="value-card"><div class="value-card-title">Democracy &amp; Rule of Law</div></div>
+    <div class="value-card"><div class="value-card-title">Entrepreneurship &amp; Self-Reliance</div></div>
+    <div class="value-card"><div class="value-card-title">Mutual Respect &amp; Strategic Partnership</div></div>
   </div>
 </section>
 
@@ -268,7 +272,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 6
 <section class="section" id="implementation">
   <div class="section-label">Section 05</div>
   <h2 class="section-title">Implementation <em>Framework</em></h2>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-top:40px">
+  <div class="sp-grid-3">
     <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
       <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Alignment</div>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
@@ -318,7 +322,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 6
 <section class="section" id="risk-management">
   <div class="section-label">Section 07</div>
   <h2 class="section-title">Risk <em>Management</em></h2>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:36px">
+  <div class="sp-grid-2b" style="margin-top:36px">
     <div style="padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
       <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:rgba(255,100,100,.6);text-transform:uppercase;margin-bottom:16px">Identified Risks</div>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
@@ -347,7 +351,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 6
   <div class="section-body" style="margin-bottom:32px">
     <p>The U.S.–Africa Allies Foundation will be recognized as a leading institution for values-based U.S.–Africa cooperation. Our communications strategy positions the Foundation across three distinct dimensions:</p>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+  <div class="sp-grid-3" style="margin-top:0">
     <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
       <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Institutional Identity</div>
       <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.7">A values-driven, conservative institution promoting democracy, family, entrepreneurship, and ethical governance.</p>
@@ -372,7 +376,7 @@ footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 6
   <div class="section-body">
     <p>The Foundation pursues a diversified, multi-source funding model designed to ensure long-term sustainability and institutional independence.</p>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:36px">
+  <div class="sp-grid-2b">
     <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
       <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Revenue Sources</div>
       <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
