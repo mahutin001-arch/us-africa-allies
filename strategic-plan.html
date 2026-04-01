@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Strategic Plan 2026–2031 — U.S.–Africa Allies Foundation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
+#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
+.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;object-fit:contain}.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}.brand-name span{color:#C9A227}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}
+.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.has-drop{position:relative}.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}.has-drop:hover .drop-menu{opacity:1;visibility:visible}.drop-menu li a{display:block;padding:11px 22px;font-size:13px;color:rgba(255,255,255,.55);transition:color .15s,background .15s}.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75)}
+#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+#mob-menu.open{opacity:1;visibility:visible}#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer}
+@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
+
+/* HERO */
+.page-hero{position:relative;min-height:70vh;display:flex;align-items:center;padding:100px 64px 80px;overflow:hidden;background:#000}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://usafricaallies.org/wp-content/uploads/2025/12/images3.webp');background-size:cover;background-position:center;opacity:.15}
+.page-hero-over{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.95) 45%,rgba(0,0,0,.6) 100%)}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1000px;height:1000px;background:radial-gradient(circle,rgba(201,162,39,.08),transparent 60%);pointer-events:none}
+.page-hero-content{position:relative;z-index:2;max-width:900px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:.95;letter-spacing:-.04em}.page-title em{color:#C9A227;font-style:italic}
+.hero-sub{font-size:18px;font-weight:300;color:rgba(255,255,255,.55);margin-top:32px;max-width:700px;line-height:1.8}
+.hero-tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero-tag{padding:8px 20px;background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.3);border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.06em;color:#C9A227;text-transform:uppercase}
+@media(max-width:768px){.page-hero{padding:100px 24px 60px}}
+
+/* TABLE OF CONTENTS */
+.toc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:40px;margin:60px 64px}
+.toc-title{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#C9A227;margin-bottom:20px}
+.toc-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 40px;list-style:none}
+.toc-list li a{font-size:14px;color:rgba(255,255,255,.5);transition:color .2s;display:flex;align-items:center;gap:10px;padding:6px 0}.toc-list li a:hover{color:#C9A227}
+.toc-list li a::before{content:attr(data-num);font-size:10px;font-weight:700;color:rgba(201,162,39,.5);letter-spacing:.1em;width:20px;flex-shrink:0}
+@media(max-width:900px){.toc{margin:40px 24px}.toc-list{grid-template-columns:1fr}}
+
+/* SECTIONS */
+.section{padding:80px 64px;max-width:1200px;margin:0 auto}
+@media(max-width:768px){.section{padding:60px 24px}}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:24px}.section-title em{color:#C9A227;font-style:italic}
+.section-body{font-size:16px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.62)}.section-body p+p{margin-top:18px}
+.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
+@media(max-width:768px){.divider{margin:0 24px}}
+
+/* VALUES GRID */
+.values-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-top:36px}
+@media(max-width:900px){.values-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:580px){.values-grid{grid-template-columns:1fr}}
+.value-card{padding:28px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);text-align:center}
+.value-card-title{font-size:13px;font-weight:600;color:rgba(255,255,255,.8);margin-top:10px}
+
+/* OBJECTIVES LIST */
+.obj-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:32px}
+.obj-list li{display:flex;align-items:flex-start;gap:16px;padding:20px 24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-size:15px;font-weight:300;color:rgba(255,255,255,.65);line-height:1.6}
+.obj-num{font-size:11px;font-weight:700;letter-spacing:.14em;color:#C9A227;flex-shrink:0;padding-top:3px}
+
+/* PROGRAMS GRID */
+.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:40px}
+@media(max-width:768px){.prog-grid{grid-template-columns:1fr}}
+.prog-card{padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+.prog-num{font-size:10px;font-weight:700;letter-spacing:.18em;color:rgba(201,162,39,.5);text-transform:uppercase;margin-bottom:12px}
+.prog-title{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:800;margin-bottom:12px}
+.prog-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.7}
+.prog-outcome{font-size:12px;font-weight:500;color:#C9A227;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.06)}
+
+/* INDICATORS TABLE */
+.indicators{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:36px}
+@media(max-width:768px){.indicators{grid-template-columns:1fr}}
+.ind-card{padding:24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:12px}
+.ind-card::before{content:'◆';color:#C9A227;font-size:10px;flex-shrink:0;padding-top:3px}
+
+/* CTA */
+.cta-band{padding:100px 64px;background:#000;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(201,162,39,.08),transparent 65%);pointer-events:none}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px;position:relative;z-index:1}
+.cta-band p{font-size:16px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:40px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.7;position:relative;z-index:1}
+.btn-gold{display:inline-block;background:#C9A227;color:#000;font-size:14px;font-weight:700;letter-spacing:.06em;padding:16px 40px;border-radius:8px;transition:background .2s,transform .15s;position:relative;z-index:1}.btn-gold:hover{background:#dbb830;transform:translateY(-2px)}
+.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s;position:relative;z-index:1}.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
+@media(max-width:768px){.cta-band{padding:60px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
+
+footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
+.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
+.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}.footer-links a:hover{color:#C9A227}
+.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}.footer-contact-item a{color:rgba(255,255,255,.4)}.footer-contact-item a:hover{color:#C9A227}
+.social-row{display:flex;gap:12px;margin-top:4px}.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}.social-btn:hover{border-color:#C9A227;color:#C9A227}
+.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
+@media(max-width:768px){footer{padding:60px 24px 32px}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="brand"><img src="assets/logo1.gif" alt="Logo" class="brand-logo"/><div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li class="has-drop"><a href="#">Impact &#9662;</a><ul class="drop-menu"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li><li><a href="strategic-council.html">Strategic Council</a></li><li><a href="opportunities.html">Opportunities Platform</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li><li><a href="partner-with-us.html">Partner With Us</a></li><li><a href="resources-publications.html">Resources &amp; Publications</a></li><li><a href="strategic-plan.html">Strategic Plan 2026–2031</a></li></ul></li><li><a href="contact.html">Contact Us</a></li><li><a href="donate.html" class="nav-cta">Donate Now</a></li></ul>
+  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="mob-menu"><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About Us</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership &amp; Board</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities Platform</a><a href="strategic-plan.html">Strategic Plan</a><a href="get-involved.html">Get Involved</a><a href="partner-with-us.html">Partner With Us</a><a href="contact.html">Contact Us</a><a href="donate.html" class="mob-cta">Donate Now</a></div>
+
+<header class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-over"></div>
+  <div class="hero-glow"></div>
+  <div class="page-hero-content">
+    <div class="eyebrow">U.S.–Africa Allies Foundation</div>
+    <h1 class="page-title">Strategic Plan<br/><em>2026–2031</em></h1>
+    <p class="hero-sub">Strengthening Values-Based Partnerships Between the United States and Africa — a five-year roadmap for governance, economic growth, human dignity, and strategic cooperation.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Governance</span>
+      <span class="hero-tag">Economic Growth</span>
+      <span class="hero-tag">Human Dignity</span>
+      <span class="hero-tag">Strategic Partnership</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Table of Contents">
+  <div class="toc-title">Table of Contents</div>
+  <ol class="toc-list">
+    <li><a href="#executive-summary" data-num="01">Executive Summary</a></li>
+    <li><a href="#vision-mission" data-num="02">Vision, Mission &amp; Core Values</a></li>
+    <li><a href="#strategic-objectives" data-num="03">Strategic Objectives (2026–2031)</a></li>
+    <li><a href="#flagship-programs" data-num="04">Flagship Programs</a></li>
+    <li><a href="#implementation" data-num="05">Implementation Framework</a></li>
+    <li><a href="#monitoring" data-num="06">Monitoring, Evaluation &amp; Impact</a></li>
+    <li><a href="#risk-management" data-num="07">Risk Management</a></li>
+    <li><a href="#communications" data-num="08">Communications &amp; Strategic Positioning</a></li>
+    <li><a href="#funding" data-num="09">Funding Strategy</a></li>
+    <li><a href="#conclusion" data-num="10">Conclusion</a></li>
+  </ol>
+</nav>
+
+<div class="divider"></div>
+
+<!-- EXECUTIVE SUMMARY -->
+<section class="section" id="executive-summary">
+  <div class="section-label">Section 01</div>
+  <h2 class="section-title"><em>Executive</em> Summary</h2>
+  <div class="section-body">
+    <p>The US–Africa Allies Foundation is a values-driven institution dedicated to fostering sustainable partnerships between the United States and African nations. Its mission is to advance democratic governance, economic growth, human dignity, and social stability in Africa while strategically supporting U.S. interests in alignment with USAID's latest orientations.</p>
+    <p>This Strategic Plan (2026–2031) explicitly integrates African Union Development Agency (AUDA-NEPAD) frameworks for governance, infrastructure, energy, and human capital development; Africa Agenda 2063, prioritizing industrialization, youth empowerment, sustainable development, and continental integration; conservative, values-based approaches promoting faith, family, human dignity, pro-life initiatives, and ethical governance; and U.S. strategic interests including trade, investment, security, democratic resilience, and soft power influence.</p>
+    <p>A signature activity will be the <strong style="color:#fff">U.S.–Africa Strategic Council</strong>, an annual summit convening African leaders, U.S. policymakers, entrepreneurs, and civil society to coordinate programs, exchange best practices, and set a shared agenda for development and partnership.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VISION MISSION -->
+<section class="section" id="vision-mission">
+  <div class="section-label">Section 02</div>
+  <h2 class="section-title">Vision, Mission &amp; <em>Core Values</em></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:48px">
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:16px">Our Vision</div>
+      <p style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.5;color:#fff">A prosperous, free, and stable Africa partnered with a globally engaged United States, united through shared values and strategic collaboration.</p>
+    </div>
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:16px">Our Mission</div>
+      <p style="font-size:15px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.65)">To catalyze partnerships that advance governance, economic prosperity, democratic freedoms, human dignity, and strategic cooperation between Africa and the United States, fully aligned with AUDA-NEPAD, Agenda 2063, and U.S. strategic interests.</p>
+    </div>
+  </div>
+  <div class="section-label" style="margin-top:0">Core Values</div>
+  <div class="values-grid">
+    <div class="value-card"><div style="font-size:26px">🙏</div><div class="value-card-title">Faith, Family &amp; Human Dignity</div></div>
+    <div class="value-card"><div style="font-size:26px">🗽</div><div class="value-card-title">Freedom &amp; Responsibility</div></div>
+    <div class="value-card"><div style="font-size:26px">⚖️</div><div class="value-card-title">Democracy &amp; Rule of Law</div></div>
+    <div class="value-card"><div style="font-size:26px">🚀</div><div class="value-card-title">Entrepreneurship &amp; Self-Reliance</div></div>
+    <div class="value-card"><div style="font-size:26px">🤝</div><div class="value-card-title">Mutual Respect &amp; Strategic Partnership</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- STRATEGIC OBJECTIVES -->
+<section class="section" id="strategic-objectives">
+  <div class="section-label">Section 03</div>
+  <h2 class="section-title">Strategic Objectives <em>2026–2031</em></h2>
+  <ol class="obj-list">
+    <li><span class="obj-num">01</span><span>Strengthen Democratic Governance and Media Freedom</span></li>
+    <li><span class="obj-num">02</span><span>Support Conservative, Values-Based Political Leadership</span></li>
+    <li><span class="obj-num">03</span><span>Accelerate Youth Entrepreneurship and Economic Growth</span></li>
+    <li><span class="obj-num">04</span><span>Promote Families, Communities, and Human Dignity</span></li>
+    <li><span class="obj-num">05</span><span>Advance Strategic U.S.–Africa Cooperation, facilitated through the U.S.–Africa Strategic Council</span></li>
+  </ol>
+</section>
+
+<div class="divider"></div>
+
+<!-- FLAGSHIP PROGRAMS -->
+<section class="section" id="flagship-programs">
+  <div class="section-label">Section 04</div>
+  <h2 class="section-title">Flagship <em>Programs</em></h2>
+  <div class="prog-grid">
+    <div class="prog-card">
+      <div class="prog-num">4.1</div>
+      <div class="prog-title">Leadership, Democracy &amp; Free Speech Initiative</div>
+      <p class="prog-desc">Support independent media and journalist networks in countries where democracy is under threat. Legal support, capacity-building, and civic education programs. Promote AUDA-NEPAD-aligned governance initiatives.</p>
+      <div class="prog-outcome">Outcomes: Resilient media institutions · Increased civic participation and government accountability</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">4.2</div>
+      <div class="prog-title">Values-Based Political Leadership Support Program</div>
+      <p class="prog-desc">Leadership training for conservative political parties and emerging leaders. Policy advisory for governance reforms, economic policy, and family-centered legislation. Exchange programs with U.S. conservative governance institutions.</p>
+      <div class="prog-outcome">Outcomes: Stronger political alternatives aligned with ethical governance · Increased institutional credibility and stability</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">4.3</div>
+      <div class="prog-title">Youth Entrepreneurship &amp; Innovation for Growth</div>
+      <p class="prog-desc">Incubators and accelerators in agritech, fintech, renewable energy, and digital economy. Mentorship, venture capital, and U.S.–Africa market linkages. Diaspora-led investment networks aligned with AUDA-NEPAD industrialization and youth employment strategies.</p>
+      <div class="prog-outcome">Outcomes: Scalable youth-led enterprises · Job creation and economic diversification · Strengthened U.S.–Africa economic partnerships</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">4.4</div>
+      <div class="prog-title">Family, Community &amp; Human Dignity Program</div>
+      <p class="prog-desc">Support pro-life organizations and maternal-child health programs. Faith-based and community engagement initiatives. Policy advocacy reinforcing human dignity and social cohesion.</p>
+      <div class="prog-outcome">Outcomes: Stronger family and community resilience · Improved maternal and child welfare outcomes</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">4.5</div>
+      <div class="prog-title">U.S.–Africa Trade &amp; Strategic Investment Accelerator</div>
+      <p class="prog-desc">Export readiness and AGOA optimization programs. Industrial zone development and SME financing. Public-private partnership facilitation and U.S. investment engagement.</p>
+      <div class="prog-outcome">Outcomes: Expanded African exports to the U.S. · Industrial and job growth · Alignment with AUDA-NEPAD economic and industrial objectives</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">4.6</div>
+      <div class="prog-title">Energy, Infrastructure &amp; Industrialization Platform</div>
+      <p class="prog-desc">Renewable energy and off-grid electrification projects. Infrastructure project preparation facilities. Technical and financial support for industrial zones and energy projects.</p>
+      <div class="prog-outcome">Outcomes: Increased electrification and energy security · Enhanced industrial capacity supporting economic growth</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">4.7</div>
+      <div class="prog-title">Security &amp; Stability Cooperation Program</div>
+      <p class="prog-desc">Training in cybersecurity, border management, and counterterrorism. Intelligence sharing and civil-military coordination. Disaster response and resilience programs.</p>
+      <div class="prog-outcome">Outcomes: Improved regional security · Strengthened U.S.–Africa strategic security cooperation</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">4.8</div>
+      <div class="prog-title">Diaspora Engagement &amp; Strategic Influence Platform</div>
+      <p class="prog-desc">Diaspora investment funds targeting entrepreneurship and infrastructure. Professional exchange programs and mentorship. Policy advocacy linking diaspora expertise with African governments.</p>
+      <div class="prog-outcome">Outcomes: Increased diaspora investment flows · Enhanced strategic partnerships between U.S. and African institutions</div>
+    </div>
+    <div class="prog-card" style="grid-column:1/-1">
+      <div class="prog-num">4.9 — Flagship</div>
+      <div class="prog-title">Annual U.S.–Africa Strategic Council</div>
+      <p class="prog-desc">Annual high-level summit in Washington, D.C., or Africa rotational venues. Policy dialogues aligned with AUDA-NEPAD and Agenda 2063 priorities. Showcase youth entrepreneurship, pro-life initiatives, governance reforms, and media freedom programs. Facilitate networking, partnerships, and investment matchmaking.</p>
+      <div class="prog-outcome">Outcomes: Strengthened high-level U.S.–Africa collaboration · Coordinated implementation of Foundation flagship programs · Elevated strategic visibility and credibility for U.S.–Africa values-based initiatives</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- IMPLEMENTATION -->
+<section class="section" id="implementation">
+  <div class="section-label">Section 05</div>
+  <h2 class="section-title">Implementation <em>Framework</em></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-top:40px">
+    <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Alignment</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span><span>AUDA-NEPAD &amp; Agenda 2063: industrialization, youth employment, governance, energy, continental integration</span></li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span><span>USAID orientations: private-sector-led growth, governance, democratic resilience, and strategic partnerships</span></li>
+      </ul>
+    </div>
+    <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Approach</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span><span>Conservative, values-based, legally compliant, non-partisan</span></li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span><span>Multi-stakeholder partnerships: governments, private sector, civil society, diaspora</span></li>
+      </ul>
+    </div>
+    <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Geographic Focus</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span><span>West, East, and Southern Africa with continental initiatives through the African Union</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MONITORING -->
+<section class="section" id="monitoring">
+  <div class="section-label">Section 06</div>
+  <h2 class="section-title">Monitoring, Evaluation <em>&amp; Impact</em></h2>
+  <div class="section-body" style="margin-bottom:36px">
+    <p>The Foundation will track progress against a comprehensive set of key indicators, supported by annual impact reports, independent evaluations, and data dashboards aligned with AUDA-NEPAD and Agenda 2063 frameworks.</p>
+  </div>
+  <div class="section-label" style="margin-bottom:16px">Key Indicators</div>
+  <div class="indicators">
+    <div class="ind-card">Media freedom and civic participation</div>
+    <div class="ind-card">Political leadership capacity strengthened</div>
+    <div class="ind-card">Youth-led businesses created and scaled</div>
+    <div class="ind-card">Families and communities impacted</div>
+    <div class="ind-card">Trade volume, energy access, and industrial output</div>
+    <div class="ind-card">U.S.–Africa Strategic Council engagement metrics (leaders, partnerships, policy outcomes)</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RISK MANAGEMENT -->
+<section class="section" id="risk-management">
+  <div class="section-label">Section 07</div>
+  <h2 class="section-title">Risk <em>Management</em></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:36px">
+    <div style="padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:rgba(255,100,100,.6);text-transform:uppercase;margin-bottom:16px">Identified Risks</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:rgba(255,100,100,.5)">▸</span>Political sensitivities around conservative and pro-life initiatives</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:rgba(255,100,100,.5)">▸</span>Regulatory constraints and host-country laws</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:rgba(255,100,100,.5)">▸</span>Funding volatility and geopolitical competition</li>
+      </ul>
+    </div>
+    <div style="padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:16px">Mitigation Strategies</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span>Operate through capacity-building, not partisan interference</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span>Engage multiple stakeholders for enhanced credibility</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.6;display:flex;gap:10px"><span style="color:#C9A227">▸</span>Transparent, legally compliant operations at all levels</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMMUNICATIONS -->
+<section class="section" id="communications">
+  <div class="section-label">Section 08</div>
+  <h2 class="section-title">Communications &amp; <em>Strategic Positioning</em></h2>
+  <div class="section-body" style="margin-bottom:32px">
+    <p>The U.S.–Africa Allies Foundation will be recognized as a leading institution for values-based U.S.–Africa cooperation. Our communications strategy positions the Foundation across three distinct dimensions:</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px">
+    <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Institutional Identity</div>
+      <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.7">A values-driven, conservative institution promoting democracy, family, entrepreneurship, and ethical governance.</p>
+    </div>
+    <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Development Catalyst</div>
+      <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.7">A catalyst for Africa's economic and governance transformation, aligned with AUDA-NEPAD and Agenda 2063.</p>
+    </div>
+    <div style="padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Summit Organizer</div>
+      <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.7">The organizer of the U.S.–Africa Strategic Council — the premier platform for high-level policy dialogue and partnership.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FUNDING -->
+<section class="section" id="funding">
+  <div class="section-label">Section 09</div>
+  <h2 class="section-title">Funding <em>Strategy</em></h2>
+  <div class="section-body">
+    <p>The Foundation pursues a diversified, multi-source funding model designed to ensure long-term sustainability and institutional independence.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:36px">
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Revenue Sources</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>U.S. foundations and philanthropic organizations</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>African government partnerships and grants</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>Private sector sponsorships</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>Diaspora giving networks</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>High-net-worth individual donors</li>
+      </ul>
+    </div>
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#C9A227;text-transform:uppercase;margin-bottom:14px">Sustainability Mechanisms</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>Blended finance structures</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>Revenue-generating programs (Summit registration, advisory services)</li>
+        <li style="font-size:14px;font-weight:300;color:rgba(255,255,255,.55);display:flex;gap:10px"><span style="color:#C9A227">→</span>Endowment development</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONCLUSION -->
+<section class="section" id="conclusion">
+  <div class="section-label">Section 10</div>
+  <h2 class="section-title"><em>Conclusion</em></h2>
+  <div class="section-body">
+    <p>The US–Africa Allies Foundation integrates values-based conservative principles, AUDA-NEPAD frameworks, Agenda 2063 priorities, and U.S. strategic interests per USAID orientations, with the US–Africa Strategic Council as a central coordinating and visibility mechanism.</p>
+    <p>Through governance, media freedom, entrepreneurship, family and human dignity initiatives, and strategic partnerships, the U.S.–Africa Allies Foundation will contribute to a prosperous, stable, and self-reliant Africa, while strengthening U.S. influence and global leadership.</p>
+    <p>This Strategic Plan represents our commitment to principled, long-term engagement — building the institutions, relationships, and economic foundations that will define the U.S.–Africa partnership for generations to come.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Partner with Our <em style="color:#C9A227;font-style:italic">Mission</em></h2>
+  <p>Join us in shaping the future of U.S.–Africa strategic cooperation. Explore how you can support, partner with, or participate in the Foundation's programs.</p>
+  <a href="partner-with-us.html" class="btn-gold">Partner With Us</a>
+  <a href="donate.html" class="btn-ghost">Donate Now</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo1.gif" alt="Logo"/>
+      <p>U.S.–Africa Allies Foundation — Building bridges of trade, investment, and strategic partnership between the United States, Africa, and Israel.</p>
+      <div class="social-row" style="margin-top:16px">
+        <a href="#" class="social-btn">f</a>
+        <a href="#" class="social-btn">𝕏</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="#" class="social-btn">ig</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Organization</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="founders-message.html">Founder's Message</a></li>
+        <li><a href="leadership-board.html">Leadership &amp; Board</a></li>
+        <li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Platform</div>
+      <ul class="footer-links">
+        <li><a href="strategic-council.html">Strategic Council</a></li>
+        <li><a href="opportunities.html">Opportunities Platform</a></li>
+        <li><a href="strategic-plan.html">Strategic Plan</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="partner-with-us.html">Partner With Us</a></li>
+        <li><a href="resources-publications.html">Resources &amp; Publications</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <div class="footer-contact-item"><a href="mailto:info@usafricaallies.org">info@usafricaallies.org</a></div>
+      <div class="footer-contact-item">Washington, D.C., USA</div>
+      <div class="footer-contact-item"><a href="donate.html" style="color:#C9A227;font-weight:600">Donate Now →</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 U.S.–Africa Allies Foundation. All rights reserved.</p>
+    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('solid', scrollY > 50); });
+</script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>U.S.–Africa Strategic Council — Founding Summit 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
+#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
+.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;object-fit:contain}.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}.brand-name span{color:#C9A227}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}
+.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.has-drop{position:relative}.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}.has-drop:hover .drop-menu{opacity:1;visibility:visible}.drop-menu li a{display:block;padding:11px 22px;font-size:13px;color:rgba(255,255,255,.55);transition:color .15s,background .15s}.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75)}
+#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+#mob-menu.open{opacity:1;visibility:visible}#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer}
+@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
+
+/* HERO */
+.page-hero{position:relative;min-height:80vh;display:flex;align-items:center;padding:100px 64px 80px;overflow:hidden;background:#000}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://usafricaallies.org/wp-content/uploads/2025/12/images3.webp');background-size:cover;background-position:center;opacity:.2;filter:grayscale(30%)}
+.page-hero-over{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.92) 50%,rgba(0,0,0,.6) 100%)}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1000px;height:1000px;background:radial-gradient(circle,rgba(201,162,39,.09),transparent 60%);pointer-events:none}
+.page-hero-content{position:relative;z-index:2;max-width:900px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5.5rem);font-weight:900;line-height:.95;letter-spacing:-.04em}.page-title em{color:#C9A227;font-style:italic}
+.hero-date-bar{display:flex;gap:20px;flex-wrap:wrap;margin-top:40px}
+.date-pill{display:flex;align-items:center;gap:12px;padding:14px 24px;background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.3);border-radius:8px}
+.date-pill-label{font-size:10px;letter-spacing:.14em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:4px}
+.date-pill-val{font-size:15px;font-weight:600;color:#fff}
+.hero-sub{font-size:18px;font-weight:300;color:rgba(255,255,255,.55);margin-top:32px;max-width:700px;line-height:1.8}
+@media(max-width:768px){.page-hero{padding:100px 24px 60px;min-height:60vh}}
+
+/* SECTIONS */
+.section{padding:100px 64px;max-width:1200px;margin:0 auto}
+@media(max-width:768px){.section{padding:60px 24px}}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}.section-title em{color:#C9A227;font-style:italic}
+.section-body{font-size:17px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.62);max-width:860px}.section-body p+p{margin-top:22px}
+.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
+@media(max-width:768px){.divider{margin:0 24px}}
+
+/* Values pillars */
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px}
+@media(max-width:900px){.pillars-grid{grid-template-columns:1fr}}
+.pillar{padding:40px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);text-align:center;transition:background .2s}
+.pillar:hover{background:rgba(201,162,39,.06)}
+.pillar-icon{font-size:36px;margin-bottom:16px}
+.pillar-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:12px}
+.pillar-body{font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.7}
+
+/* Who attends */
+.attendees-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:40px}
+@media(max-width:768px){.attendees-grid{grid-template-columns:1fr}}
+.attendee-card{padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+.attendee-card:hover{background:rgba(201,162,39,.04)}
+.att-region{font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:10px}
+.att-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.6}
+
+/* Register CTA */
+.register-band{padding:100px 64px;background:#000;text-align:center;position:relative;overflow:hidden}
+.register-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(201,162,39,.08),transparent 65%);pointer-events:none}
+.register-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px;position:relative;z-index:1}
+.register-band p{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:44px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.7;position:relative;z-index:1}
+.btn-gold{display:inline-block;background:#C9A227;color:#000;font-size:14px;font-weight:700;letter-spacing:.06em;padding:16px 40px;border-radius:8px;transition:background .2s,transform .15s;position:relative;z-index:1}.btn-gold:hover{background:#dbb830;transform:translateY(-2px)}
+.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s;position:relative;z-index:1}.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
+@media(max-width:768px){.register-band{padding:60px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
+
+footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
+.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
+.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}.footer-links a:hover{color:#C9A227}
+.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}.footer-contact-item a{color:rgba(255,255,255,.4);transition:color .2s}.footer-contact-item a:hover{color:#C9A227}
+.social-row{display:flex;gap:12px;margin-top:4px}.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}.social-btn:hover{border-color:#C9A227;color:#C9A227}
+.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
+@media(max-width:768px){footer{padding:60px 24px 32px}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="brand"><img src="assets/logo1.gif" alt="Logo" class="brand-logo"/><div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li class="has-drop"><a href="#">Impact &#9662;</a><ul class="drop-menu"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li><li><a href="strategic-council.html">Strategic Council</a></li><li><a href="opportunities.html">Opportunities Platform</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li><li><a href="partner-with-us.html">Partner With Us</a></li><li><a href="resources-publications.html">Resources &amp; Publications</a></li></ul></li><li><a href="contact.html">Contact Us</a></li><li><a href="donate.html" class="nav-cta">Donate Now</a></li></ul>
+  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="mob-menu"><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About Us</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership &amp; Board</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities Platform</a><a href="get-involved.html">Get Involved</a><a href="partner-with-us.html">Partner With Us</a><a href="contact.html">Contact Us</a><a href="donate.html" class="mob-cta">Donate Now</a></div>
+
+<header class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-over"></div>
+  <div class="hero-glow"></div>
+  <div class="page-hero-content">
+    <div class="eyebrow">Foundation Announcement</div>
+    <h1 class="page-title">Founding Summit of the<br/>U.S.–Africa <em>Strategic Council</em></h1>
+    <div class="hero-date-bar">
+      <div class="date-pill"><div><div class="date-pill-label">Date</div><div class="date-pill-val">June 11–12, 2026</div></div></div>
+      <div class="date-pill"><div><div class="date-pill-label">Venue</div><div class="date-pill-val">United States Capitol, Washington, D.C.</div></div></div>
+    </div>
+    <p class="hero-sub">Hosted by the U.S.–Africa Allies Foundation — bringing together leaders from the United States, all African nations, Israel, and the global African Diaspora.</p>
+  </div>
+</header>
+
+<!-- ANNOUNCEMENT -->
+<section class="section">
+  <div class="section-label">The Announcement</div>
+  <h2 class="section-title">A Historic <em>Founding Summit</em></h2>
+  <div class="section-body">
+    <p>We are pleased to announce that on <strong style="color:#fff">June 11–12, 2026</strong>, at the United States Capitol in Washington, D.C., the U.S.–Africa Allies Foundation will host the Founding Summit of the U.S.–Africa Strategic Council.</p>
+    <p>The Council is envisioned as a values-based platform bringing together leaders from the United States, all African nations, Israel, and the global African Diaspora to advance trade, investment, leadership cooperation, and long-term economic stability grounded in shared ethical principles.</p>
+    <p>Rooted in family-centered, country-centered, and God-centered values, the Council affirms the importance of strong families, national sovereignty, democratic governance, and strategic partnership as the foundation for lasting prosperity and security across both continents.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VALUES PILLARS -->
+<section class="section">
+  <div class="section-label">Foundation of the Council</div>
+  <h2 class="section-title">Rooted in <em>Enduring Values</em></h2>
+  <div class="pillars-grid">
+    <div class="pillar">
+      <div class="pillar-icon">🏠</div>
+      <div class="pillar-name">Family-Centered</div>
+      <p class="pillar-body">The family unit is the irreplaceable foundation of stable, prosperous societies. Every initiative flows from this conviction.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🇺🇸</div>
+      <div class="pillar-name">Country-Centered</div>
+      <p class="pillar-body">National sovereignty, patriotism, and democratic governance form the bedrock of sustainable partnerships between nations.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">✝️</div>
+      <div class="pillar-name">God-Centered</div>
+      <p class="pillar-body">Leadership grounded in faith, reverence for God, and moral responsibility produces justice, accountability, and lasting prosperity.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MANDATE -->
+<section class="section">
+  <div class="section-label">Council Mandate</div>
+  <h2 class="section-title">Advancing <em>Trade, Investment &amp; Leadership</em></h2>
+  <div class="section-body">
+    <p>The U.S.–Africa Strategic Council will serve as a permanent platform for high-level dialogue, strategic cooperation, and practical partnership between the United States, African nations, Israel, and the global African Diaspora.</p>
+    <p>Its mandate encompasses four core areas of cooperation, each grounded in shared values and a long-term vision for mutual prosperity and stability.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:48px">
+    <div style="padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)"><div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">01</div><h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:12px">Trade &amp; Investment</h3><p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.7">Facilitating concrete trade flows, cross-border investment, and economic partnerships between U.S. and African enterprises.</p></div>
+    <div style="padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)"><div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">02</div><h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:12px">Leadership Cooperation</h3><p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.7">Building a network of principled leaders across government, business, civil society, and faith communities.</p></div>
+    <div style="padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)"><div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">03</div><h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:12px">Economic Stability</h3><p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.7">Promoting long-term economic stability through principled governance, entrepreneurship, and values-based development.</p></div>
+    <div style="padding:36px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)"><div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">04</div><h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:12px">Diaspora Engagement</h3><p style="font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.7">Mobilizing the global African Diaspora as a strategic force for development, investment, and diplomatic influence.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHO ATTENDS -->
+<section class="section">
+  <div class="section-label">Who Will Attend</div>
+  <h2 class="section-title">Leaders from <em>Every Sector</em></h2>
+  <div class="attendees-grid">
+    <div class="attendee-card"><div class="att-region">United States</div><p class="att-desc">Members of Congress, senior government officials, business leaders, investors, civil society representatives, and faith community leaders.</p></div>
+    <div class="attendee-card"><div class="att-region">All African Nations</div><p class="att-desc">Heads of state representatives, ministers, African Union delegates, business associations, and civil society leaders from across the continent.</p></div>
+    <div class="attendee-card"><div class="att-region">Israel</div><p class="att-desc">Israeli government officials, business leaders, and strategic partners committed to the U.S.–Africa–Israel trilateral cooperation framework.</p></div>
+    <div class="attendee-card"><div class="att-region">Global African Diaspora</div><p class="att-desc">Diaspora leaders, entrepreneurs, investors, academics, and community organizers from across Europe, North America, and beyond.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INVITATION CONTEXT -->
+<section class="section">
+  <div class="section-label">Invitation Opportunity</div>
+  <h2 class="section-title">A <em>Unique Platform</em> for High-Level Engagement</h2>
+  <div class="section-body">
+    <p>The U.S.–Africa Strategic Council Summit 2026 will bring together U.S. lawmakers, senior government officials, business leaders, and African counterparts to explore concrete pathways for deeper economic cooperation, investment, and strategic partnerships.</p>
+    <p>The Summit is hosted by the U.S.–Africa Allies Foundation, a Washington, D.C.–based organization committed to fostering values-based, practical collaboration among individuals, companies, investors, and institutions. Participation is by invitation only.</p>
+    <p style="padding:24px 28px;background:rgba(201,162,39,.06);border-left:3px solid #C9A227;margin-top:28px;font-size:15px;line-height:1.8;color:rgba(255,255,255,.7)">Participation is by invitation only. Participants are selected based on strategic relevance and potential to contribute to trade, investment, and policy dialogue. While there are no participation fees, attendees are expected to cover their own airfare and accommodation expenses. The Summit marks the launch of a permanent working platform to strengthen U.S.–Africa economic, policy, and innovation partnerships.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHO SHOULD PARTICIPATE -->
+<section class="section">
+  <div class="section-label">Who Should Participate</div>
+  <h2 class="section-title">What <em>Each Participant</em> Gains</h2>
+  <div class="section-body" style="margin-bottom:48px">
+    <p>The Summit is designed to deliver concrete, differentiated value to each participant type — whether you are a government official, business leader, diaspora member, or U.S. citizen.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:3px">
+    <!-- African Businessman -->
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">01</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:20px">African Business Leaders</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Direct Access to U.S. Investors &amp; Companies:</strong> B2B and B2G meetings to explore trade deals, joint ventures, and investment partnerships.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Sector-Specific Opportunities:</strong> Roundtables in energy, digital economy, infrastructure, agriculture, and health systems.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Regulatory &amp; Market Insights:</strong> Engagement on transparent investment environments and governance issues to reduce risk when entering new markets.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Long-Term Partnerships:</strong> Access to diaspora networks and recurring strategic platforms for enduring commercial relationships.</span></li>
+      </ul>
+    </div>
+
+    <!-- African Politician -->
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">02</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:20px">African Politicians &amp; Officials</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Policy &amp; Governance Dialogue:</strong> Plenary sessions on governance, democratic cooperation, and institutional strengthening.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Strategic Economic Development:</strong> Participation in shaping trade, investment, and energy security frameworks to attract investment.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Regional &amp; Global Networking:</strong> Connections with U.S. policymakers, governors, and African peers for bilateral or multilateral initiatives.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Capacity Building:</strong> Exposure to innovation, digital economy, and workforce development discussions to inform domestic policy reforms.</span></li>
+      </ul>
+    </div>
+
+    <!-- African Diaspora -->
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">03</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:20px">Members of the African Diaspora</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Diaspora Investment Forum:</strong> A platform to channel capital, expertise, and mentorship back to Africa, bridging economic opportunity and development impact.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Influence &amp; Advocacy:</strong> Opportunity to engage in media dialogues and policy discussions, amplifying diaspora voices in shaping U.S.–Africa cooperation.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Networking with Leaders:</strong> Direct access to policymakers, business leaders, and civic actors in both Africa and the U.S.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Partnership Development:</strong> Serve as a trusted intermediary linking U.S. investors with African opportunities, creating tangible economic and social impact.</span></li>
+      </ul>
+    </div>
+
+    <!-- U.S. Citizens -->
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px">04</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:20px">U.S. Citizens &amp; Business Leaders</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Investment &amp; Trade Opportunities:</strong> Identify priority sectors in Africa for profitable investment, joint ventures, and market expansion.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Strategic Policy Engagement:</strong> Interact with African leaders and policymakers to align business and foreign policy objectives.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Innovation &amp; Energy Security:</strong> Access insights on critical supply chains, energy systems, and technology partnerships in emerging markets.</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">→</span><span><strong style="color:rgba(255,255,255,.85);font-weight:500">Global Impact &amp; Values Alignment:</strong> Participate in a values-based platform promoting governance, transparency, and sustainable development while advancing U.S. strategic interests.</span></li>
+      </ul>
+    </div>
+  </div>
+  <p style="margin-top:32px;font-size:14px;color:rgba(255,255,255,.35);font-style:italic">This gathering provides a valuable platform to engage directly with U.S. and African policymakers, explore new business and investment opportunities across Africa, and shape the future of U.S.–Africa strategic cooperation.</p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROGRAM HIGHLIGHTS -->
+<section class="section">
+  <div class="section-label">Summit Program</div>
+  <h2 class="section-title">Two Days of <em>Strategic Engagement</em></h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:48px">
+
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:16px">Day One — June 11, 2026</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;margin-bottom:20px">Strategic Dialogue</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Plenary sessions on trade and economic cooperation</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Energy security and infrastructure dialogue</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Innovation and digital economy roundtable</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Governance, democratic cooperation, and institutional strengthening</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Sustainable growth and values-based development sessions</span></li>
+      </ul>
+    </div>
+
+    <div style="padding:40px 36px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:16px">Day Two — June 12, 2026</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;margin-bottom:20px">Operational Engagement</h3>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px">
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Sector-specific roundtables (agriculture, health, fintech, infrastructure)</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>B2B and B2G bilateral meetings</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Diaspora Investment Forum</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Media dialogue and advocacy sessions</span></li>
+        <li style="display:flex;gap:12px;font-size:14px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6"><span style="color:#C9A227;font-weight:700;flex-shrink:0">▸</span><span>Partnership announcements and Strategic Cooperation Roadmap launch</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPECTED OUTCOMES -->
+<section class="section">
+  <div class="section-label">Expected Outcomes</div>
+  <h2 class="section-title">What the <em>Summit Will Deliver</em></h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:40px">
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:28px;margin-bottom:14px">📋</div>
+      <p style="font-size:14px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.65">Identification of priority sectors for U.S.–Africa trade expansion and investment</p>
+    </div>
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:28px;margin-bottom:14px">🤝</div>
+      <p style="font-size:14px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.65">Formation of thematic working groups and facilitation of commercial and investment partnerships</p>
+    </div>
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:28px;margin-bottom:14px">🗺️</div>
+      <p style="font-size:14px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.65">Development of a U.S.–Africa Strategic Cooperation Roadmap for ongoing implementation</p>
+    </div>
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:28px;margin-bottom:14px">📰</div>
+      <p style="font-size:14px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.65">Publication of a Strategic Council Summary Report for policymakers and stakeholders</p>
+    </div>
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:28px;margin-bottom:14px">🌐</div>
+      <p style="font-size:14px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.65">Launch of a permanent working platform for strengthened U.S.–Africa economic, policy, and innovation partnerships</p>
+    </div>
+    <div style="padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+      <div style="font-size:28px;margin-bottom:14px">💼</div>
+      <p style="font-size:14px;font-weight:400;color:rgba(255,255,255,.7);line-height:1.65">Elevated strategic visibility and credibility for U.S.–Africa values-based cooperation initiatives</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<div class="register-band">
+  <h2>Be Part of<br/><em style="color:#C9A227;font-style:italic;font-family:'Playfair Display',serif">History</em></h2>
+  <p>Join us at the United States Capitol on June 11–12, 2026. Register your interest today to receive summit updates and participation details.</p>
+  <a href="mailto:daniel.edah@usafricaallies.org?subject=Strategic Council Summit Registration" class="btn-gold">Register Your Interest</a>
+  <a href="contact.html" class="btn-ghost">Contact Us</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="assets/logo1.gif" alt="Logo"/><div class="brand-name" style="font-size:13px;margin-top:8px">U.S.–Africa Allies<br/><span style="color:#C9A227">Foundation</span></div><p>Building strong families, forming principled leaders, and strengthening the U.S.–Africa partnership.</p><div class="social-row" style="margin-top:20px"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">t</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div></div>
+    <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li><a href="programs-initiatives.html">Programs</a></li><li><a href="strategic-council.html">Strategic Council</a></li><li><a href="opportunities.html">Opportunities</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+    <div><div class="footer-heading">Resources</div><ul class="footer-links"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="resources-publications.html">Publications</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="partner-with-us.html">Partner With Us</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div><div class="footer-heading">Contact</div><div class="footer-contact-item">300 Independence Ave SE<br/>Washington, DC 20003</div><div class="footer-contact-item"><a href="tel:+12406787500">+1 (240) 678-7500</a></div><div class="footer-contact-item"><a href="mailto:daniel.edah@usafricaallies.org">daniel.edah@usafricaallies.org</a></div></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 U.S.–Africa Allies Foundation. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Safeguarding</a></div></div>
+</footer>
+<script>const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('solid',window.scrollY>50)},{passive:true});</script>
+</body>
+</html>
