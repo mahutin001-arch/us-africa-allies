@@ -76,7 +76,7 @@ body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidd
 /* ── SCROLL STAGE (transparent spacer) ── */
 #scroll-stage{
   position:relative;
-  height:8000px;
+  height:13500px;
   z-index:5;
   pointer-events:none;
 }
@@ -290,10 +290,53 @@ body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidd
   padding:9px 22px;border-radius:6px;font-weight:700 !important;
 }
 .nav-cta:hover{background:#dbb830 !important}
+/* Dropdown */
+.has-drop{position:relative}
+.drop-menu{
+  position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);
+  background:rgba(8,8,8,.98);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(255,255,255,.08);border-radius:10px;
+  padding:8px 0;list-style:none;min-width:230px;
+  opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600;
+}
+.has-drop:hover .drop-menu{opacity:1;visibility:visible}
+.drop-menu li a{
+  display:block;padding:11px 22px;
+  font-size:13px;font-weight:500;color:rgba(255,255,255,.55);
+  text-decoration:none;transition:color .15s,background .15s;
+}
+.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
+/* Hamburger */
+.nav-burger{
+  display:none;flex-direction:column;gap:5px;
+  background:none;border:none;cursor:pointer;padding:4px;z-index:600;
+}
+.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75);transition:all .3s}
+/* Mobile overlay */
+#mob-menu{
+  position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;
+}
+#mob-menu.open{opacity:1;visibility:visible}
+#mob-menu a{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;
+  color:rgba(255,255,255,.65);text-decoration:none;
+  padding:10px 32px;transition:color .2s;letter-spacing:-.02em;
+}
+#mob-menu a:hover{color:#C9A227}
+#mob-menu .mob-cta{color:#C9A227}
+.mob-close{
+  position:absolute;top:28px;right:28px;
+  background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer;
+  line-height:1;
+}
 @media(max-width:900px){
   #nav{padding:16px 24px}
   #nav.solid{padding:12px 24px}
   .nav-links{display:none}
+  .nav-burger{display:flex}
 }
 
 /* ════════════════════════════════════════
@@ -426,7 +469,7 @@ body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidd
 
   .m-hero{
     position:relative;min-height:100vh;
-    background:url('assets/home-new-1.jpg') center/cover no-repeat;
+    background:url('assets/usafrica%20pic1.webp') center/cover no-repeat;
     display:flex;align-items:flex-end;
     padding:0 24px 80px;
   }
@@ -552,17 +595,47 @@ body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidd
 
 <!-- ── FIXED NAV ── -->
 <nav id="nav">
-  <a href="#" class="brand">
+  <a href="index.html" class="brand">
     <img src="assets/logo1.gif" alt="Logo" class="brand-logo"/>
     <div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="#p-feat1-anchor">Mission</a></li>
-    <li><a href="#p-feat2-anchor">Programs</a></li>
-    <li><a href="#cta-section">About</a></li>
-    <li><a href="mailto:daniel.edah@usafricaallies.org?subject=Partnership" class="nav-cta">Partner With Us</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="founders-message.html">Founder's Message</a></li>
+    <li class="has-drop">
+      <a href="#">Impact &#9662;</a>
+      <ul class="drop-menu">
+        <li><a href="leadership-board.html">Leadership &amp; Board</a></li>
+        <li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="partner-with-us.html">Partner With Us</a></li>
+        <li><a href="resources-publications.html">Resources &amp; Publications</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
   </ul>
+  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div id="mob-menu">
+  <button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')" aria-label="Close">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="founders-message.html">Founder's Message</a>
+  <a href="leadership-board.html">Leadership &amp; Board</a>
+  <a href="programs-initiatives.html">Programs &amp; Initiatives</a>
+  <a href="get-involved.html">Get Involved</a>
+  <a href="partner-with-us.html">Partner With Us</a>
+  <a href="resources-publications.html">Resources</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="donate.html" class="mob-cta">Donate Now</a>
+</div>
 
 <!-- ════════════════════════════════════════
      FIXED CONTENT PANELS (desktop only)
@@ -789,21 +862,21 @@ body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidd
   </div>
 
   <div class="m-section">
-    <img src="assets/images3.webp" alt="Leadership" class="m-section-img"/>
+    <img src="assets/usafrica%20pic5.webp" alt="Leadership" class="m-section-img"/>
     <div class="m-label">01 — Leadership</div>
     <h2 class="m-h2">Values <em>Before</em> Programs.</h2>
     <p class="m-body">Every initiative begins with character. We train ethical leaders who transform families, communities, and nations across the U.S.–Africa corridor.</p>
   </div>
 
   <div class="m-section" style="background:#000">
-    <img src="assets/images5.webp" alt="Family" class="m-section-img"/>
+    <img src="assets/usafrica%20pic10.webp" alt="Family" class="m-section-img"/>
     <div class="m-label">02 — Family</div>
     <h2 class="m-h2"><em>Families</em> First.</h2>
     <p class="m-body">The family unit is the bedrock of every strong society. We invest in families to create lasting generational change from Washington to Accra.</p>
   </div>
 
   <div class="m-section">
-    <img src="assets/images7.webp" alt="Partnership" class="m-section-img"/>
+    <img src="assets/usafrica%20pic15.webp" alt="Partnership" class="m-section-img"/>
     <div class="m-label">03 — Partnership</div>
     <h2 class="m-h2">Partnership, Not <em>Dependency.</em></h2>
     <p class="m-body">Strategic alliances built on mutual respect and shared purpose — America and Africa rising together.</p>
@@ -821,7 +894,7 @@ body{background:#000;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidd
   </div>
 
   <div class="m-founder">
-    <img src="assets/Founder.jpg" alt="Daniel Edah — Founder &amp; President" class="m-founder-img"/>
+    <img src="https://usafricaallies.org/wp-content/uploads/2025/12/Founder.jpg" alt="Daniel Edah — Founder &amp; President" class="m-founder-img"/>
     <div class="m-label">Founder &amp; President</div>
     <h2 class="m-h2">Daniel <em>Edah.</em></h2>
     <p class="m-body" style="margin-bottom:12px">
@@ -863,22 +936,33 @@ if (!IS_MOBILE) {
 
 // ── IMAGE MANIFEST ────────────────────────────────────────────
 const FRAME_PATHS = [
-  'assets/home-new-1.jpg',   // 0  — opening wide
-  'assets/images3.webp',     // 1
-  'assets/images5.webp',     // 2
-  'assets/images6.webp',     // 3
-  'assets/images7.webp',     // 4
-  'assets/images12-1.webp',  // 5
-  'assets/images13-1.webp',  // 6
-  'assets/images14-1.webp',  // 7
-  'assets/images17.webp',    // 8
-  'assets/images18.webp',    // 9
-  'assets/images28.webp',    // 10
-  'assets/images49.webp',    // 11
-  'assets/pic-18.jpg',       // 12
-  'assets/pic-29.jpg',       // 13
-  'assets/agent-2.jpg',      // 14
-  'assets/Founder.jpg',      // 15 — founder closes
+  'assets/usafrica%20pic1.webp',
+  'assets/usafrica%20pic2.webp',
+  'assets/usafrica%20pic3.html',
+  'assets/usafrica%20pic4.webp',
+  'assets/usafrica%20pic5.webp',
+  'assets/usafrica%20pic6.webp',
+  'assets/usafrica%20pic7.webp',
+  'assets/usafrica%20pic8.webp',
+  'assets/usafrica%20pic9.webp',
+  'assets/usafrica%20pic10.webp',
+  'assets/usafrica%20pic11.webp',
+  'assets/usafrica%20pic12.webp',
+  'assets/usafrica%20pic13.webp',
+  'assets/usafrica%20pic14.webp',
+  'assets/usafrica%20pic15.webp',
+  'assets/usafrica%20pic16.webp',
+  'assets/usafrica%20pic17.webp',
+  'assets/usafrica%20pic18.webp',
+  'assets/usafrica%20pic19.webp',
+  'assets/usafrica%20pic20.webp',
+  'assets/usafrica%20pic21.webp',
+  'assets/usafrica%20pic22.webp',
+  'assets/usafrica%20pic23.webp',
+  'assets/usafrica%20pic24.webp',
+  'assets/usafrica%20pic25.webp',
+  'assets/usafrica%20pic26.webp',
+  'assets/usafrica%20pic27.webp',
 ];
 
 const TOTAL = FRAME_PATHS.length;           // 16
@@ -1032,12 +1116,12 @@ function updateProgress() {
 // Each panel: [showAt, peakStart, peakEnd, hideBy] — all in scrollY px
 const PANELS = [
   // id,          show,  peak-start, peak-end, hide
-  ['p-hero',      0,     0,          600,      900,   'up',     null],
-  ['p-feat1',     900,   1100,       2200,     2500,  'left',   null],
-  ['p-feat2',     2600,  2800,       3900,     4200,  'right',  null],
-  ['p-feat3',     4300,  4500,       5600,     5900,  'left',   null],
-  ['p-stats',     6000,  6200,       7000,     7300,  'up',     '#p-stats'],
-  ['p-close',     7200,  7400,       8000,     8000,  'up',     null],
+  ['p-hero',      0,     0,          800,      1200,  'up',     null],
+  ['p-feat1',     1500,  1800,       3800,     4200,  'left',   null],
+  ['p-feat2',     4500,  4800,       6800,     7200,  'right',  null],
+  ['p-feat3',     7500,  7800,       9800,     10200, 'left',   null],
+  ['p-stats',     10500, 10800,      12000,    12400, 'up',     '#p-stats'],
+  ['p-close',     12500, 12700,      13500,    13500, 'up',     null],
 ];
 
 function panelOpacity(sy, show, peakS, peakE, hide) {

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us — U.S.–Africa Allies Foundation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+/* ── NAV ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
+#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-logo{width:42px;height:42px;object-fit:contain}
+.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}
+.brand-name span{color:#C9A227}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.nav-cta:hover{background:#dbb830!important}
+.has-drop{position:relative}
+.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}
+.has-drop:hover .drop-menu{opacity:1;visibility:visible}
+.drop-menu li a{display:block;padding:11px 22px;font-size:13px;font-weight:500;color:rgba(255,255,255,.55);transition:color .15s,background .15s}
+.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75);transition:all .3s}
+#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+#mob-menu.open{opacity:1;visibility:visible}
+#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}
+#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}
+.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer;line-height:1}
+@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
+
+/* ── PAGE HERO ── */
+.page-hero{position:relative;min-height:65vh;display:flex;align-items:flex-end;padding:0 64px 90px;overflow:hidden;background:#000}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://usafricaallies.org/wp-content/uploads/2025/12/images13-1-1024x1024.webp');background-size:cover;background-position:center top;opacity:.3}
+.page-hero-over{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.2) 0%,rgba(0,0,0,.85) 100%)}
+.page-hero-content{position:relative;z-index:2;max-width:800px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:900;line-height:.95;letter-spacing:-.04em}
+.page-title em{color:#C9A227;font-style:italic}
+@media(max-width:768px){.page-hero{padding:0 24px 60px;min-height:55vh}.page-title{font-size:clamp(2.4rem,9vw,4rem)}}
+
+/* ── SECTIONS ── */
+.section{padding:100px 64px;max-width:1200px;margin:0 auto}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}
+.section-title em{color:#C9A227;font-style:italic}
+.section-body{font-size:17px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.62);max-width:780px}
+.section-body p+p{margin-top:20px}
+.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
+@media(max-width:768px){.section{padding:60px 24px}.divider{margin:0 24px}}
+
+/* Two-col grid */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+@media(max-width:900px){.two-col{grid-template-columns:1fr;gap:48px}}
+
+/* Bridge list */
+.bridge-list{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:0}
+.bridge-list li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px;font-weight:400;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:14px}
+.bridge-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C9A227;flex-shrink:0}
+
+/* Principles grid */
+.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
+@media(max-width:900px){.principles-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.principles-grid{grid-template-columns:1fr}}
+.principle-card{padding:36px 30px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:background .2s}
+.principle-card:hover{background:rgba(201,162,39,.05)}
+.principle-num{font-size:11px;font-weight:600;letter-spacing:.18em;color:rgba(201,162,39,.5);margin-bottom:14px}
+.principle-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
+.principle-body{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.45)}
+
+/* Quote pull */
+.pull-quote{padding:80px 64px;background:rgba(201,162,39,.04);border-left:3px solid #C9A227;margin:0}
+.pull-quote p{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2.2rem);font-weight:700;font-style:italic;line-height:1.4;color:rgba(255,255,255,.85);max-width:800px}
+@media(max-width:768px){.pull-quote{padding:48px 24px}}
+
+/* Image feature */
+.img-feature{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;opacity:.85}
+
+/* CTA band */
+.cta-band{padding:100px 64px;text-align:center;background:#000;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(201,162,39,.08),transparent 65%);pointer-events:none}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px}
+.cta-band p{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:44px;max-width:520px;margin-left:auto;margin-right:auto}
+.btn-gold{display:inline-block;background:#C9A227;color:#000;font-size:14px;font-weight:700;letter-spacing:.06em;padding:16px 40px;border-radius:8px;transition:background .2s,transform .15s}
+.btn-gold:hover{background:#dbb830;transform:translateY(-2px)}
+.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
+@media(max-width:768px){.cta-band{padding:60px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
+
+/* ── FOOTER ── */
+footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
+.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
+.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}
+.footer-links a:hover{color:#C9A227}
+.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}
+.footer-contact-item a{color:rgba(255,255,255,.4);transition:color .2s}
+.footer-contact-item a:hover{color:#C9A227}
+.social-row{display:flex;gap:12px;margin-top:4px}
+.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}
+.social-btn:hover{border-color:#C9A227;color:#C9A227}
+.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-legal{display:flex;gap:24px}
+.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}
+.footer-legal a:hover{color:rgba(255,255,255,.5)}
+@media(max-width:768px){footer{padding:60px 24px 32px}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="brand">
+    <img src="assets/logo1.gif" alt="Logo" class="brand-logo"/>
+    <div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="founders-message.html">Founder's Message</a></li>
+    <li class="has-drop"><a href="#">Impact &#9662;</a>
+      <ul class="drop-menu">
+        <li><a href="leadership-board.html">Leadership &amp; Board</a></li>
+        <li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="partner-with-us.html">Partner With Us</a></li>
+        <li><a href="resources-publications.html">Resources &amp; Publications</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
+  </ul>
+  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="mob-menu">
+  <button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="founders-message.html">Founder's Message</a>
+  <a href="leadership-board.html">Leadership &amp; Board</a>
+  <a href="programs-initiatives.html">Programs &amp; Initiatives</a>
+  <a href="get-involved.html">Get Involved</a>
+  <a href="partner-with-us.html">Partner With Us</a>
+  <a href="resources-publications.html">Resources</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="donate.html" class="mob-cta">Donate Now</a>
+</div>
+
+<!-- HERO -->
+<header class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-over"></div>
+  <div class="page-hero-content">
+    <div class="eyebrow">Our Story</div>
+    <h1 class="page-title">About<br/><em>Us</em></h1>
+  </div>
+</header>
+
+<!-- WHO WE ARE -->
+<section class="section">
+  <div class="two-col">
+    <div>
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">A <em>Transcontinental</em> Movement</h2>
+      <div class="section-body">
+        <p>The U.S.–Africa Allies Foundation is a transcontinental movement dedicated to strengthening families, uplifting nations, and glorifying God through service-driven leadership.</p>
+        <p>We believe that when families are empowered, communities flourish — and when communities flourish, nations rise. Across the United States and Africa, we serve families, empower youth, uplift women, expand education, and support civil society through programs that restore dignity, expand opportunity, and cultivate leaders rooted in integrity and compassion.</p>
+        <p>We are more than an organization — we are a bridge.</p>
+      </div>
+      <ul class="bridge-list">
+        <li>Past and Future</li>
+        <li>America and Africa</li>
+        <li>Leadership and Service</li>
+        <li>Vision and Action</li>
+        <li>Faith and Societal Transformation</li>
+      </ul>
+    </div>
+    <div>
+      <img src="https://usafricaallies.org/wp-content/uploads/2025/12/images14-1.webp" alt="About US Africa Allies" class="img-feature"/>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- VISION -->
+<section class="section">
+  <div class="section-label">Our Vision</div>
+  <h2 class="section-title" style="max-width:800px">A world where every individual has the <em>opportunity</em> to learn, lead, thrive, and live with dignity.</h2>
+  <div class="section-body" style="margin-top:32px">
+    <p>A future where leadership is principled and rooted in service. Where families are stable and flourishing. Where communities are resilient. Where women are fully empowered. Where youth rise with courage and purpose. Where nations grow stronger through shared values and shared responsibility.</p>
+    <p>This is the future we are committed to building — one that reflects both human dignity and divine purpose.</p>
+  </div>
+</section>
+
+<blockquote class="pull-quote">
+  <p>"In strengthening families, we uplift nations — and in serving people, we glorify God."</p>
+</blockquote>
+
+<!-- MISSION -->
+<section class="section">
+  <div class="two-col">
+    <div>
+      <img src="https://usafricaallies.org/wp-content/uploads/2025/12/images12-1.webp" alt="Our Mission" class="img-feature"/>
+    </div>
+    <div>
+      <div class="section-label">Our Mission</div>
+      <h2 class="section-title">Grounded in <em>Faith</em>, Driven by Service</h2>
+      <div class="section-body">
+        <p>To develop ethical and God-fearing leaders, strengthen families, expand educational access, empower women, uplift vulnerable communities, and foster collaboration between the United States and Africa through programs, partnerships, and humanitarian action.</p>
+        <p>Our mission is grounded in faith, driven by service, and focused on impact — because in strengthening families, we uplift nations, and in serving people, we glorify God.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CORE PRINCIPLES -->
+<section class="section">
+  <div class="section-label">Core Principles</div>
+  <h2 class="section-title">The Values That <em>Guide</em> Everything</h2>
+  <div class="principles-grid">
+    <div class="principle-card">
+      <div class="principle-num">01</div>
+      <div class="principle-name">Integrity</div>
+      <p class="principle-body">We uphold the highest standard of honesty, ethics, and transparency in all we do.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">02</div>
+      <div class="principle-name">Dignity</div>
+      <p class="principle-body">We honor the inherent worth of every human being without exception.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">03</div>
+      <div class="principle-name">Service</div>
+      <p class="principle-body">Leadership begins with serving others first — position follows purpose.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">04</div>
+      <div class="principle-name">Excellence</div>
+      <p class="principle-body">We pursue the highest level of quality in all programs and operations.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">05</div>
+      <div class="principle-name">Accountability</div>
+      <p class="principle-body">We manage resources responsibly and steward donor trust with care.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-num">06</div>
+      <div class="principle-name">Courage</div>
+      <p class="principle-body">We confront challenges with boldness, compassion, and conviction.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- APPROACH -->
+<section class="section">
+  <div class="section-label">Our Approach</div>
+  <h2 class="section-title">People-Centered,<br/><em>Dignity-Based</em> Development</h2>
+  <div class="section-body">
+    <p>Our work is guided by a model that places human dignity at the center of every program and decision.</p>
+  </div>
+  <ul class="bridge-list" style="max-width:700px;margin-top:40px">
+    <li>We invest in individuals, because individuals transform communities</li>
+    <li>We strengthen families, because families build nations</li>
+    <li>We empower women, because women anchor social and economic life</li>
+    <li>We equip youth, because they are the architects of the future</li>
+    <li>We serve the vulnerable, because compassion is the highest form of leadership</li>
+  </ul>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>We are not here to<br/><em style="color:#C9A227;font-style:italic;font-family:'Playfair Display',serif">observe</em> change.</h2>
+  <p>We are here to make it. Join the movement that is building nations from the inside out.</p>
+  <a href="donate.html" class="btn-gold">Support Our Mission</a>
+  <a href="contact.html" class="btn-ghost">Get In Touch</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="assets/logo1.gif" alt="Logo"/>
+      <div class="brand-name" style="font-size:13px">U.S.–Africa Allies<br/><span style="color:#C9A227">Foundation</span></div>
+      <p>Building strong families, forming principled leaders, and strengthening the U.S.–Africa partnership.</p>
+      <div class="social-row" style="margin-top:20px">
+        <a href="#" class="social-btn">f</a>
+        <a href="#" class="social-btn">t</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="#" class="social-btn">ig</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="founders-message.html">Founder's Message</a></li>
+        <li><a href="programs-initiatives.html">Programs</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="partner-with-us.html">Partner With Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Resources</div>
+      <ul class="footer-links">
+        <li><a href="leadership-board.html">Leadership &amp; Board</a></li>
+        <li><a href="resources-publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-use.html">Terms of Use</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <div class="footer-contact-item">300 Independence Ave SE<br/>Washington, DC 20003</div>
+      <div class="footer-contact-item"><a href="tel:+12406787500">+1 (240) 678-7500</a></div>
+      <div class="footer-contact-item"><a href="mailto:daniel.edah@usafricaallies.org">daniel.edah@usafricaallies.org</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 U.S.–Africa Allies Foundation. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="safeguarding.html">Safeguarding</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('solid',window.scrollY>50)},{passive:true});
+</script>
+</body>
+</html>

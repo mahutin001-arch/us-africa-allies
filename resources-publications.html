@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Resources &amp; Publications — U.S.–Africa Allies Foundation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
+#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
+.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;object-fit:contain}.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}.brand-name span{color:#C9A227}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}
+.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
+.has-drop{position:relative}.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}.has-drop:hover .drop-menu{opacity:1;visibility:visible}.drop-menu li a{display:block;padding:11px 22px;font-size:13px;color:rgba(255,255,255,.55);transition:color .15s,background .15s}.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
+.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75)}
+#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+#mob-menu.open{opacity:1;visibility:visible}#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer}
+@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
+
+.page-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;padding:0 64px 90px;overflow:hidden;background:#000}
+.page-hero-bg{position:absolute;inset:0;background-image:url('https://usafricaallies.org/wp-content/uploads/2025/12/images5.webp');background-size:cover;background-position:center;opacity:.28}
+.page-hero-over{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.2),rgba(0,0,0,.88))}
+.page-hero-content{position:relative;z-index:2;max-width:700px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
+.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5.5vw,5rem);font-weight:900;line-height:.95;letter-spacing:-.04em}.page-title em{color:#C9A227;font-style:italic}
+@media(max-width:768px){.page-hero{padding:0 24px 60px;min-height:50vh}}
+
+.section{padding:100px 64px;max-width:1200px;margin:0 auto}
+@media(max-width:768px){.section{padding:60px 24px}}
+.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}.section-title em{color:#C9A227;font-style:italic}
+.section-body{font-size:17px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.6);max-width:780px}
+.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
+@media(max-width:768px){.divider{margin:0 24px}}
+
+/* Category tabs */
+.cat-tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:48px}
+.cat-tab{padding:10px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;font-size:13px;font-weight:500;color:rgba(255,255,255,.45);cursor:pointer;transition:all .2s}
+.cat-tab.active,.cat-tab:hover{background:rgba(201,162,39,.1);border-color:rgba(201,162,39,.3);color:#C9A227}
+
+/* Resource cards */
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+@media(max-width:900px){.resource-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.resource-grid{grid-template-columns:1fr}}
+.res-card{padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:background .2s;cursor:pointer}
+.res-card:hover{background:rgba(201,162,39,.05)}
+.res-type{font-size:11px;font-weight:600;letter-spacing:.14em;color:rgba(201,162,39,.6);text-transform:uppercase;margin-bottom:12px}
+.res-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;margin-bottom:10px;line-height:1.2}
+.res-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,.4);line-height:1.6}
+.res-meta{margin-top:20px;font-size:12px;color:rgba(255,255,255,.25);display:flex;justify-content:space-between;align-items:center}
+.res-arrow{color:#C9A227;font-size:16px;transition:transform .2s}
+.res-card:hover .res-arrow{transform:translateX(4px)}
+
+/* Newsletter signup */
+.newsletter-band{padding:80px 64px;background:rgba(201,162,39,.04);border-top:1px solid rgba(255,255,255,.07)}
+@media(max-width:768px){.newsletter-band{padding:56px 24px}}
+.newsletter-inner{max-width:700px;margin:0 auto;text-align:center}
+.nl-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:900;letter-spacing:-.03em;margin-bottom:16px}
+.nl-sub{font-size:16px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:36px;line-height:1.7}
+.nl-form{display:flex;gap:12px;max-width:480px;margin:0 auto}
+@media(max-width:560px){.nl-form{flex-direction:column}}
+.nl-input{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;color:#fff;font-family:'DM Sans',sans-serif;font-size:15px;padding:14px 18px;outline:none;transition:border-color .2s}
+.nl-input::placeholder{color:rgba(255,255,255,.25)}
+.nl-input:focus{border-color:rgba(201,162,39,.5)}
+.btn-gold{display:inline-block;background:#C9A227;color:#000;font-size:14px;font-weight:700;letter-spacing:.06em;padding:14px 28px;border-radius:6px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;transition:background .2s}.btn-gold:hover{background:#dbb830}
+
+.cta-band{padding:100px 64px;text-align:center;background:#000;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(201,162,39,.08),transparent 65%);pointer-events:none}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px}
+.cta-band p{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:44px;max-width:540px;margin-left:auto;margin-right:auto}
+.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s}.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
+@media(max-width:768px){.cta-band{padding:60px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
+
+footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
+@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
+.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
+.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
+.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}.footer-links a:hover{color:#C9A227}
+.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}.footer-contact-item a{color:rgba(255,255,255,.4);transition:color .2s}.footer-contact-item a:hover{color:#C9A227}
+.social-row{display:flex;gap:12px;margin-top:4px}.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}.social-btn:hover{border-color:#C9A227;color:#C9A227}
+.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
+@media(max-width:768px){footer{padding:60px 24px 32px}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="brand"><img src="assets/logo1.gif" alt="Logo" class="brand-logo"/><div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li class="has-drop"><a href="#">Impact &#9662;</a><ul class="drop-menu"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li><li><a href="partner-with-us.html">Partner With Us</a></li><li><a href="resources-publications.html">Resources &amp; Publications</a></li></ul></li><li><a href="contact.html">Contact Us</a></li><li><a href="donate.html" class="nav-cta">Donate Now</a></li></ul>
+  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="mob-menu"><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About Us</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership &amp; Board</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="get-involved.html">Get Involved</a><a href="partner-with-us.html">Partner With Us</a><a href="resources-publications.html">Resources</a><a href="contact.html">Contact Us</a><a href="donate.html" class="mob-cta">Donate Now</a></div>
+
+<header class="page-hero">
+  <div class="page-hero-bg"></div><div class="page-hero-over"></div>
+  <div class="page-hero-content">
+    <div class="eyebrow">Knowledge &amp; Insight</div>
+    <h1 class="page-title">Resources &amp;<br/><em>Publications</em></h1>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section-label">Our Library</div>
+  <h2 class="section-title">Ideas That <em>Build Nations</em></h2>
+  <div class="section-body">Explore articles, policy perspectives, foundation announcements, media coverage, and reflections from our Founder. This is where knowledge meets purpose.</div>
+  <div class="cat-tabs" style="margin-top:40px">
+    <div class="cat-tab active">All</div>
+    <div class="cat-tab">Articles</div>
+    <div class="cat-tab">Policy Perspectives</div>
+    <div class="cat-tab">Foundation Announcements</div>
+    <div class="cat-tab">Media Coverage</div>
+    <div class="cat-tab">Founder's Reflections</div>
+  </div>
+  <div class="resource-grid">
+    <div class="res-card">
+      <div class="res-type">Founder's Reflections</div>
+      <h3 class="res-title">Leadership Is Not a Position — It Is a Calling</h3>
+      <p class="res-desc">Daniel Edah reflects on the founding conviction behind the U.S.–Africa Allies Foundation and the responsibility of principled leadership.</p>
+      <div class="res-meta"><span>Foundation Essay</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Policy Perspectives</div>
+      <h3 class="res-title">Strengthening U.S.–Africa Partnership in a Defining Decade</h3>
+      <p class="res-desc">An analysis of the strategic opportunity for values-based partnership between the United States and African nations.</p>
+      <div class="res-meta"><span>Policy Brief</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Articles</div>
+      <h3 class="res-title">Why Families Are the Foundation of National Stability</h3>
+      <p class="res-desc">Exploring the link between strong family units and the broader resilience of communities, economies, and nations.</p>
+      <div class="res-meta"><span>Research Article</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Foundation Announcements</div>
+      <h3 class="res-title">U.S.–Africa Allies Foundation Launches Leadership Academy</h3>
+      <p class="res-desc">The Foundation announces the opening of its Leadership Academy program, bringing ethical leadership training to youth across both continents.</p>
+      <div class="res-meta"><span>Press Release</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Articles</div>
+      <h3 class="res-title">Women as Nation-Builders: The Case for Investing in Women's Leadership</h3>
+      <p class="res-desc">How empowering women creates a multiplier effect across families, communities, and national economies.</p>
+      <div class="res-meta"><span>Research Article</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Policy Perspectives</div>
+      <h3 class="res-title">Faith, Governance, and Ethical Leadership in the 21st Century</h3>
+      <p class="res-desc">A perspective on the role of faith-inspired values in creating accountable, servant-driven leaders in public and private life.</p>
+      <div class="res-meta"><span>Policy Essay</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Media Coverage</div>
+      <h3 class="res-title">Foundation Featured in U.S.–Africa Diaspora Summit Coverage</h3>
+      <p class="res-desc">Press coverage of the Foundation's participation in cross-continental dialogue on leadership, governance, and shared prosperity.</p>
+      <div class="res-meta"><span>Media Feature</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Articles</div>
+      <h3 class="res-title">Patriotism as a Development Strategy: Lessons from Both Continents</h3>
+      <p class="res-desc">Examining how civic pride, national responsibility, and patriotism contribute to social cohesion and long-term development.</p>
+      <div class="res-meta"><span>Development Article</span><span class="res-arrow">→</span></div>
+    </div>
+    <div class="res-card">
+      <div class="res-type">Founder's Reflections</div>
+      <h3 class="res-title">Building People Who Build Nations</h3>
+      <p class="res-desc">Reflections on why the Foundation believes that every investment in a person is ultimately an investment in the nation they will help build.</p>
+      <div class="res-meta"><span>Personal Essay</span><span class="res-arrow">→</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="newsletter-band">
+  <div class="newsletter-inner">
+    <h2 class="nl-title">Stay <em style="color:#C9A227;font-style:italic;font-family:'Playfair Display',serif">Informed</em></h2>
+    <p class="nl-sub">Subscribe to receive the latest articles, policy perspectives, program updates, and news from the U.S.–Africa Allies Foundation.</p>
+    <form class="nl-form" onsubmit="this.innerHTML='<p style=\'color:#C9A227;font-size:15px;font-weight:500\'>Thank you for subscribing!</p>';event.preventDefault()">
+      <input type="email" class="nl-input" placeholder="Your email address" required/>
+      <button type="submit" class="btn-gold">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<div class="cta-band">
+  <h2>Knowledge Is the<br/><em style="color:#C9A227;font-style:italic;font-family:'Playfair Display',serif">Beginning of Change</em></h2>
+  <p>Read. Learn. Act. Join the movement that is turning ideas into impact across two continents.</p>
+  <a href="get-involved.html" class="btn-gold">Get Involved</a>
+  <a href="contact.html" class="btn-ghost">Contact Us</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><img src="assets/logo1.gif" alt="Logo"/><div class="brand-name" style="font-size:13px;margin-top:8px">U.S.–Africa Allies<br/><span style="color:#C9A227">Foundation</span></div><p>Building strong families, forming principled leaders, and strengthening the U.S.–Africa partnership.</p><div class="social-row" style="margin-top:20px"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">t</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div></div>
+    <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li><a href="programs-initiatives.html">Programs</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li></ul></div>
+    <div><div class="footer-heading">Resources</div><ul class="footer-links"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="resources-publications.html">Publications</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+    <div><div class="footer-heading">Contact</div><div class="footer-contact-item">300 Independence Ave SE<br/>Washington, DC 20003</div><div class="footer-contact-item"><a href="tel:+12406787500">+1 (240) 678-7500</a></div><div class="footer-contact-item"><a href="mailto:daniel.edah@usafricaallies.org">daniel.edah@usafricaallies.org</a></div></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 U.S.–Africa Allies Foundation. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Safeguarding</a></div></div>
+</footer>
+<script>const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('solid',window.scrollY>50)},{passive:true});</script>
+</body>
+</html>
