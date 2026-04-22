@@ -1,1 +1,8 @@
 .vercel
+node_modules/
+package-lock.json
+package.json
+*.zip
+screenshot_*.png
+.DS_Store
+Thumbs.db

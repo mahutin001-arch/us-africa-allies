@@ -1,187 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Leadership &amp; Board — U.S.–Africa Allies Foundation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Leadership Board · U.S.–Africa Allies Foundation</title>
+<meta name="description" content="The leadership board of the U.S.–Africa Allies Foundation — the standing body responsible for direction and stewardship.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="assets/seal.svg" type="image/svg+xml">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
-#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
-.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;object-fit:contain}.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}.brand-name span{color:#C9A227}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}
-.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
-.has-drop{position:relative}.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}.has-drop:hover .drop-menu{opacity:1;visibility:visible}.drop-menu li a{display:block;padding:11px 22px;font-size:13px;color:rgba(255,255,255,.55);transition:color .15s,background .15s}.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
-.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75)}
-#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
-#mob-menu.open{opacity:1;visibility:visible}#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer}
-@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
-
-.page-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;padding:0 64px 90px;overflow:hidden;background:#000}
-.page-hero-bg{position:absolute;inset:0;background-image:url('https://usafricaallies.org/wp-content/uploads/2025/12/images18.webp');background-size:cover;background-position:center;opacity:.28}
-.page-hero-over{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.2),rgba(0,0,0,.88))}
-.page-hero-content{position:relative;z-index:2;max-width:700px}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
-.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;line-height:.95;letter-spacing:-.04em}.page-title em{color:#C9A227;font-style:italic}
-@media(max-width:768px){.page-hero{padding:0 24px 60px;min-height:50vh}}
-
-.section{padding:100px 64px;max-width:1200px;margin:0 auto}
-@media(max-width:768px){.section{padding:60px 24px}}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}.section-title em{color:#C9A227;font-style:italic}
-.section-body{font-size:17px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.6);max-width:780px}.section-body p+p{margin-top:20px}
-.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
-@media(max-width:768px){.divider{margin:0 24px}}
-
-/* Board member cards */
-.board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:60px}
-@media(max-width:900px){.board-grid{grid-template-columns:1fr}}
-.board-card{position:relative;overflow:hidden}
-.board-photo{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;filter:grayscale(30%);transition:filter .3s}
-.board-card:hover .board-photo{filter:grayscale(0%)}
-.board-info{padding:32px 28px;background:rgba(0,0,0,.95);border-top:2px solid rgba(201,162,39,.3)}
-.board-role{font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:8px}
-.board-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;margin-bottom:14px;letter-spacing:-.02em}
-.board-bio{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.5)}
-
-/* Principles grid */
-.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
-@media(max-width:900px){.principles-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.principles-grid{grid-template-columns:1fr}}
-.principle-card{padding:36px 30px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:background .2s}
-.principle-card:hover{background:rgba(201,162,39,.05)}
-.principle-num{font-size:11px;font-weight:600;letter-spacing:.18em;color:rgba(201,162,39,.5);margin-bottom:14px}
-.principle-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:12px;letter-spacing:-.02em}
-.principle-body{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.45)}
-
-/* Responsibility list */
-.resp-list{list-style:none;display:flex;flex-direction:column;gap:0;margin-top:40px;max-width:700px}
-.resp-list li{padding:16px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px;font-weight:400;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:14px}
-.resp-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C9A227;flex-shrink:0}
-
-.cta-band{padding:100px 64px;text-align:center;background:#000;position:relative;overflow:hidden}
-.cta-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(201,162,39,.08),transparent 65%);pointer-events:none}
-.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px}
-.cta-band p{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:44px;max-width:540px;margin-left:auto;margin-right:auto}
-.btn-gold{display:inline-block;background:#C9A227;color:#000;font-size:14px;font-weight:700;letter-spacing:.06em;padding:16px 40px;border-radius:8px;transition:background .2s,transform .15s}.btn-gold:hover{background:#dbb830;transform:translateY(-2px)}
-.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s}.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
-@media(max-width:768px){.cta-band{padding:60px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
-
-footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
-@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
-@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
-.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
-.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
-.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}.footer-links a:hover{color:#C9A227}
-.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}.footer-contact-item a{color:rgba(255,255,255,.4);transition:color .2s}.footer-contact-item a:hover{color:#C9A227}
-.social-row{display:flex;gap:12px;margin-top:4px}.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}.social-btn:hover{border-color:#C9A227;color:#C9A227}
-.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
-@media(max-width:768px){footer{padding:60px 24px 32px}}
+  .roster{display:grid;grid-template-columns:repeat(3,1fr);gap:48px 32px;margin-top:48px}
+  @media (max-width:880px){.roster{grid-template-columns:repeat(2,1fr);gap:32px 20px}}
+  @media (max-width:520px){.roster{grid-template-columns:1fr}}
+  .person{text-align:center}
+  .person .portrait{width:180px;height:180px;border-radius:50%;margin:0 auto 18px;overflow:hidden;background:var(--navy-deep);border:1px solid var(--brass);position:relative}
+  .person .portrait img{width:100%;height:100%;object-fit:cover;filter:url(#duotone-navy-brass) contrast(1.05)}
+  .person .placeholder{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-family:'Libre Caslon Display',serif;font-size:48px;color:var(--brass);background:linear-gradient(145deg,var(--navy-deep),var(--navy))}
+  .person .name{font-family:'Libre Caslon Display',serif;font-size:20px;color:var(--navy-deep);margin-bottom:4px}
+  .person .role{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--brass);margin-bottom:8px}
+  .person .bio{font-size:14px;color:var(--ink-soft);max-width:34ch;margin:0 auto;line-height:1.55}
 </style>
 </head>
 <body>
-<nav id="nav">
-  <a href="index.html" class="brand"><img src="assets/logo1.gif" alt="Logo" class="brand-logo"/><div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div></a>
-  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li class="has-drop"><a href="#">Impact &#9662;</a><ul class="drop-menu"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li><li><a href="strategic-council.html">Strategic Council</a></li><li><a href="opportunities.html">Opportunities Platform</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li><li><a href="partner-with-us.html">Partner With Us</a></li><li><a href="resources-publications.html">Resources &amp; Publications</a></li><li><a href="strategic-plan.html">Strategic Plan 2026–2031</a></li></ul></li><li><a href="contact.html">Contact Us</a></li><li><a href="donate.html" class="nav-cta">Donate Now</a></li></ul>
-  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div id="mob-menu"><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About Us</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership &amp; Board</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities Platform</a><a href="get-involved.html">Get Involved</a><a href="partner-with-us.html">Partner With Us</a><a href="resources-publications.html">Resources</a><a href="strategic-plan.html">Strategic Plan</a><a href="contact.html">Contact Us</a><a href="donate.html" class="mob-cta">Donate Now</a></div>
 
-<header class="page-hero">
-  <div class="page-hero-bg"></div><div class="page-hero-over"></div>
-  <div class="page-hero-content">
-    <div class="eyebrow">Governance &amp; Leadership</div>
-    <h1 class="page-title">Leadership<br/>&amp; <em>Board</em></h1>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="duotone-navy-brass">
+    <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+    <feComponentTransfer color-interpolation-filters="sRGB"><feFuncR tableValues="0.024 0.831"/><feFuncG tableValues="0.094 0.686"/><feFuncB tableValues="0.270 0.215"/></feComponentTransfer>
+  </filter>
+</defs></svg>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="mast-brand"><img src="assets/seal.svg" alt="" class="mast-seal"><span class="mast-name"><span class="top">U.S.–Africa Allies Foundation</span><span class="sub">Vol. I · Est. MMXXVI</span></span></a>
+    <nav class="mast-nav"><a href="about.html" class="pen-link">About</a><a href="founders-message.html" class="pen-link">Founder</a><a href="programs-initiatives.html" class="pen-link">Programs</a><a href="leadership-board.html" class="pen-link">Leadership</a><a href="strategic-plan.html" class="pen-link">Plan</a><a href="get-involved.html" class="pen-link">Get Involved</a></nav>
+    <a href="donate.html" class="mast-cta">Donate</a>
+    <button class="mast-toggle" aria-label="Open menu" onclick="document.getElementById('mobileDrawer').classList.add('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
 
-<section class="section">
-  <div class="section-label">Our Leadership</div>
-  <h2 class="section-title">Committed to <em>Ethical</em> Governance</h2>
-  <div class="section-body"><p>The U.S.-AFRICA ALLIES FOUNDATION is guided by a leadership team committed to ethical governance, strategic vision, and measurable impact. Our Board of Directors provides oversight to ensure transparency, accountability, and alignment with our charitable mission.</p></div>
-  <div class="board-grid">
-    <div class="board-card">
-      <img src="assets/WhatsApp%20Image%202026-04-01%20at%206.51.56%20PM.jpeg" alt="Daniel Edah" class="board-photo"/>
-      <div class="board-info">
-        <div class="board-role">President &amp; Founder</div>
-        <h3 class="board-name">Daniel Edah</h3>
-        <p class="board-bio">Daniel Edah provides strategic leadership and long-term vision for the organization, overseeing programs, partnerships, and external relations. His role includes guiding the Foundation's mission to strengthen leadership, civic engagement, and cooperation between the United States and Africa.</p>
-      </div>
-    </div>
-    <div class="board-card">
-      <img src="https://usafricaallies.org/wp-content/uploads/2025/12/agent-2.jpg" alt="Akim E. Djekinnou" class="board-photo"/>
-      <div class="board-info">
-        <div class="board-role">Treasurer</div>
-        <h3 class="board-name">Akim E. Djekinnou</h3>
-        <p class="board-bio">Akim E. Djekinnou oversees financial management, budgeting, reporting, and internal controls, ensuring fiscal responsibility and adherence to all fiduciary and regulatory standards.</p>
-      </div>
-    </div>
-    <div class="board-card">
-      <div class="board-photo" style="background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center"><svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="24" r="14" fill="rgba(255,255,255,.1)"/><path d="M4 60c0-15.464 12.536-28 28-28s28 12.536 28 28" fill="rgba(255,255,255,.07)"/></svg></div>
-      <div class="board-info">
-        <div class="board-role">Secretary</div>
-        <h3 class="board-name">Mynor Armando Requeno</h3>
-        <p class="board-bio">Mynor Armando Requeno is responsible for maintaining official records, documenting board actions, ensuring compliance with governance requirements, and safeguarding the integrity of the Foundation's corporate documentation.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section class="section">
-  <div class="section-label">Core Principles</div>
-  <h2 class="section-title">The Ethical Framework That <em>Guides</em> Every Decision</h2>
-  <div class="principles-grid">
-    <div class="principle-card"><div class="principle-num">01</div><div class="principle-name">Integrity</div><p class="principle-body">Truth is non-negotiable in every decision and communication.</p></div>
-    <div class="principle-card"><div class="principle-num">02</div><div class="principle-name">Transparency</div><p class="principle-body">Openness builds credibility with donors, partners, and communities.</p></div>
-    <div class="principle-card"><div class="principle-num">03</div><div class="principle-name">Service</div><p class="principle-body">Leaders serve first — position is earned through sacrifice.</p></div>
-    <div class="principle-card"><div class="principle-num">04</div><div class="principle-name">Vision</div><p class="principle-body">Leadership must look beyond the present to shape the future.</p></div>
-    <div class="principle-card"><div class="principle-num">05</div><div class="principle-name">Accountability</div><p class="principle-body">Governance protects trust and safeguards the mission.</p></div>
-    <div class="principle-card"><div class="principle-num">06</div><div class="principle-name">Courage</div><p class="principle-body">Bold decisions create generational impact and lasting change.</p></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section class="section">
-  <div class="section-label">Board Responsibilities</div>
-  <h2 class="section-title">How Our Board <em>Strengthens</em> the Foundation</h2>
-  <div class="section-body"><p>The Board ensures that the U.S.-AFRICA ALLIES FOUNDATION operates at the highest standard of governance and impact.</p></div>
-  <ul class="resp-list">
-    <li>Operates with integrity and full regulatory compliance</li>
-    <li>Maintains strong financial accountability and stewardship</li>
-    <li>Builds ethical and effective programs with measurable outcomes</li>
-    <li>Forms strategic partnerships across the United States and Africa</li>
-    <li>Protects beneficiaries through safeguarding mechanisms</li>
-    <li>Remains mission-focused and people-centered in all decisions</li>
-  </ul>
-</section>
-
-<div class="cta-band">
-  <h2>A Leadership Team Committed<br/>to <em style="color:#C9A227;font-style:italic;font-family:'Playfair Display',serif">Transforming Nations</em></h2>
-  <p>Each member carries the responsibility of empowering leaders, strengthening communities, and shaping a future where dignity and opportunity are within reach for all.</p>
-  <a href="donate.html" class="btn-gold">Support Our Work</a>
-  <a href="contact.html" class="btn-ghost">Contact Us</a>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="close-row"><span class="mono-mark">Menu</span><button aria-label="Close" onclick="document.getElementById('mobileDrawer').classList.remove('open')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
+  <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-plan.html">Strategic Plan</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a><a href="contact.html">Contact</a><a href="donate.html">Donate</a></nav>
 </div>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand"><img src="assets/logo1.gif" alt="Logo"/><div class="brand-name" style="font-size:13px;margin-top:8px">U.S.–Africa Allies<br/><span style="color:#C9A227">Foundation</span></div><p>Building strong families, forming principled leaders, and strengthening the U.S.–Africa partnership.</p><div class="social-row" style="margin-top:20px"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">t</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div></div>
-    <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li><a href="programs-initiatives.html">Programs</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li></ul></div>
-    <div><div class="footer-heading">Resources</div><ul class="footer-links"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="resources-publications.html">Publications</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
-    <div><div class="footer-heading">Contact</div><div class="footer-contact-item">300 Independence Ave SE<br/>Washington, DC 20003</div><div class="footer-contact-item"><a href="tel:+12406787500">+1 (240) 678-7500</a></div><div class="footer-contact-item"><a href="mailto:daniel.edah@usafricaallies.org">daniel.edah@usafricaallies.org</a></div></div>
+<section class="frontispiece">
+  <div class="sheet">
+    <div class="vol mono-mark">Folio IV &nbsp;·&nbsp; The Leadership Board &nbsp;·&nbsp; Standing Roster · MMXXVI</div>
+    <h1 class="display" style="max-width:16ch;margin-top:32px">The Standing Body<br>of the Foundation.</h1>
+    <p class="subtitle">The Leadership Board is responsible for the direction, stewardship, and integrity of the U.S.–Africa Allies Foundation. Members are appointed for staggered terms.</p>
   </div>
-  <div class="footer-bottom"><p>&copy; 2025 U.S.–Africa Allies Foundation. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Safeguarding</a></div></div>
+</section>
+
+<section class="heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="column-wide">
+      <div class="section-head"><div class="num">§ I &nbsp; Founder &amp; President</div></div>
+      <div class="person" style="margin-bottom:48px">
+        <div class="portrait" style="width:240px;height:240px"><img src="assets/founders-headshot.jpeg" alt="Daniel Edah"></div>
+        <div class="name" style="font-size:28px">Daniel Edah</div>
+        <div class="role">Founder · President · Convener</div>
+        <div class="bio" style="max-width:54ch;font-size:15px">Founder and President of the U.S.–Africa Allies Foundation. Daniel Edah's career has spanned international development, diplomatic convening, and private enterprise across both continents. He chartered the Foundation in 2026 to give the U.S.–Africa partnership the institutional permanence it has long deserved.</div>
+      </div>
+      <div class="hr-ornament-wrap"><span>❦</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-parchment-d heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="section-head"><div class="num">§ II &nbsp; Board of Directors</div><h2>The standing body.</h2><p class="lede">Members of the Leadership Board are appointed for staggered terms and convene quarterly under the seal of the Foundation. Additional members will be announced as the Board completes its inaugural composition.</p></div>
+    <div class="roster">
+      <div class="person"><div class="portrait"><div class="placeholder">A</div></div><div class="name">Member to be Announced</div><div class="role">Director</div><div class="bio">Inaugural Board appointment forthcoming. Position confirmed.</div></div>
+      <div class="person"><div class="portrait"><div class="placeholder">B</div></div><div class="name">Member to be Announced</div><div class="role">Director</div><div class="bio">Inaugural Board appointment forthcoming. Position confirmed.</div></div>
+      <div class="person"><div class="portrait"><div class="placeholder">C</div></div><div class="name">Member to be Announced</div><div class="role">Director</div><div class="bio">Inaugural Board appointment forthcoming. Position confirmed.</div></div>
+      <div class="person"><div class="portrait"><div class="placeholder">D</div></div><div class="name">Member to be Announced</div><div class="role">Director</div><div class="bio">Inaugural Board appointment forthcoming. Position confirmed.</div></div>
+      <div class="person"><div class="portrait"><div class="placeholder">E</div></div><div class="name">Member to be Announced</div><div class="role">Director</div><div class="bio">Inaugural Board appointment forthcoming. Position confirmed.</div></div>
+      <div class="person"><div class="portrait"><div class="placeholder">F</div></div><div class="name">Member to be Announced</div><div class="role">Director</div><div class="bio">Inaugural Board appointment forthcoming. Position confirmed.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="column">
+      <div class="section-head"><div class="num">§ III &nbsp; Governance Structure</div><h2>How the Foundation is governed.</h2></div>
+      <ul class="ledger">
+        <li><span class="label">Founder &amp; President</span><span class="leader"></span><span class="value">Daniel Edah</span></li>
+        <li><span class="label">Leadership Board</span><span class="leader"></span><span class="value">Quarterly · Standing</span></li>
+        <li><span class="label">Strategic Council</span><span class="leader"></span><span class="value"><a href="strategic-council.html" class="pen-link">View →</a></span></li>
+        <li><span class="label">Audit &amp; Ethics</span><span class="leader"></span><span class="value">Annual · Independent</span></li>
+        <li><span class="label">Term Length</span><span class="leader"></span><span class="value">Three years · Staggered</span></li>
+        <li><span class="label">Election Method</span><span class="leader"></span><span class="value">By the Board, in chambers</span></li>
+      </ul>
+      <div class="hr-ornament-wrap" style="margin-top:48px"><span>❦</span></div>
+      <div style="text-align:center;margin-top:32px">
+        <a href="strategic-council.html" class="btn btn-outline">View the Strategic Council →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="colophon-inner">
+    <div class="brand-block"><img src="assets/seal.svg" alt="" style="width:62px;height:62px;margin-bottom:18px;filter:invert(1) sepia(1) saturate(0.7) hue-rotate(15deg)"><div class="name">U.S.–Africa Allies Foundation</div><div class="tag">Convening · Policy · Partnership</div><p>An institution dedicated to the deliberate work of partnership between the United States and the nations of the African continent.</p></div>
+    <div><h4>The Foundation</h4><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="strategic-plan.html">Strategic Plan</a></div>
+    <div><h4>Engage</h4><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a></div>
+    <div><h4>Correspond</h4><a href="contact.html">Contact</a><a href="donate.html">Donate</a><a href="mailto:contact@usafricaallies.org">contact@usafricaallies.org</a><a href="https://usafricaallies.org">usafricaallies.org</a></div>
+  </div>
+  <div class="colophon-bottom"><span>© MMXXVI · U.S.–Africa Allies Foundation · All rights reserved.</span><span>Set in Libre Caslon &amp; JetBrains Mono · Washington, D.C.</span></div>
 </footer>
-<script>const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('solid',window.scrollY>50)},{passive:true});</script>
+
+<script>
+  (function(){const path=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.mast-nav a, .mobile-drawer nav a').forEach(a=>{if(a.getAttribute('href')===path)a.classList.add('active');});})();
+  document.querySelectorAll('.mobile-drawer nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileDrawer').classList.remove('open')));
+</script>
+
 </body>
 </html>

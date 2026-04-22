@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="U.S.–Africa Allies Foundation seal">
+  <defs>
+    <path id="circ-top" d="M 30 100 A 70 70 0 0 1 170 100" fill="none"/>
+    <path id="circ-bot" d="M 30 100 A 70 70 0 0 0 170 100" fill="none"/>
+  </defs>
+
+  <!-- outer ring -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#B8932E" stroke-width="1.4"/>
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#B8932E" stroke-width="0.6"/>
+
+  <!-- decorative dots ring -->
+  <g fill="#B8932E">
+    <circle cx="100" cy="14" r="1.5"/>
+    <circle cx="143" cy="25.5" r="1.5"/>
+    <circle cx="174.5" cy="57" r="1.5"/>
+    <circle cx="186" cy="100" r="1.5"/>
+    <circle cx="174.5" cy="143" r="1.5"/>
+    <circle cx="143" cy="174.5" r="1.5"/>
+    <circle cx="100" cy="186" r="1.5"/>
+    <circle cx="57" cy="174.5" r="1.5"/>
+    <circle cx="25.5" cy="143" r="1.5"/>
+    <circle cx="14" cy="100" r="1.5"/>
+    <circle cx="25.5" cy="57" r="1.5"/>
+    <circle cx="57" cy="25.5" r="1.5"/>
+  </g>
+
+  <!-- inner ring -->
+  <circle cx="100" cy="100" r="74" fill="none" stroke="#B8932E" stroke-width="0.6"/>
+
+  <!-- text path top -->
+  <text font-family="Libre Caslon Display, Georgia, serif" font-size="9.5" letter-spacing="3" fill="#0A2463">
+    <textPath href="#circ-top" startOffset="50%" text-anchor="middle">U.S. — AFRICA ALLIES FOUNDATION</textPath>
+  </text>
+  <text font-family="JetBrains Mono, monospace" font-size="7" letter-spacing="4" fill="#B8932E">
+    <textPath href="#circ-bot" startOffset="50%" text-anchor="middle">·  ESTABLISHED  MMXXVI  ·</textPath>
+  </text>
+
+  <!-- center mark: monogram U • A within laurel -->
+  <g transform="translate(100,100)">
+    <!-- laurel left -->
+    <path d="M -42 6 Q -52 -4 -48 -22 M -38 12 Q -46 4 -44 -10 M -34 18 Q -40 12 -38 0" stroke="#B8932E" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <!-- laurel right -->
+    <path d="M 42 6 Q 52 -4 48 -22 M 38 12 Q 46 4 44 -10 M 34 18 Q 40 12 38 0" stroke="#B8932E" stroke-width="1" fill="none" stroke-linecap="round"/>
+
+    <text x="0" y="6" font-family="Libre Caslon Display, Georgia, serif" font-size="42" text-anchor="middle" fill="#0A2463">U</text>
+    <text x="0" y="6" font-family="Libre Caslon Display, Georgia, serif" font-size="42" text-anchor="middle" fill="#0A2463" opacity="0"></text>
+    <!-- ampersand below -->
+    <text x="0" y="26" font-family="Libre Caslon Display, Georgia, serif" font-style="italic" font-size="14" text-anchor="middle" fill="#B8932E">&amp;</text>
+    <text x="0" y="42" font-family="Libre Caslon Display, Georgia, serif" font-size="14" text-anchor="middle" fill="#0A2463" letter-spacing="2">A</text>
+  </g>
+
+  <!-- side stars -->
+  <g fill="#B8932E">
+    <polygon points="100,52 102,58 108,58 103,62 105,68 100,64 95,68 97,62 92,58 98,58" opacity="0.85"/>
+  </g>
+</svg>

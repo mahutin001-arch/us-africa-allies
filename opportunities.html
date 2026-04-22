@@ -1,324 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Opportunities &amp; Strategic Connections Platform — U.S.–Africa Allies Foundation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Opportunities · U.S.–Africa Allies Foundation</title>
+<meta name="description" content="Open calls — fellowships, scholarships, working groups, and positions at the U.S.–Africa Allies Foundation.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="assets/seal.svg" type="image/svg+xml">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
-#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
-.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;object-fit:contain}.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}.brand-name span{color:#C9A227}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}
-.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
-.has-drop{position:relative}.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}.has-drop:hover .drop-menu{opacity:1;visibility:visible}.drop-menu li a{display:block;padding:11px 22px;font-size:13px;color:rgba(255,255,255,.55);transition:color .15s,background .15s}.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
-.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75)}
-#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
-#mob-menu.open{opacity:1;visibility:visible}#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer}
-@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
-
-/* HERO */
-.page-hero{position:relative;min-height:80vh;display:flex;align-items:center;padding:100px 64px 80px;overflow:hidden;background:#000}
-.page-hero-bg{position:absolute;inset:0;background-image:url('https://usafricaallies.org/wp-content/uploads/2025/12/images3.webp');background-size:cover;background-position:center;opacity:.18;filter:grayscale(20%)}
-.page-hero-over{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.94) 45%,rgba(0,0,0,.55) 100%)}
-.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:1000px;height:1000px;background:radial-gradient(circle,rgba(201,162,39,.09),transparent 60%);pointer-events:none}
-.page-hero-content{position:relative;z-index:2;max-width:900px}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
-.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5.5rem);font-weight:900;line-height:.95;letter-spacing:-.04em}.page-title em{color:#C9A227;font-style:italic}
-.hero-sub{font-size:18px;font-weight:300;color:rgba(255,255,255,.55);margin-top:32px;max-width:700px;line-height:1.8}
-.hero-tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
-.hero-tag{padding:8px 20px;background:rgba(201,162,39,.1);border:1px solid rgba(201,162,39,.3);border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.06em;color:#C9A227;text-transform:uppercase}
-@media(max-width:768px){.page-hero{padding:100px 24px 60px;min-height:60vh}}
-
-/* SECTIONS */
-.section{padding:100px 64px;max-width:1200px;margin:0 auto}
-@media(max-width:768px){.section{padding:60px 24px}}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}.section-title em{color:#C9A227;font-style:italic}
-.section-body{font-size:17px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.62);max-width:860px}.section-body p+p{margin-top:22px}
-.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
-@media(max-width:768px){.divider{margin:0 24px}}
-
-/* TWO COL INTRO */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-@media(max-width:900px){.two-col{grid-template-columns:1fr;gap:48px}}
-.feature-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:40px 36px}
-.feature-card-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:800;margin-bottom:20px}
-.feature-list{list-style:none;display:flex;flex-direction:column;gap:14px}
-.feature-list li{display:flex;align-items:flex-start;gap:14px;font-size:15px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.6}
-.feature-list li::before{content:'→';color:#C9A227;font-weight:700;flex-shrink:0;margin-top:1px}
-
-/* WHO WE SERVE */
-.serve-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:48px}
-@media(max-width:900px){.serve-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:580px){.serve-grid{grid-template-columns:1fr}}
-.serve-card{padding:36px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:background .2s}
-.serve-card:hover{background:rgba(201,162,39,.06)}
-.serve-icon{font-size:32px;margin-bottom:16px}
-.serve-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;margin-bottom:10px}
-.serve-body{font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.7}
-
-/* GEOGRAPHIES */
-.geo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:40px}
-@media(max-width:900px){.geo-grid{grid-template-columns:1fr}}
-.geo-card{padding:32px 28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-.geo-region{font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:8px}
-.geo-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;margin-bottom:10px}
-.geo-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.6}
-
-/* OPPORTUNITY TYPES */
-.opp-types{display:grid;grid-template-columns:repeat(2,1fr);gap:3px;margin-top:48px}
-@media(max-width:768px){.opp-types{grid-template-columns:1fr}}
-.opp-card{padding:40px 32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:background .2s}
-.opp-card:hover{background:rgba(201,162,39,.05)}
-.opp-num{font-size:11px;font-weight:700;letter-spacing:.18em;color:rgba(201,162,39,.5);text-transform:uppercase;margin-bottom:14px}
-.opp-title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;margin-bottom:12px}
-.opp-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,.45);line-height:1.7}
-
-/* PLATFORM HIGHLIGHT BAND */
-.highlight-band{background:linear-gradient(135deg,rgba(201,162,39,.08) 0%,rgba(201,162,39,.03) 100%);border-top:1px solid rgba(201,162,39,.15);border-bottom:1px solid rgba(201,162,39,.15);padding:80px 64px;text-align:center;position:relative;overflow:hidden}
-.highlight-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(201,162,39,.06),transparent 60%);pointer-events:none}
-.highlight-band blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,3vw,2.4rem);font-weight:700;font-style:italic;line-height:1.35;color:#fff;max-width:880px;margin:0 auto;position:relative;z-index:1}
-.highlight-band blockquote em{color:#C9A227;font-style:normal}
-.highlight-band cite{display:block;margin-top:28px;font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);position:relative;z-index:1}
-@media(max-width:768px){.highlight-band{padding:60px 24px}}
-
-/* CTA BAND */
-.cta-band{padding:100px 64px;background:#000;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(201,162,39,.08),transparent 65%);pointer-events:none}
-.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px;position:relative;z-index:1}
-.cta-band p{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:44px;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7;position:relative;z-index:1}
-.btn-gold{display:inline-block;background:#C9A227;color:#000;font-size:14px;font-weight:700;letter-spacing:.06em;padding:16px 40px;border-radius:8px;transition:background .2s,transform .15s;position:relative;z-index:1}.btn-gold:hover{background:#dbb830;transform:translateY(-2px)}
-.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s;position:relative;z-index:1}.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
-@media(max-width:768px){.cta-band{padding:60px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
-
-footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
-@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
-@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
-.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
-.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
-.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}.footer-links a:hover{color:#C9A227}
-.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}.footer-contact-item a{color:rgba(255,255,255,.4);transition:color .2s}.footer-contact-item a:hover{color:#C9A227}
-.social-row{display:flex;gap:12px;margin-top:4px}.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}.social-btn:hover{border-color:#C9A227;color:#C9A227}
-.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
-@media(max-width:768px){footer{padding:60px 24px 32px}}
+  .listing{padding:32px 0;border-bottom:1px solid var(--brass-hair)}
+  .listing-head{display:flex;justify-content:space-between;align-items:start;gap:24px;flex-wrap:wrap;margin-bottom:14px}
+  .listing-head h3{font-size:22px;margin:0}
+  .listing-meta{display:flex;gap:18px;flex-wrap:wrap;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-muted);margin-top:6px}
+  .listing-status{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;padding:6px 12px;border:1px solid var(--brass);color:var(--brass);white-space:nowrap}
+  .listing-status.closed{color:var(--ink-muted);border-color:var(--ink-muted)}
+  .listing p{color:var(--ink-soft);max-width:80ch;margin-bottom:14px}
 </style>
 </head>
 <body>
-<nav id="nav">
-  <a href="index.html" class="brand"><img src="assets/logo1.gif" alt="Logo" class="brand-logo"/><div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div></a>
-  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li class="has-drop"><a href="#">Impact &#9662;</a><ul class="drop-menu"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li><li><a href="strategic-council.html">Strategic Council</a></li><li><a href="opportunities.html">Opportunities Platform</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li><li><a href="partner-with-us.html">Partner With Us</a></li><li><a href="resources-publications.html">Resources &amp; Publications</a></li></ul></li><li><a href="contact.html">Contact Us</a></li><li><a href="donate.html" class="nav-cta">Donate Now</a></li></ul>
-  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div id="mob-menu"><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About Us</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership &amp; Board</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities Platform</a><a href="get-involved.html">Get Involved</a><a href="partner-with-us.html">Partner With Us</a><a href="contact.html">Contact Us</a><a href="donate.html" class="mob-cta">Donate Now</a></div>
 
-<header class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-over"></div>
-  <div class="hero-glow"></div>
-  <div class="page-hero-content">
-    <div class="eyebrow">U.S.–Africa Allies Foundation</div>
-    <h1 class="page-title">Opportunities &amp; Strategic<br/><em>Connections Platform</em></h1>
-    <p class="hero-sub">Building Bridges for Trade, Investment, and Strategic Partnerships across the United States, Africa, and Israel.</p>
-    <div class="hero-tags">
-      <span class="hero-tag">Trade</span>
-      <span class="hero-tag">Investment</span>
-      <span class="hero-tag">Strategic Partnerships</span>
-      <span class="hero-tag">U.S. · Africa · Israel</span>
-    </div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="duotone-navy-brass">
+    <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+    <feComponentTransfer color-interpolation-filters="sRGB"><feFuncR tableValues="0.024 0.831"/><feFuncG tableValues="0.094 0.686"/><feFuncB tableValues="0.270 0.215"/></feComponentTransfer>
+  </filter>
+</defs></svg>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="mast-brand"><img src="assets/seal.svg" alt="" class="mast-seal"><span class="mast-name"><span class="top">U.S.–Africa Allies Foundation</span><span class="sub">Vol. I · Est. MMXXVI</span></span></a>
+    <nav class="mast-nav"><a href="about.html" class="pen-link">About</a><a href="founders-message.html" class="pen-link">Founder</a><a href="programs-initiatives.html" class="pen-link">Programs</a><a href="leadership-board.html" class="pen-link">Leadership</a><a href="strategic-plan.html" class="pen-link">Plan</a><a href="get-involved.html" class="pen-link">Get Involved</a></nav>
+    <a href="donate.html" class="mast-cta">Donate</a>
+    <button class="mast-toggle" aria-label="Open menu" onclick="document.getElementById('mobileDrawer').classList.add('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
 
-<!-- ABOUT THE PLATFORM -->
-<section class="section">
-  <div class="section-label">The Platform</div>
-  <div class="two-col">
-    <div>
-      <h2 class="section-title">A New Kind of <em>Opportunity Network</em></h2>
-      <div class="section-body">
-        <p>The U.S.–Africa Allies Foundation's Opportunities &amp; Strategic Connections Platform is designed to facilitate meaningful, sustainable partnerships between individuals, entrepreneurs, companies, investors, and institutions across the United States, Africa, and Israel.</p>
-        <p>We recognize that real development — the kind that transforms lives, builds strong nations, and creates generational wealth — does not happen through aid alone. It happens when capable people and organizations connect purposefully, share resources strategically, and work together toward shared goals.</p>
-        <p>This platform exists to make those connections possible.</p>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="close-row"><span class="mono-mark">Menu</span><button aria-label="Close" onclick="document.getElementById('mobileDrawer').classList.remove('open')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
+  <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-plan.html">Strategic Plan</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a><a href="contact.html">Contact</a><a href="donate.html">Donate</a></nav>
+</div>
+
+<section class="frontispiece">
+  <div class="sheet">
+    <div class="vol mono-mark">Folio XI &nbsp;·&nbsp; Open Calls &amp; Opportunities &nbsp;·&nbsp; Recorded Standing · MMXXVI</div>
+    <h1 class="display" style="margin-top:32px;max-width:14ch">Open Calls.</h1>
+    <p class="subtitle">Fellowships, scholarships, working groups, and standing positions. The Foundation maintains an open record of every active opportunity.</p>
+  </div>
+</section>
+
+<section class="heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="column-wide">
+      <div class="section-head"><div class="num">§ I &nbsp; Currently Open</div><h2>Calls accepting submissions.</h2></div>
+
+      <div class="listing">
+        <div class="listing-head">
+          <div>
+            <h3>Inaugural Fellowship Cohort · 2027</h3>
+            <div class="listing-meta"><span>Fellowship</span><span>12-Month Tenure</span><span>Stipend Provided</span></div>
+          </div>
+          <span class="listing-status">Forthcoming</span>
+        </div>
+        <p>The Foundation will name its first cohort of fellows in 2027. Half American, half African, all early-career. A twelve-month deliberate exchange under the Foundation's seal. Open call opens autumn 2026; nominations welcome year-round.</p>
+        <a href="get-involved.html" class="pen-link mono-mark">Express interest →</a>
       </div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-card-title">What We Facilitate</div>
-      <ul class="feature-list">
-        <li>Trade and import/export partnerships between U.S. and African businesses</li>
-        <li>Investment opportunities across key African sectors and emerging markets</li>
-        <li>Strategic alliances between institutions, governments, and NGOs</li>
-        <li>Diaspora reconnection — linking African Americans and the global African Diaspora with their continental counterparts</li>
-        <li>Israel–Africa–U.S. trilateral business and innovation partnerships</li>
-        <li>Leadership development and executive exchange programs</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
-<div class="divider"></div>
+      <div class="listing">
+        <div class="listing-head">
+          <div>
+            <h3>Diaspora Council · Founding Membership</h3>
+            <div class="listing-meta"><span>Standing Body</span><span>Open Enrollment</span><span>U.S. Residents</span></div>
+          </div>
+          <span class="listing-status">Open</span>
+        </div>
+        <p>Founding members of the Diaspora Council are being enrolled now. Open to members of the African diaspora in the United States who wish to organize their civic and professional weight around the Foundation's standing work.</p>
+        <a href="get-involved.html" class="pen-link mono-mark">Enroll →</a>
+      </div>
 
-<!-- WHO WE SERVE -->
-<section class="section">
-  <div class="section-label">Who We Serve</div>
-  <h2 class="section-title">Built for <em>Visionaries &amp; Builders</em></h2>
-  <div class="section-body">
-    <p>Our platform serves a broad community of change-makers who believe in the transformative power of U.S.–Africa–Israel collaboration. Whether you are an individual professional or a multinational corporation, we have pathways designed for you.</p>
-  </div>
-  <div class="serve-grid">
-    <div class="serve-card">
-      <div class="serve-title">Individuals</div>
-      <p class="serve-body">Professionals, academics, and advocates seeking to build cross-continental careers and networks rooted in purpose.</p>
-    </div>
-    <div class="serve-card">
-      <div class="serve-title">Entrepreneurs</div>
-      <p class="serve-body">Founders and startups looking to scale across borders, access new markets, and find aligned co-founders and partners.</p>
-    </div>
-    <div class="serve-card">
-      <div class="serve-title">Companies</div>
-      <p class="serve-body">Established businesses seeking market entry, distribution partnerships, and on-the-ground relationships in the U.S. or Africa.</p>
-    </div>
-    <div class="serve-card">
-      <div class="serve-title">Investors</div>
-      <p class="serve-body">Impact investors and capital allocators looking for vetted, high-potential opportunities across African economies.</p>
-    </div>
-    <div class="serve-card">
-      <div class="serve-title">Institutions</div>
-      <p class="serve-body">Universities, research bodies, faith organizations, and government agencies seeking formal strategic partnerships.</p>
-    </div>
-    <div class="serve-card">
-      <div class="serve-title">Diaspora</div>
-      <p class="serve-body">African Americans and the global African Diaspora building bridges of investment, knowledge, and culture back to the continent.</p>
-    </div>
-  </div>
-</section>
+      <div class="listing">
+        <div class="listing-head">
+          <div>
+            <h3>Working Group · Trade &amp; Investment</h3>
+            <div class="listing-meta"><span>Volunteer · 6 mo.</span><span>Quarterly Sessions</span></div>
+          </div>
+          <span class="listing-status">Open</span>
+        </div>
+        <p>The Foundation is forming a working group on U.S.–Africa trade and investment, ahead of the inaugural quarterly mission. Members convene quarterly; output is a published sectoral dossier.</p>
+        <a href="contact.html" class="pen-link mono-mark">Apply by correspondence →</a>
+      </div>
 
-<div class="divider"></div>
-
-<!-- GEOGRAPHIES -->
-<section class="section">
-  <div class="section-label">Geographic Focus</div>
-  <h2 class="section-title">A <em>Trilateral</em> Partnership Vision</h2>
-  <div class="section-body">
-    <p>The platform is built around a unique trilateral framework connecting three regions with deep historical, cultural, and economic ties — creating opportunities that transcend traditional bilateral approaches.</p>
-  </div>
-  <div class="geo-grid">
-    <div class="geo-card">
-      <div class="geo-region">Region 01</div>
-      <div class="geo-name">United States</div>
-      <p class="geo-desc">The world's largest economy, home to a powerful African Diaspora community and leading technology, finance, and agriculture sectors seeking expansion into African markets.</p>
-    </div>
-    <div class="geo-card">
-      <div class="geo-region">Region 02</div>
-      <div class="geo-name">Africa — All 54 Nations</div>
-      <p class="geo-desc">The world's fastest-growing continent, with 1.4 billion people, abundant natural resources, and a young, entrepreneurial population driving the next wave of global growth.</p>
-    </div>
-    <div class="geo-card">
-      <div class="geo-region">Region 03</div>
-      <div class="geo-name">Israel</div>
-      <p class="geo-desc">A global leader in technology, agri-tech, water management, cybersecurity, and innovation — whose expertise is uniquely suited to address key development challenges across Africa.</p>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- OPPORTUNITY TYPES -->
-<section class="section">
-  <div class="section-label">Opportunity Categories</div>
-  <h2 class="section-title">Four Pathways to <em>Partnership</em></h2>
-  <div class="opp-types">
-    <div class="opp-card">
-      <div class="opp-num">Category 01</div>
-      <div class="opp-title">Trade &amp; Commerce</div>
-      <p class="opp-desc">Import/export facilitation, trade finance, supply chain partnerships, and business-to-business matching across all sectors — agriculture, manufacturing, retail, logistics, and more.</p>
-    </div>
-    <div class="opp-card">
-      <div class="opp-num">Category 02</div>
-      <div class="opp-title">Investment &amp; Capital</div>
-      <p class="opp-desc">Equity investment, impact capital deployment, joint ventures, real estate development, and infrastructure financing across emerging African markets with strong sovereign backing.</p>
-    </div>
-    <div class="opp-card">
-      <div class="opp-num">Category 03</div>
-      <div class="opp-title">Technology &amp; Innovation</div>
-      <p class="opp-desc">Technology transfer, joint R&amp;D, fintech, agri-tech, health-tech, and digital infrastructure partnerships — especially leveraging Israeli and U.S. innovation ecosystems.</p>
-    </div>
-    <div class="opp-card">
-      <div class="opp-num">Category 04</div>
-      <div class="opp-title">Leadership &amp; Institutional</div>
-      <p class="opp-desc">Executive exchange, policy dialogue, academic partnerships, faith-based collaboration, and government-to-government memoranda of understanding (MOUs).</p>
-    </div>
-  </div>
-</section>
-
-<!-- HIGHLIGHT BAND -->
-<div class="highlight-band">
-  <blockquote>"Real development happens when capable people connect purposefully — when resources flow where they are needed, knowledge transfers where it can transform, and investment reaches those with the <em>vision to build</em>."</blockquote>
-  <cite>— U.S.–Africa Allies Foundation</cite>
-</div>
-
-<!-- CTA -->
-<div class="cta-band">
-  <h2>Ready to <em style="color:#C9A227;font-style:italic">Connect?</em></h2>
-  <p>Submit your opportunity profile and our team will match you with the right partners, investors, or collaborators across the U.S.–Africa–Israel corridor.</p>
-  <a href="contact.html" class="btn-gold">Submit an Opportunity</a>
-  <a href="partner-with-us.html" class="btn-ghost">Partner With Us</a>
-</div>
-
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="assets/logo1.gif" alt="Logo"/>
-      <p>U.S.–Africa Allies Foundation — Building bridges of trade, investment, and strategic partnership between the United States, Africa, and Israel.</p>
-    </div>
-    <div>
-      <div class="footer-heading">Organization</div>
-      <ul class="footer-links">
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="founders-message.html">Founder's Message</a></li>
-        <li><a href="leadership-board.html">Leadership &amp; Board</a></li>
-        <li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-heading">Platform</div>
-      <ul class="footer-links">
-        <li><a href="strategic-council.html">Strategic Council</a></li>
-        <li><a href="opportunities.html">Opportunities Platform</a></li>
-        <li><a href="get-involved.html">Get Involved</a></li>
-        <li><a href="partner-with-us.html">Partner With Us</a></li>
-        <li><a href="resources-publications.html">Resources &amp; Publications</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-heading">Contact</div>
-      <div class="footer-contact-item"><a href="mailto:info@usafricaallies.org">info@usafricaallies.org</a></div>
-      <div class="footer-contact-item">Washington, D.C., USA</div>
-      <div class="footer-contact-item"><a href="donate.html" style="color:#C9A227;font-weight:600">Donate Now →</a></div>
-      <div class="social-row" style="margin-top:16px">
-        <a href="#" class="social-btn" aria-label="Facebook">f</a>
-        <a href="#" class="social-btn" aria-label="X">𝕏</a>
-        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-        <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+      <div class="listing">
+        <div class="listing-head">
+          <div>
+            <h3>Editorial Volunteer · Open Archive</h3>
+            <div class="listing-meta"><span>Volunteer</span><span>Remote</span><span>Editorial · Translation</span></div>
+          </div>
+          <span class="listing-status">Open</span>
+        </div>
+        <p>The Foundation's open archive of briefs and joint statements is built by an editorial collective. Native or near-native English, French, and Portuguese needed; editorial experience preferred.</p>
+        <a href="contact.html" class="pen-link mono-mark">Apply by correspondence →</a>
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 U.S.–Africa Allies Foundation. All rights reserved.</p>
-    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="contact.html">Contact</a></div>
+</section>
+
+<section class="bg-parchment-d heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="column-wide">
+      <div class="section-head"><div class="num">§ II &nbsp; Forthcoming</div><h2>Calls scheduled to open.</h2></div>
+      <ul class="ledger">
+        <li><span class="label">Annual Fellowship · 2027 Cohort</span><span class="leader"></span><span class="value">Opens Q4 · 2026</span></li>
+        <li><span class="label">Continental Convening · Lagos</span><span class="leader"></span><span class="value">Q3 · 2027</span></li>
+        <li><span class="label">Press Fellowship · 2028</span><span class="leader"></span><span class="value">Opens Q1 · 2027</span></li>
+        <li><span class="label">Public Service Scholarship</span><span class="leader"></span><span class="value">Q2 · 2027</span></li>
+        <li><span class="label">Visiting Scholar Residencies</span><span class="leader"></span><span class="value">Rolling · 2027 onward</span></li>
+      </ul>
+      <div class="hr-ornament-wrap" style="margin-top:48px"><span>❦</span></div>
+      <div style="text-align:center;margin-top:24px">
+        <a href="contact.html" class="btn btn-outline">Subscribe to Open Calls →</a>
+      </div>
+    </div>
   </div>
+</section>
+
+<footer class="colophon">
+  <div class="colophon-inner">
+    <div class="brand-block"><img src="assets/seal.svg" alt="" style="width:62px;height:62px;margin-bottom:18px;filter:invert(1) sepia(1) saturate(0.7) hue-rotate(15deg)"><div class="name">U.S.–Africa Allies Foundation</div><div class="tag">Convening · Policy · Partnership</div><p>An institution dedicated to the deliberate work of partnership between the United States and the nations of the African continent.</p></div>
+    <div><h4>The Foundation</h4><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="strategic-plan.html">Strategic Plan</a></div>
+    <div><h4>Engage</h4><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a></div>
+    <div><h4>Correspond</h4><a href="contact.html">Contact</a><a href="donate.html">Donate</a><a href="mailto:contact@usafricaallies.org">contact@usafricaallies.org</a><a href="https://usafricaallies.org">usafricaallies.org</a></div>
+  </div>
+  <div class="colophon-bottom"><span>© MMXXVI · U.S.–Africa Allies Foundation · All rights reserved.</span><span>Set in Libre Caslon &amp; JetBrains Mono · Washington, D.C.</span></div>
 </footer>
 
 <script>
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => { nav.classList.toggle('solid', scrollY > 50); });
+  (function(){const path=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.mast-nav a, .mobile-drawer nav a').forEach(a=>{if(a.getAttribute('href')===path)a.classList.add('active');});})();
+  document.querySelectorAll('.mobile-drawer nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileDrawer').classList.remove('open')));
 </script>
+
 </body>
 </html>

@@ -1,237 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Founder's Message — U.S.–Africa Allies Foundation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
-#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
-.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;object-fit:contain}.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}.brand-name span{color:#C9A227}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}
-.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}.nav-cta:hover{background:#dbb830!important}
-.has-drop{position:relative}.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}.has-drop:hover .drop-menu{opacity:1;visibility:visible}.drop-menu li a{display:block;padding:11px 22px;font-size:13px;font-weight:500;color:rgba(255,255,255,.55);transition:color .15s,background .15s}.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
-.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75)}
-#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
-#mob-menu.open{opacity:1;visibility:visible}#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer;line-height:1}
-@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
-
-/* HERO */
-.page-hero{position:relative;min-height:70vh;display:flex;align-items:flex-end;padding:0 64px 90px;overflow:hidden;background:#000}
-.page-hero-bg{position:absolute;inset:0;background-image:url('assets/WhatsApp%20Image%202026-04-01%20at%206.48.44%20PM.jpeg');background-size:cover;background-position:center top;opacity:.35}
-.page-hero-over{position:absolute;inset:0;background:linear-gradient(115deg,rgba(0,0,0,.9) 40%,rgba(0,0,0,.4) 100%)}
-.page-hero-content{position:relative;z-index:2;max-width:700px}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
-.page-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;line-height:.97;letter-spacing:-.04em}.page-title em{color:#C9A227;font-style:italic}
-@media(max-width:768px){.page-hero{padding:0 24px 60px;min-height:55vh}}
-
-/* FOUNDER INTRO */
-.founder-intro{padding:100px 64px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
-@media(max-width:900px){.founder-intro{grid-template-columns:1fr;gap:48px;padding:60px 24px}}
-.founder-photo{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;opacity:.9}
-.founder-sig{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:#C9A227;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
-
-/* SECTIONS */
-.section{padding:80px 64px;max-width:1200px;margin:0 auto}
-@media(max-width:768px){.section{padding:56px 24px}}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}.section-title em{color:#C9A227;font-style:italic}
-.section-body{font-size:17px;font-weight:300;line-height:1.9;color:rgba(255,255,255,.62);max-width:760px}.section-body p+p{margin-top:22px}
-.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
-@media(max-width:768px){.divider{margin:0 24px}}
-
-/* LETTER SECTIONS */
-.letter-section{padding:0 64px 72px;max-width:900px;margin:0 auto}
-@media(max-width:768px){.letter-section{padding:0 24px 56px}}
-.letter-h{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;letter-spacing:-.03em;color:#fff;margin-bottom:20px}
-.letter-body{font-size:17px;font-weight:300;line-height:1.9;color:rgba(255,255,255,.6)}.letter-body p+p{margin-top:20px}
-
-/* CLOSING QUOTE */
-.closing-block{padding:100px 64px;background:#000;text-align:center;position:relative;overflow:hidden}
-.closing-block::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(201,162,39,.07),transparent 65%);pointer-events:none}
-.closing-block blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,3rem);font-weight:800;font-style:italic;line-height:1.3;color:rgba(255,255,255,.9);max-width:820px;margin:0 auto 32px;position:relative;z-index:1}
-.closing-block cite{font-size:14px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#C9A227;position:relative;z-index:1}
-@media(max-width:768px){.closing-block{padding:60px 24px}}
-
-/* CTA */
-.cta-band{padding:100px 64px;text-align:center;background:rgba(201,162,39,.04);border-top:1px solid rgba(255,255,255,.07)}
-.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.8rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px}
-.cta-band p{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:44px;max-width:520px;margin-left:auto;margin-right:auto}
-.btn-gold{display:inline-block;background:#C9A227;color:#000;font-size:14px;font-weight:700;letter-spacing:.06em;padding:16px 40px;border-radius:8px;transition:background .2s,transform .15s}.btn-gold:hover{background:#dbb830;transform:translateY(-2px)}
-.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s}.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
-@media(max-width:768px){.cta-band{padding:60px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
-
-/* FOOTER */
-footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
-@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
-@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
-.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
-.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
-.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}.footer-links a:hover{color:#C9A227}
-.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}.footer-contact-item a{color:rgba(255,255,255,.4);transition:color .2s}.footer-contact-item a:hover{color:#C9A227}
-.social-row{display:flex;gap:12px;margin-top:4px}.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}.social-btn:hover{border-color:#C9A227;color:#C9A227}
-.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
-@media(max-width:768px){footer{padding:60px 24px 32px}}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Founder's Message · U.S.–Africa Allies Foundation</title>
+<meta name="description" content="A letter from Daniel Edah, founder and president of the U.S.–Africa Allies Foundation.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="assets/seal.svg" type="image/svg+xml">
 </head>
 <body>
 
-<nav id="nav">
-  <a href="index.html" class="brand"><img src="assets/logo1.gif" alt="Logo" class="brand-logo"/><div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="founders-message.html">Founder's Message</a></li>
-    <li class="has-drop"><a href="#">Impact &#9662;</a>
-      <ul class="drop-menu">
-        <li><a href="leadership-board.html">Leadership &amp; Board</a></li>
-        <li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li>
-        <li><a href="strategic-council.html">Strategic Council</a></li>
-        <li><a href="opportunities.html">Opportunities Platform</a></li>
-        <li><a href="get-involved.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
-        <li><a href="partner-with-us.html">Partner With Us</a></li>
-        <li><a href="resources-publications.html">Resources &amp; Publications</a></li>
-        <li><a href="strategic-plan.html">Strategic Plan 2026–2031</a></li>
-      </ul>
-    </li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="donate.html" class="nav-cta">Donate Now</a></li>
-  </ul>
-  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div id="mob-menu">
-  <button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button>
-  <a href="index.html">Home</a><a href="about.html">About Us</a><a href="founders-message.html">Founder's Message</a>
-  <a href="leadership-board.html">Leadership &amp; Board</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a>
-  <a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities Platform</a>
-  <a href="get-involved.html">Get Involved</a><a href="partner-with-us.html">Partner With Us</a>
-  <a href="resources-publications.html">Resources</a><a href="strategic-plan.html">Strategic Plan</a><a href="contact.html">Contact Us</a>
-  <a href="donate.html" class="mob-cta">Donate Now</a>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="duotone-navy-brass">
+    <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+    <feComponentTransfer color-interpolation-filters="sRGB">
+      <feFuncR tableValues="0.024 0.831"/>
+      <feFuncG tableValues="0.094 0.686"/>
+      <feFuncB tableValues="0.270 0.215"/>
+    </feComponentTransfer>
+  </filter>
+</defs></svg>
 
-<header class="page-hero">
-  <div class="page-hero-bg"></div>
-  <div class="page-hero-over"></div>
-  <div class="page-hero-content">
-    <div class="eyebrow">Daniel Edah — Founder &amp; President</div>
-    <h1 class="page-title">Founder's<br/><em>Message</em></h1>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="mast-brand">
+      <img src="assets/seal.svg" alt="" class="mast-seal">
+      <span class="mast-name"><span class="top">U.S.–Africa Allies Foundation</span><span class="sub">Vol. I · Est. MMXXVI</span></span>
+    </a>
+    <nav class="mast-nav">
+      <a href="about.html" class="pen-link">About</a>
+      <a href="founders-message.html" class="pen-link">Founder</a>
+      <a href="programs-initiatives.html" class="pen-link">Programs</a>
+      <a href="leadership-board.html" class="pen-link">Leadership</a>
+      <a href="strategic-plan.html" class="pen-link">Plan</a>
+      <a href="get-involved.html" class="pen-link">Get Involved</a>
+    </nav>
+    <a href="donate.html" class="mast-cta">Donate</a>
+    <button class="mast-toggle" aria-label="Open menu" onclick="document.getElementById('mobileDrawer').classList.add('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
 </header>
 
-<!-- FOUNDER INTRO -->
-<section class="founder-intro">
-  <div>
-    <img src="assets/WhatsApp%20Image%202026-04-01%20at%206.51.56%20PM.jpeg" alt="Daniel Edah" class="founder-photo"/>
-    <div class="founder-sig">— Daniel Edah<br/><span style="font-size:13px;color:rgba(255,255,255,.4);font-style:normal">Founder &amp; President<br/>U.S.–Africa Allies Foundation</span></div>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="close-row"><span class="mono-mark">Menu</span>
+    <button aria-label="Close" onclick="document.getElementById('mobileDrawer').classList.remove('open')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M6 18L18 6"/></svg></button>
   </div>
-  <div>
-    <div class="section-label">A Message from the Founder</div>
-    <h2 class="section-title">Leadership is not a position —<br/>it is a <em>calling.</em></h2>
-    <div class="section-body">
-      <p>It demands courage, responsibility, compassion, and an unwavering commitment to the well-being of others. The U.S.–Africa Allies Foundation was born from a sacred conviction: that the strength of families shapes the strength of nations, that partnership between the United States and Africa is essential for shared progress, and that all true leadership must ultimately glorify God through service, integrity, and dignity.</p>
-      <p>Across the United States and throughout Africa, millions of people carry extraordinary potential yet lack access to opportunity. Young people are eager to lead but have never been shown the way. Women bear tremendous social and economic responsibility but remain underserved and under-supported. Families struggle without the safety, stability, and empowerment they deserve. Communities face humanitarian crises, instability, and economic inequality that hinder growth.</p>
+  <nav>
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-plan.html">Strategic Plan</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a><a href="contact.html">Contact</a><a href="donate.html">Donate</a>
+  </nav>
+</div>
+
+<!-- ============ DOCUMENT FRONTISPIECE ============ -->
+<section class="frontispiece" style="padding-bottom:48px">
+  <div class="sheet">
+    <div class="vol mono-mark">Folio II &nbsp;·&nbsp; A Letter from the Founder &nbsp;·&nbsp; Washington · 2026</div>
+    <h1 class="display" style="max-width:18ch;margin-top:32px">On Building the<br>Partnership We<br>Were Owed.</h1>
+    <p class="subtitle" style="margin-top:32px">By Daniel Edah · Founder &amp; President · U.S.–Africa Allies Foundation</p>
+  </div>
+</section>
+
+<!-- ============ AUTHOR CARD ============ -->
+<section style="padding:0 var(--gutter)">
+  <div class="sheet" style="padding:0">
+    <div class="column-wide" style="display:grid;grid-template-columns:200px 1fr;gap:48px;align-items:center;padding:48px 0;border-top:1px solid var(--brass-hair);border-bottom:1px solid var(--brass-hair)">
+      <div class="duotone-wrap" style="border-radius:50%;width:200px;height:200px"><img src="assets/founders-headshot.jpeg" alt="Daniel Edah" style="width:200px;height:200px;object-fit:cover"></div>
+      <div>
+        <div class="eyebrow">The Author</div>
+        <h3 style="font-size:26px;margin:8px 0 6px">Daniel Edah</h3>
+        <p class="mono" style="font-size:12px;color:var(--ink-muted);text-transform:uppercase;letter-spacing:0.18em;margin-bottom:14px">Founder · President · Convener</p>
+        <p style="color:var(--ink-soft);max-width:60ch">Born on the African continent and educated in the United States, Daniel Edah has spent his career at the intersection of international development, diplomacy, and private enterprise. He founded the U.S.–Africa Allies Foundation in 2026 to give that work a permanent institutional home.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+<!-- ============ THE LETTER ============ -->
+<section class="heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="column">
+      <p class="mono-mark text-center" style="margin-bottom:48px">— The Letter —</p>
 
-<section style="padding:80px 64px 0;max-width:1200px;margin:0 auto">
-  <div class="section-label">Why This Foundation Exists</div>
-</section>
+      <div class="prose">
+        <p class="dropcap">When I was asked, late one evening in Washington, why I was building yet another foundation in a city already crowded with them, my answer surprised even me. I said: because the relationship between my two homes deserves an institution, and not a series of conferences.</p>
 
-<div class="letter-section" style="padding-top:40px">
-  <h3 class="letter-h">We Exist Because Nations Rise When Families Are Strengthened</h3>
-  <div class="letter-body">
-    <p>We exist because nations rise when families are strengthened, when leaders are principled and ethical, and when every act of service reflects a higher purpose. We exist to uplift those whom the world has overlooked and to honor God through work that restores dignity and expands opportunity.</p>
-    <p>Our foundation is built on a simple but profound belief: leadership begins with responsibility and flourishes through service. Our programs are designed to raise a generation of U.S. and African leaders who understand that real strength comes not from power, but from purpose — purpose anchored in faith, compassion, and accountability.</p>
-  </div>
-</div>
+        <p>I was born on the African continent. I have made my professional life in the United States. For twenty years I have watched the conversation between these two places be carried by goodwill, by personal relationships, by the occasional summit, by aid budgets that arrive in answer to crises already underway. Goodwill is an excellent thing in a friendship. It is not a strategy.</p>
 
-<div class="divider"></div>
+        <p>Africa, by mid-century, will hold one in four of the world's working-age people. Its cities will be among the world's largest, its consumer markets among the world's most consequential, its political weight in any room — the United Nations, the G20, the climate negotiations — impossible to outvote. The United States has built no coherent posture for any of this. The foundation I am building exists to answer that omission.</p>
 
-<section style="padding:80px 64px 0;max-width:1200px;margin:0 auto">
-  <div class="section-label">A Vision Rooted in Responsibility</div>
-</section>
-<div class="letter-section" style="padding-top:40px">
-  <h3 class="letter-h">Building People Who Build Nations</h3>
-  <div class="letter-body">
-    <p>We do not measure success by titles or recognition, but by the families strengthened, the nations uplifted, and the U.S.–Africa partnerships or joint ventures formed through our work.</p>
-    <p>The U.S.–Africa Allies Foundation is not merely an initiative — it is a movement. A movement to restore dignity, expand education, empower women, and invest in leaders who will transform their communities and shape the future of nations. A movement grounded in the belief that God-fearing people, equipped with the right tools, opportunities, and support, can change the course of history.</p>
-  </div>
-</div>
+        <div class="hr-ornament-wrap" style="margin:48px 0"><span>❦</span></div>
 
-<div class="divider"></div>
+        <h3 style="text-align:center;font-style:italic;margin:32px 0 24px">What we will do.</h3>
 
-<section style="padding:80px 64px 0;max-width:1200px;margin:0 auto">
-  <div class="section-label">A Personal Commitment</div>
-</section>
-<div class="letter-section" style="padding-top:40px">
-  <h3 class="letter-h">This Foundation Is a Personal Covenant</h3>
-  <div class="letter-body">
-    <p>This foundation is not an academic exercise or a theoretical concept. It is a personal covenant — to serve others, to uplift the vulnerable, and to build bridges across cultures, nations, and generations.</p>
-    <p>I stand firmly in the conviction that true leadership is measured not by how many follow, but by how many rise because you chose to serve. Every program we deliver, every young person we empower, every woman we support, and every family we strengthen reflects this greater calling.</p>
-    <p>May our work always honor God, uplift nations, and strengthen the families that form their foundation.</p>
-  </div>
-</div>
+        <p>We will convene. The plain, patient, repeated work of putting American and African leaders in the same room, on serious terms, around named questions of mutual consequence. We will do it with heads of state, with legislators on both sides, with ambassadors and ministers, with university presidents and CEOs and civil-society leaders. We will do it in Washington, in African capitals, in places that belong to neither.</p>
 
-<div class="divider"></div>
+        <p>We will publish. The work of convening is wasted if it produces nothing durable. So we will commission and publish white papers, joint statements, and policy briefs developed with the best minds on both continents — open to the working press, cited by working governments.</p>
 
-<section style="padding:80px 64px 0;max-width:1200px;margin:0 auto">
-  <div class="section-label">A Call to Destiny</div>
-</section>
-<div class="letter-section" style="padding-top:40px">
-  <h3 class="letter-h">Together, We Can Build a Better Future</h3>
-  <div class="letter-body">
-    <p>To everyone reading this: your life has meaning. Your contribution matters. You have a role in shaping the future — whether through partnership, support, leadership, or action. The work ahead of us is great, but so is the potential within the people we serve.</p>
-    <p>Together, we can build a world where leadership is ethical, opportunity is accessible, and dignity is protected for all.</p>
-    <p>My hope is that this foundation becomes a beacon of excellence, compassion, and integrity — a place where leaders are formed, where communities find support, and where nations discover the strength of unity.</p>
-  </div>
-</div>
+        <p>We will mobilize the diaspora. The African diaspora in the United States is one of the most consequential constituencies in American civic life — and the least organized around the work of its homelands. We will give it a deliberate home.</p>
 
-<div class="closing-block">
-  <blockquote>"It is an honor to serve."</blockquote>
-  <cite>— Daniel Edah, Founder &amp; President, U.S.–Africa Allies Foundation</cite>
-</div>
+        <p>And we will invest in the next generation. Through fellowships, exchanges, and scholarships, we will place rising American and African leaders in deliberate proximity — early, and for long enough that it matters by the time they are running things.</p>
 
-<div class="cta-band">
-  <h2>Stand With<br/><em style="color:#C9A227;font-style:italic;font-family:'Playfair Display',serif">the Movement</em></h2>
-  <p>Join Daniel Edah and the U.S.–Africa Allies Foundation in building principled leaders and stronger nations.</p>
-  <a href="donate.html" class="btn-gold">Donate Now</a>
-  <a href="get-involved.html" class="btn-ghost">Get Involved</a>
-</div>
+        <div class="hr-ornament-wrap" style="margin:48px 0"><span>❦</span></div>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="assets/logo1.gif" alt="Logo"/>
-      <div class="brand-name" style="font-size:13px;margin-top:8px">U.S.–Africa Allies<br/><span style="color:#C9A227">Foundation</span></div>
-      <p>Building strong families, forming principled leaders, and strengthening the U.S.–Africa partnership.</p>
-      <div class="social-row" style="margin-top:20px"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">t</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div>
+        <h3 style="text-align:center;font-style:italic;margin:32px 0 24px">What we will not do.</h3>
+
+        <p>We will not be a charity. The instinct to read this work as benevolence is exactly the instinct we are here to correct. The partnership between the United States and Africa is owed in both directions, and the Foundation will treat it that way in every program we run.</p>
+
+        <p>We will not be a vehicle for any single party, administration, or ideology. The work is generational. The institutions that have endured in American life are the ones that outlasted the cycles, and we mean to be one of them.</p>
+
+        <p>And we will not be small about our ambitions. The window for building this matters most in the next decade. We intend to use it.</p>
+
+        <div class="hr-ornament-wrap" style="margin:48px 0"><span>❦</span></div>
+
+        <p>If the work I have described sounds like work you have been waiting for, I would be honored to have you join it. Read the strategic plan. Examine the programs. Consider becoming a founding member, a partner institution, an underwriter, a fellow. Write to me directly if it would help.</p>
+
+        <p>This is not a finished document. It is a beginning. With your help — with the right rooms, the right voices, the right patience — it will become the institution this relationship has long deserved.</p>
+
+        <p style="margin-top:48px">Yours in the work,</p>
+      </div>
+
+      <!-- Signature block -->
+      <div style="margin-top:24px">
+        <p class="display" style="font-size:36px;font-style:italic;color:var(--navy-deep);line-height:1">Daniel Edah</p>
+        <p class="mono-mark" style="margin-top:14px">Founder &amp; President · Washington · MMXXVI</p>
+      </div>
+
+      <div class="hr-ornament-wrap" style="margin-top:64px"><span>❦</span></div>
+
+      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:48px">
+        <a href="strategic-plan.html" class="btn btn-outline">Read the Strategic Plan →</a>
+        <a href="get-involved.html" class="btn">Join the Foundation →</a>
+        <a href="contact.html" class="btn btn-brass">Write to the Founder →</a>
+      </div>
     </div>
-    <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li><a href="programs-initiatives.html">Programs</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li><li><a href="partner-with-us.html">Partner With Us</a></li></ul></div>
-    <div><div class="footer-heading">Resources</div><ul class="footer-links"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="resources-publications.html">Publications</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul></div>
-    <div><div class="footer-heading">Contact</div><div class="footer-contact-item">300 Independence Ave SE<br/>Washington, DC 20003</div><div class="footer-contact-item"><a href="tel:+12406787500">+1 (240) 678-7500</a></div><div class="footer-contact-item"><a href="mailto:daniel.edah@usafricaallies.org">daniel.edah@usafricaallies.org</a></div></div>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 U.S.–Africa Allies Foundation. All rights reserved.</p>
-    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Safeguarding</a></div>
+</section>
+
+<footer class="colophon">
+  <div class="colophon-inner">
+    <div class="brand-block">
+      <img src="assets/seal.svg" alt="" style="width:62px;height:62px;margin-bottom:18px;filter:invert(1) sepia(1) saturate(0.7) hue-rotate(15deg)">
+      <div class="name">U.S.–Africa Allies Foundation</div>
+      <div class="tag">Convening · Policy · Partnership</div>
+      <p>An institution dedicated to the deliberate work of partnership between the United States and the nations of the African continent.</p>
+    </div>
+    <div><h4>The Foundation</h4><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="strategic-plan.html">Strategic Plan</a></div>
+    <div><h4>Engage</h4><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a></div>
+    <div><h4>Correspond</h4><a href="contact.html">Contact</a><a href="donate.html">Donate</a><a href="mailto:contact@usafricaallies.org">contact@usafricaallies.org</a><a href="https://usafricaallies.org">usafricaallies.org</a></div>
+  </div>
+  <div class="colophon-bottom">
+    <span>© MMXXVI · U.S.–Africa Allies Foundation · All rights reserved.</span>
+    <span>Set in Libre Caslon &amp; JetBrains Mono · Washington, D.C.</span>
   </div>
 </footer>
 
 <script>
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('solid',window.scrollY>50)},{passive:true});
+  (function(){const path=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.mast-nav a, .mobile-drawer nav a').forEach(a=>{if(a.getAttribute('href')===path)a.classList.add('active');});})();
+  document.querySelectorAll('.mobile-drawer nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileDrawer').classList.remove('open')));
 </script>
+
 </body>
 </html>

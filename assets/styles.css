@@ -1,0 +1,452 @@
+/* ============================================================
+   U.S.–AFRICA ALLIES FOUNDATION — FOUNDING DOCUMENT STYLESHEET
+   Senate stationery · diplomatic register · archival treatment
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ---------- 1. PALETTE ---------- */
+:root{
+  --navy-deep:    #061845;
+  --navy:         #0A2463;
+  --navy-mid:     #1A3B80;
+  --brass:        #B8932E;
+  --brass-bright: #D4AF37;
+  --brass-hair:   #C4B688;
+  --parchment:    #F4EDD8;
+  --parchment-d:  #EDE7D3;
+  --soft-white:   #FAF7EF;
+  --ink:          #1A1A1A;
+  --ink-soft:     #3D3D3D;
+  --ink-muted:    #6B6B6B;
+  --oxblood:      #6B1F1F;
+
+  --measure: 68ch;          /* narrow column for justified prose */
+  --gutter: clamp(24px, 5vw, 96px);
+  --rule: 1px;
+}
+
+/* ---------- 2. RESET ---------- */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--parchment);
+  color:var(--ink);
+  font-family:'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+  font-size:17px;
+  line-height:1.65;
+  font-feature-settings:"liga","onum","kern";
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul,ol{list-style:none}
+
+/* parchment paper grain — extremely subtle */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(184,147,46,.025) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(184,147,46,.02) 0%, transparent 40%);
+  mix-blend-mode:multiply;
+}
+
+/* ---------- 3. TYPOGRAPHY ---------- */
+.display{
+  font-family:'Libre Caslon Display','Libre Caslon Text',Georgia,serif;
+  font-weight:400;
+  letter-spacing:-0.005em;
+}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;letter-spacing:0.02em}
+.italic{font-style:italic}
+.smallcaps{font-variant:small-caps;letter-spacing:0.12em;text-transform:lowercase}
+
+h1,h2,h3,h4{font-family:'Libre Caslon Display','Libre Caslon Text',Georgia,serif;font-weight:400;color:var(--navy-deep);line-height:1.15}
+h1{font-size:clamp(40px,6vw,76px);letter-spacing:-0.01em}
+h2{font-size:clamp(28px,3.6vw,44px);letter-spacing:-0.005em}
+h3{font-size:clamp(20px,2vw,26px)}
+h4{font-size:18px;letter-spacing:0.02em}
+
+p{max-width:var(--measure)}
+.prose p{
+  text-align:justify;
+  hyphens:auto;
+  -webkit-hyphens:auto;
+  margin-bottom:1em;
+  text-indent:0;
+}
+.prose p + p{text-indent:1.5em;margin-bottom:0}
+.prose p:first-of-type::first-line{font-variant:small-caps;letter-spacing:0.08em}
+
+/* drop cap for opening prose */
+.dropcap::first-letter{
+  font-family:'Libre Caslon Display',serif;
+  font-size:5em;
+  float:left;
+  line-height:0.85;
+  padding:6px 10px 0 0;
+  color:var(--navy-deep);
+  font-weight:400;
+}
+
+/* eyebrow / volume / dateline */
+.eyebrow,.dateline,.volume{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--brass);
+}
+.dateline{display:flex;gap:18px;align-items:center;color:var(--ink-muted)}
+.dateline span{display:flex;align-items:center;gap:10px}
+.dateline span + span::before{content:"·";color:var(--brass);margin-right:18px}
+
+/* ---------- 4. RULES & DIVIDERS ---------- */
+.hr-hair{border:0;border-top:var(--rule) solid var(--brass-hair);margin:32px 0}
+.hr-double{border:0;border-top:var(--rule) solid var(--brass);border-bottom:var(--rule) solid var(--brass);height:5px;margin:40px 0}
+.hr-ornament{
+  border:0;text-align:center;margin:48px 0;line-height:1;
+  background:none;height:auto;
+}
+.hr-ornament::before{
+  content:"❦";color:var(--brass);font-size:18px;
+  display:inline-block;padding:0 24px;
+  background:var(--parchment);
+  position:relative;z-index:1;
+}
+.hr-ornament-wrap{position:relative;text-align:center;margin:48px 0}
+.hr-ornament-wrap::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:var(--rule) solid var(--brass-hair);z-index:0}
+.hr-ornament-wrap span{position:relative;z-index:1;background:var(--parchment);padding:0 24px;color:var(--brass);font-size:16px}
+
+/* ---------- 5. STATIONERY GRID ---------- */
+.sheet{
+  position:relative;
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 var(--gutter);
+  z-index:1;
+}
+.column{max-width:720px;margin:0 auto}
+.column-wide{max-width:960px;margin:0 auto}
+.heavy-top{padding-top:clamp(80px,12vh,160px)}
+.heavy-bottom{padding-bottom:clamp(80px,12vh,160px)}
+
+/* ---------- 6. HEADER (DOCUMENT MASTHEAD) ---------- */
+.masthead{
+  position:sticky;top:0;z-index:50;
+  background:var(--parchment);
+  border-bottom:var(--rule) solid var(--brass-hair);
+  backdrop-filter:saturate(110%);
+}
+.masthead-inner{
+  max-width:1280px;margin:0 auto;
+  padding:14px var(--gutter);
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;
+}
+.mast-brand{display:flex;align-items:center;gap:14px}
+.mast-seal{width:46px;height:46px}
+.mast-name{
+  display:flex;flex-direction:column;line-height:1.05;
+}
+.mast-name .top{font-family:'Libre Caslon Display',serif;font-size:18px;color:var(--navy-deep);letter-spacing:0.01em}
+.mast-name .sub{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.28em;color:var(--brass);text-transform:uppercase;margin-top:3px}
+
+.mast-nav{display:flex;justify-content:center;gap:28px}
+.mast-nav a{
+  font-family:'Libre Caslon Text',serif;
+  font-size:14px;color:var(--ink-soft);
+  position:relative;padding:6px 0;
+  transition:color .25s;
+}
+.mast-nav a:hover{color:var(--navy-deep)}
+.mast-nav a.active{color:var(--navy-deep)}
+.mast-nav a.active::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);
+}
+
+/* pen-stroke underline microinteraction */
+.pen-link{position:relative;display:inline-block}
+.pen-link::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;
+  background:linear-gradient(90deg,var(--brass) 0%,var(--brass-bright) 100%);
+  transform:scaleX(0);transform-origin:left center;
+  transition:transform .55s cubic-bezier(.2,.8,.2,1);
+}
+.pen-link:hover::after{transform:scaleX(1)}
+
+.mast-cta{
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+  border:1px solid var(--navy-deep);color:var(--navy-deep);
+  padding:9px 16px;background:transparent;
+  transition:background .25s,color .25s;
+}
+.mast-cta:hover{background:var(--navy-deep);color:var(--parchment)}
+
+/* mobile nav */
+.mast-toggle{display:none;width:38px;height:38px;align-items:center;justify-content:center;color:var(--navy-deep)}
+.mast-toggle svg{width:22px;height:22px}
+
+@media (max-width: 880px){
+  .masthead-inner{grid-template-columns:auto 1fr auto;gap:12px}
+  .mast-nav{display:none}
+  .mast-toggle{display:inline-flex}
+  .mast-cta{display:none}
+  .mast-name .top{font-size:15px}
+  .mast-name .sub{font-size:8px;letter-spacing:0.22em}
+}
+
+.mobile-drawer{
+  display:none;position:fixed;inset:0;z-index:60;
+  background:var(--parchment);padding:24px var(--gutter);
+}
+.mobile-drawer.open{display:block}
+.mobile-drawer .close-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
+.mobile-drawer nav{display:flex;flex-direction:column;gap:0}
+.mobile-drawer nav a{
+  display:block;padding:18px 0;border-bottom:1px solid var(--brass-hair);
+  font-family:'Libre Caslon Display',serif;font-size:22px;color:var(--navy-deep);
+}
+
+/* ---------- 7. SEAL ---------- */
+.seal-watermark{
+  position:absolute;
+  pointer-events:none;
+  opacity:.05;
+  z-index:0;
+}
+.seal-emboss{
+  display:inline-block;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.5)) drop-shadow(0 -1px 0 rgba(0,0,0,.1));
+}
+
+/* ---------- 8. BUTTONS — SEAL-STAMP CIRCULAR ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:0.2em;text-transform:uppercase;
+  padding:14px 28px;
+  border:1px solid var(--navy-deep);
+  background:var(--navy-deep);color:var(--parchment);
+  transition:all .3s ease;
+  position:relative;
+}
+.btn:hover{background:var(--navy);border-color:var(--navy);transform:translateY(-1px);box-shadow:0 4px 0 0 rgba(184,147,46,.4)}
+.btn-outline{background:transparent;color:var(--navy-deep)}
+.btn-outline:hover{background:var(--navy-deep);color:var(--parchment)}
+.btn-brass{background:var(--brass);border-color:var(--brass);color:var(--navy-deep)}
+.btn-brass:hover{background:var(--brass-bright);border-color:var(--brass-bright);color:var(--navy-deep)}
+
+.seal-btn{
+  display:inline-flex;align-items:center;justify-content:center;flex-direction:column;
+  width:144px;height:144px;border-radius:50%;
+  border:2px solid var(--brass);
+  background:radial-gradient(circle at 30% 30%,var(--parchment) 0%,var(--parchment-d) 100%);
+  color:var(--navy-deep);
+  font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;text-align:center;
+  position:relative;
+  transition:transform .35s,box-shadow .35s;
+}
+.seal-btn::before{
+  content:"";position:absolute;inset:8px;border-radius:50%;border:1px solid var(--brass-hair);
+  pointer-events:none;
+}
+.seal-btn .seal-line{display:block;line-height:1.3;padding:0 18px}
+.seal-btn .seal-amp{font-family:'Libre Caslon Display',serif;font-size:24px;letter-spacing:0;color:var(--brass);margin:6px 0;text-transform:none}
+.seal-btn:hover{transform:rotate(-3deg) scale(1.04);box-shadow:0 8px 30px rgba(6,24,69,.18)}
+
+/* ---------- 9. LEDGER LIST WITH DOT LEADERS ---------- */
+.ledger{list-style:none;padding:0;margin:32px 0}
+.ledger li{
+  display:flex;align-items:baseline;gap:8px;
+  padding:14px 0;
+  border-bottom:1px dotted var(--brass-hair);
+  font-family:'Libre Caslon Text',serif;
+}
+.ledger li .label{color:var(--ink);flex-shrink:0}
+.ledger li .leader{
+  flex:1;border-bottom:2px dotted var(--brass-hair);
+  margin:0 6px;position:relative;top:-4px;height:0;
+}
+.ledger li .value{color:var(--navy-deep);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.04em;flex-shrink:0}
+
+/* numbered registry */
+.registry{counter-reset:reg;margin:32px 0;padding:0;list-style:none}
+.registry li{
+  counter-increment:reg;
+  display:grid;grid-template-columns:64px 1fr;gap:24px;
+  padding:24px 0;
+  border-top:1px solid var(--brass-hair);
+}
+.registry li:last-child{border-bottom:1px solid var(--brass-hair)}
+.registry li::before{
+  content:counter(reg,upper-roman) ".";
+  font-family:'Libre Caslon Display',serif;
+  font-size:28px;color:var(--brass);
+  text-align:right;line-height:1;
+}
+.registry li h3{margin-bottom:6px;font-size:20px}
+.registry li p{margin:0;color:var(--ink-soft);font-size:15px}
+
+/* ---------- 10. CARDS / DOCUMENT BLOCKS ---------- */
+.doc-card{
+  background:var(--soft-white);
+  border:1px solid var(--brass-hair);
+  padding:36px 32px;
+  position:relative;
+}
+.doc-card::before{
+  content:"";position:absolute;top:8px;left:8px;right:8px;bottom:8px;
+  border:1px solid var(--brass-hair);pointer-events:none;
+}
+.doc-card h3{margin-bottom:14px}
+
+/* ---------- 11. PHOTOGRAPHY — ARCHIVAL DUOTONE ---------- */
+.duotone{filter:url(#duotone-navy-brass) contrast(1.05);position:relative}
+.duotone-wrap{position:relative;overflow:hidden;background:var(--navy-deep)}
+.duotone-wrap img{filter:url(#duotone-navy-brass) contrast(1.05);transition:transform 1.2s ease}
+.duotone-wrap:hover img{transform:scale(1.04)}
+.duotone-wrap::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 60%,rgba(6,24,69,.4) 100%);
+}
+.photo-cap{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--ink-muted);
+  margin-top:12px;padding-left:14px;border-left:1px solid var(--brass);
+}
+
+/* ---------- 12. HERO COMPOSITIONS ---------- */
+.frontispiece{
+  position:relative;
+  padding:clamp(80px,14vh,180px) 0 clamp(60px,10vh,120px);
+  text-align:center;
+  background:var(--parchment);
+  border-bottom:1px solid var(--brass-hair);
+  overflow:hidden;
+}
+.frontispiece .vol{margin-bottom:32px}
+.frontispiece h1{
+  font-family:'Libre Caslon Display',serif;
+  margin:0 auto 24px;max-width:14ch;
+}
+.frontispiece .subtitle{
+  font-style:italic;color:var(--ink-soft);
+  max-width:54ch;margin:0 auto 40px;font-size:20px;
+}
+.frontispiece .seal-mark{
+  width:120px;height:120px;margin:0 auto 32px;
+}
+
+/* ---------- 13. SECTION HEADER ---------- */
+.section-head{text-align:center;margin-bottom:64px}
+.section-head .num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:0.3em;color:var(--brass);
+  margin-bottom:18px;
+}
+.section-head h2{margin-bottom:14px}
+.section-head .lede{
+  font-style:italic;color:var(--ink-soft);
+  max-width:60ch;margin:0 auto;
+  font-size:17px;
+}
+
+/* ---------- 14. FOOTER ---------- */
+.colophon{
+  background:var(--navy-deep);color:var(--parchment);
+  padding:80px var(--gutter) 32px;
+  margin-top:120px;
+  position:relative;
+}
+.colophon::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:6px;
+  background:repeating-linear-gradient(90deg,var(--brass) 0,var(--brass) 8px,transparent 8px,transparent 14px);
+}
+.colophon-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:48px}
+.colophon h4{color:var(--brass);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;margin-bottom:18px;font-weight:500}
+.colophon a{display:block;color:var(--parchment);opacity:.8;padding:5px 0;font-size:14px;transition:opacity .2s,color .2s}
+.colophon a:hover{opacity:1;color:var(--brass-bright)}
+.colophon .brand-block{padding-right:24px}
+.colophon .brand-block .name{font-family:'Libre Caslon Display',serif;font-size:22px;margin-bottom:8px}
+.colophon .brand-block .tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;color:var(--brass);text-transform:uppercase;margin-bottom:18px}
+.colophon .brand-block p{font-size:14px;opacity:.75;line-height:1.6}
+.colophon-bottom{
+  max-width:1280px;margin:64px auto 0;padding-top:24px;
+  border-top:1px solid rgba(196,182,136,.2);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.12em;color:var(--brass-hair);
+}
+
+@media (max-width:880px){
+  .colophon-inner{grid-template-columns:1fr 1fr;gap:32px}
+  .colophon .brand-block{grid-column:1/-1;padding-right:0}
+}
+@media (max-width:520px){
+  .colophon-inner{grid-template-columns:1fr}
+}
+
+/* ---------- 15. UTILITIES ---------- */
+.text-center{text-align:center}
+.mono-mark{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass)}
+.flourish{text-align:center;color:var(--brass);font-size:24px;margin:32px 0;line-height:1}
+.bg-navy{background:var(--navy-deep);color:var(--parchment)}
+.bg-navy h1,.bg-navy h2,.bg-navy h3,.bg-navy h4{color:var(--parchment)}
+.bg-navy .eyebrow{color:var(--brass-bright)}
+.bg-parchment-d{background:var(--parchment-d)}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+@media (max-width:880px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr;gap:32px}}
+
+.stack-sm > * + *{margin-top:14px}
+.stack-md > * + *{margin-top:24px}
+.stack-lg > * + *{margin-top:48px}
+.center{display:flex;align-items:center;justify-content:center}
+
+/* ---------- 16. FORMS (CONTACT / DONATE) ---------- */
+.form-field{margin-bottom:24px}
+.form-field label{
+  display:block;font-family:'JetBrains Mono',monospace;
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--brass);margin-bottom:8px;
+}
+.form-field input,.form-field textarea,.form-field select{
+  width:100%;padding:14px 0;
+  border:none;border-bottom:1px solid var(--ink);
+  background:transparent;
+  font-family:'Libre Caslon Text',serif;font-size:17px;
+  color:var(--ink);
+  transition:border-color .25s;
+}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{
+  outline:none;border-bottom-color:var(--brass);
+}
+.form-field textarea{resize:vertical;min-height:120px}
+
+/* ---------- 17. MOBILE COMPOSITION OVERRIDES ---------- */
+@media (max-width:600px){
+  body{font-size:16px}
+  .heavy-top{padding-top:64px}
+  .heavy-bottom{padding-bottom:64px}
+  .frontispiece{padding:60px 0 40px}
+  .section-head{margin-bottom:40px}
+  .colophon{padding:48px var(--gutter) 24px;margin-top:64px}
+  .doc-card{padding:24px 20px}
+  .seal-btn{width:120px;height:120px}
+  .registry li{grid-template-columns:48px 1fr;gap:16px}
+  .registry li::before{font-size:22px}
+}
+
+/* ---------- 18. PRINT ---------- */
+@media print{
+  .masthead,.colophon{display:none}
+  body{background:white;color:black}
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+}

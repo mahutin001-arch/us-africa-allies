@@ -1,244 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Donate — U.S.–Africa Allies Foundation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Subscriptions &amp; Endowments · U.S.–Africa Allies Foundation</title>
+<meta name="description" content="Underwrite the work of the U.S.–Africa Allies Foundation through founding subscriptions, endowed gifts, or one-time contributions.">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="icon" href="assets/seal.svg" type="image/svg+xml">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:#0a0a0a;color:#fff;font-family:'DM Sans',sans-serif;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-#nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:22px 64px;transition:all .4s ease}
-#nav.solid{background:rgba(0,0,0,.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,255,255,.07);padding:14px 64px}
-.brand{display:flex;align-items:center;gap:12px}.brand-logo{width:42px;height:42px;object-fit:contain}.brand-name{font-size:12px;font-weight:600;line-height:1.3;color:#fff}.brand-name span{color:#C9A227}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none}.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.5);transition:color .2s}.nav-links a:hover{color:#fff}
-.nav-cta{background:#C9A227!important;color:#000!important;padding:9px 22px;border-radius:6px;font-weight:700!important}
-.has-drop{position:relative}.drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);background:rgba(8,8,8,.98);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 0;list-style:none;min-width:230px;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s;z-index:600}.has-drop:hover .drop-menu{opacity:1;visibility:visible}.drop-menu li a{display:block;padding:11px 22px;font-size:13px;color:rgba(255,255,255,.55);transition:color .15s,background .15s}.drop-menu li a:hover{color:#C9A227;background:rgba(201,162,39,.06)}
-.nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.nav-burger span{display:block;width:24px;height:2px;background:rgba(255,255,255,.75)}
-#mob-menu{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
-#mob-menu.open{opacity:1;visibility:visible}#mob-menu a{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,5vw,2.4rem);font-weight:700;color:rgba(255,255,255,.65);padding:10px 32px;transition:color .2s;letter-spacing:-.02em}#mob-menu a:hover,#mob-menu .mob-cta{color:#C9A227}.mob-close{position:absolute;top:28px;right:28px;background:none;border:none;color:rgba(255,255,255,.4);font-size:26px;cursor:pointer}
-@media(max-width:900px){#nav{padding:16px 24px}#nav.solid{padding:12px 24px}.nav-links{display:none}.nav-burger{display:flex}}
+  .tier{
+    background:var(--soft-white);border:1px solid var(--brass-hair);
+    padding:36px 28px;position:relative;text-align:center;
+    transition:transform .35s,box-shadow .35s;
+  }
+  .tier::before{content:"";position:absolute;inset:8px;border:1px solid var(--brass-hair);pointer-events:none}
+  .tier:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(6,24,69,.08)}
+  .tier .rank{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--brass);margin-bottom:14px}
+  .tier .amount{font-family:'Libre Caslon Display',serif;font-size:42px;color:var(--navy-deep);line-height:1;margin-bottom:6px}
+  .tier .amount-sub{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;color:var(--ink-muted);text-transform:uppercase;margin-bottom:24px}
+  .tier .name{font-family:'Libre Caslon Display',serif;font-size:22px;color:var(--navy-deep);margin-bottom:14px;font-style:italic}
+  .tier ul{text-align:left;font-size:14px;color:var(--ink-soft);line-height:1.7;margin:20px 0;padding:0}
+  .tier ul li{padding:6px 0;border-bottom:1px dotted var(--brass-hair);position:relative;padding-left:18px}
+  .tier ul li:last-child{border:none}
+  .tier ul li::before{content:"·";position:absolute;left:6px;color:var(--brass);font-size:18px;line-height:1}
+  .tier .pick{display:block;margin-top:20px;padding:12px;background:var(--navy-deep);color:var(--parchment);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;text-align:center;transition:background .25s}
+  .tier .pick:hover{background:var(--navy)}
+  .tier-featured{border-color:var(--brass);background:linear-gradient(180deg,var(--soft-white) 0%,#FBF6E8 100%)}
+  .tier-featured::after{content:"Most Subscribed";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--brass);color:var(--navy-deep);padding:4px 14px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase}
 
-.page-hero{position:relative;min-height:65vh;display:flex;align-items:flex-end;padding:0 64px 90px;overflow:hidden;background:#000}
-.page-hero-bg{position:absolute;inset:0;background-image:url('https://usafricaallies.org/wp-content/uploads/2025/12/images29.webp');background-size:cover;background-position:center;opacity:.28}
-.page-hero-over{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.2),rgba(0,0,0,.88))}
-.page-hero-content{position:relative;z-index:2;max-width:700px}
-.eyebrow{font-size:11px;font-weight:600;letter-spacing:.22em;color:#C9A227;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px}.eyebrow::before{content:'';width:28px;height:1px;background:#C9A227}
-.page-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:900;line-height:.95;letter-spacing:-.04em}.page-title em{color:#C9A227;font-style:italic}
-.page-hero-sub{font-size:18px;font-weight:300;color:rgba(255,255,255,.55);margin-top:20px;max-width:560px;line-height:1.7}
-@media(max-width:768px){.page-hero{padding:0 24px 60px;min-height:50vh}}
-
-.section{padding:100px 64px;max-width:1200px;margin:0 auto}
-@media(max-width:768px){.section{padding:60px 24px}}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.2em;color:#C9A227;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}.section-label::before{content:'';width:20px;height:1px;background:#C9A227}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:28px}.section-title em{color:#C9A227;font-style:italic}
-.section-body{font-size:17px;font-weight:300;line-height:1.85;color:rgba(255,255,255,.6);max-width:780px}.section-body p+p{margin-top:20px}
-.divider{height:1px;background:rgba(255,255,255,.07);margin:0 64px}
-@media(max-width:768px){.divider{margin:0 24px}}
-
-/* Impact list */
-.impact-list{list-style:none;display:flex;flex-direction:column;gap:0;max-width:700px;margin-top:32px}
-.impact-list li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px;font-weight:400;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:14px}
-.impact-list li::before{content:'✓';color:#C9A227;font-weight:700;flex-shrink:0}
-
-/* Giving ways grid */
-.giving-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:60px}
-@media(max-width:1000px){.giving-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.giving-grid{grid-template-columns:1fr}}
-.giving-card{padding:40px 30px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);transition:background .2s}
-.giving-card:hover{background:rgba(201,162,39,.06)}
-.giving-card.featured{background:rgba(201,162,39,.08);border-color:rgba(201,162,39,.3)}
-.giving-label{font-size:11px;font-weight:600;letter-spacing:.16em;color:#C9A227;text-transform:uppercase;margin-bottom:12px}
-.giving-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:800;margin-bottom:14px;letter-spacing:-.02em}
-.giving-body{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.5)}
-
-/* Fund cards */
-.funds-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-@media(max-width:900px){.funds-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:500px){.funds-grid{grid-template-columns:1fr}}
-.fund-card{padding:36px 30px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-.fund-card:hover{background:rgba(201,162,39,.04)}
-.fund-name{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:800;margin-bottom:12px}
-.fund-body{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.45)}
-
-/* Stewardship */
-.steward-row{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-@media(max-width:900px){.steward-row{grid-template-columns:1fr;gap:48px}}
-.steward-list{list-style:none;display:flex;flex-direction:column;gap:10px}
-.steward-list li{display:flex;align-items:center;gap:12px;font-size:15px;color:rgba(255,255,255,.5)}
-.steward-list li::before{content:'→';color:#C9A227;font-size:13px}
-
-/* Big donate CTA */
-.donate-cta{padding:120px 64px;text-align:center;background:#000;position:relative;overflow:hidden}
-.donate-cta::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(201,162,39,.07),transparent 65%);pointer-events:none}
-.donate-cta h2{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:900;letter-spacing:-.04em;margin-bottom:20px;position:relative;z-index:1}
-.donate-cta p{font-size:18px;font-weight:300;color:rgba(255,255,255,.5);margin-bottom:52px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7;position:relative;z-index:1}
-.btn-gold-lg{display:inline-block;background:#C9A227;color:#000;font-size:16px;font-weight:700;letter-spacing:.06em;padding:20px 60px;border-radius:8px;transition:background .2s,transform .15s;position:relative;z-index:1}.btn-gold-lg:hover{background:#dbb830;transform:translateY(-2px)}
-.btn-ghost{display:inline-block;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);font-size:14px;font-weight:500;padding:15px 32px;border-radius:8px;margin-left:16px;transition:all .2s;position:relative;z-index:1}.btn-ghost:hover{border-color:rgba(255,255,255,.4);color:#fff}
-@media(max-width:768px){.donate-cta{padding:80px 24px}.btn-ghost{margin-left:0;margin-top:12px;display:inline-block}}
-
-footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:80px 64px 40px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
-@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:40px}}
-@media(max-width:580px){.footer-grid{grid-template-columns:1fr}}
-.footer-brand img{width:46px;height:46px;object-fit:contain;margin-bottom:16px}
-.footer-brand p{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.4);max-width:280px;margin-top:12px}
-.footer-heading{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}.footer-links a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s}.footer-links a:hover{color:#C9A227}
-.footer-contact-item{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:10px;line-height:1.5}.footer-contact-item a{color:rgba(255,255,255,.4);transition:color .2s}.footer-contact-item a:hover{color:#C9A227}
-.social-row{display:flex;gap:12px;margin-top:4px}.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;transition:all .2s}.social-btn:hover{border-color:#C9A227;color:#C9A227}
-.footer-bottom{padding-top:32px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.footer-bottom p{font-size:13px;color:rgba(255,255,255,.25)}.footer-legal{display:flex;gap:24px}.footer-legal a{font-size:13px;color:rgba(255,255,255,.25);transition:color .2s}.footer-legal a:hover{color:rgba(255,255,255,.5)}
-@media(max-width:768px){footer{padding:60px 24px 32px}}
+  .pay-panel{background:var(--soft-white);border:1px solid var(--brass-hair);padding:36px;margin-top:48px}
+  .pay-panel h3{margin-bottom:18px}
+  .amt-row{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+  .amt-btn{padding:10px 16px;border:1px solid var(--ink-soft);background:transparent;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.1em;color:var(--ink);cursor:pointer;transition:all .2s}
+  .amt-btn:hover{border-color:var(--brass)}
+  .amt-active{background:var(--navy-deep)!important;border-color:var(--navy-deep)!important;color:var(--parchment)!important}
+  .pay-methods{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+  @media (max-width:600px){.pay-methods{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<nav id="nav">
-  <a href="index.html" class="brand"><img src="assets/logo1.gif" alt="Logo" class="brand-logo"/><div class="brand-name">U.S.–Africa Allies<br/><span>Foundation</span></div></a>
-  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li class="has-drop"><a href="#">Impact &#9662;</a><ul class="drop-menu"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="programs-initiatives.html">Programs &amp; Initiatives</a></li><li><a href="strategic-council.html">Strategic Council</a></li><li><a href="opportunities.html">Opportunities Platform</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li><li><a href="partner-with-us.html">Partner With Us</a></li><li><a href="resources-publications.html">Resources &amp; Publications</a></li><li><a href="strategic-plan.html">Strategic Plan 2026–2031</a></li></ul></li><li><a href="contact.html">Contact Us</a></li><li><a href="donate.html" class="nav-cta">Donate Now</a></li></ul>
-  <button class="nav-burger" onclick="document.getElementById('mob-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-<div id="mob-menu"><button class="mob-close" onclick="document.getElementById('mob-menu').classList.remove('open')">&times;</button><a href="index.html">Home</a><a href="about.html">About Us</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership &amp; Board</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities Platform</a><a href="get-involved.html">Get Involved</a><a href="partner-with-us.html">Partner With Us</a><a href="resources-publications.html">Resources</a><a href="strategic-plan.html">Strategic Plan</a><a href="contact.html">Contact Us</a><a href="donate.html" class="mob-cta">Donate Now</a></div>
 
-<header class="page-hero">
-  <div class="page-hero-bg"></div><div class="page-hero-over"></div>
-  <div class="page-hero-content">
-    <div class="eyebrow">Your Gift Changes Lives</div>
-    <h1 class="page-title">Give<br/><em>Today</em></h1>
-    <p class="page-hero-sub">A donation to the U.S.-Africa Allies Foundation is more than charity — it is an investment in God's work through people.</p>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <filter id="duotone-navy-brass">
+    <feColorMatrix type="matrix" values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"/>
+    <feComponentTransfer color-interpolation-filters="sRGB"><feFuncR tableValues="0.024 0.831"/><feFuncG tableValues="0.094 0.686"/><feFuncB tableValues="0.270 0.215"/></feComponentTransfer>
+  </filter>
+</defs></svg>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="index.html" class="mast-brand"><img src="assets/seal.svg" alt="" class="mast-seal"><span class="mast-name"><span class="top">U.S.–Africa Allies Foundation</span><span class="sub">Vol. I · Est. MMXXVI</span></span></a>
+    <nav class="mast-nav"><a href="about.html" class="pen-link">About</a><a href="founders-message.html" class="pen-link">Founder</a><a href="programs-initiatives.html" class="pen-link">Programs</a><a href="leadership-board.html" class="pen-link">Leadership</a><a href="strategic-plan.html" class="pen-link">Plan</a><a href="get-involved.html" class="pen-link">Get Involved</a></nav>
+    <a href="donate.html" class="mast-cta">Donate</a>
+    <button class="mast-toggle" aria-label="Open menu" onclick="document.getElementById('mobileDrawer').classList.add('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
 </header>
 
-<!-- Why Support -->
-<section class="section">
-  <div class="section-label">Why Your Support Matters</div>
-  <h2 class="section-title">Every Contribution Creates<br/><em>Lasting Impact</em></h2>
-  <div class="section-body"><p>Your generosity fuels programs that create lasting, measurable impact across the United States and Africa. When you give, you join a faith-driven movement dedicated to human dignity, opportunity, and long-term transformation.</p></div>
-  <ul class="impact-list">
-    <li>Scholarships for underserved students to pursue education and leadership</li>
-    <li>Leadership development programs for youth and emerging leaders</li>
-    <li>Women's empowerment and entrepreneurship initiatives</li>
-    <li>Humanitarian relief for families facing crisis</li>
-    <li>Community development and outreach programs</li>
-    <li>U.S.–Africa civic, cultural, and faith-based exchange initiatives</li>
-  </ul>
-</section>
-
-<div class="divider"></div>
-
-<!-- Ways to Give -->
-<section class="section">
-  <div class="section-label">Ways to Give</div>
-  <h2 class="section-title">Choose How You <em>Want to Give</em></h2>
-  <div class="giving-grid">
-    <div class="giving-card">
-      <div class="giving-label">One-Time</div>
-      <h3 class="giving-title">One-Time Donation</h3>
-      <p class="giving-body">A single contribution that immediately supports programs, outreach, and humanitarian assistance wherever it is needed most.</p>
-    </div>
-    <div class="giving-card featured">
-      <div class="giving-label">Monthly</div>
-      <h3 class="giving-title">Monthly Partnership</h3>
-      <p class="giving-body">Monthly partners sustain our long-term mission. Even modest recurring gifts create continuous impact, allowing us to expand programs with stability and confidence.</p>
-    </div>
-    <div class="giving-card">
-      <div class="giving-label">Annual</div>
-      <h3 class="giving-title">Annual Giving</h3>
-      <p class="giving-body">Annual donors support large-scale initiatives and provide the foundation with the strength to plan, grow, and develop new leadership and education programs.</p>
-    </div>
-    <div class="giving-card">
-      <div class="giving-label">Corporate</div>
-      <h3 class="giving-title">Corporate &amp; Foundation</h3>
-      <p class="giving-body">We welcome grants, sponsorships, CSR partnerships, and corporate philanthropic support. Organizations may sponsor programs, events, or trainings.</p>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- Specific Funds -->
-<section class="section">
-  <div class="section-label">Specific Funds</div>
-  <h2 class="section-title">Sponsor a <em>Specific Cause</em></h2>
-  <div class="funds-grid">
-    <div class="fund-card">
-      <h3 class="fund-name">Sponsor a Student</h3>
-      <p class="fund-body">Provide direct educational access by covering tuition, books, mentoring, technology, or program participation. Your sponsorship changes a life forever.</p>
-    </div>
-    <div class="fund-card">
-      <h3 class="fund-name">Women's Empowerment Fund</h3>
-      <p class="fund-body">Support women-owned businesses, entrepreneurship training, and micro-grant programs. Empower a woman, uplift a family, strengthen a community.</p>
-    </div>
-    <div class="fund-card">
-      <h3 class="fund-name">Leadership Academy Fund</h3>
-      <p class="fund-body">Help train the next generation of ethical, faith-driven leaders across schools, churches, civic institutions, and communities.</p>
-    </div>
-    <div class="fund-card">
-      <h3 class="fund-name">Humanitarian Relief Fund</h3>
-      <p class="fund-body">Provide direct support to families facing crisis, food insecurity, displacement, or instability. Your gift restores dignity and hope in times of need.</p>
-    </div>
-    <div class="fund-card">
-      <h3 class="fund-name">Community Development</h3>
-      <p class="fund-body">Support neighborhood outreach programs, civic engagement, and infrastructure that builds lasting community resilience.</p>
-    </div>
-    <div class="fund-card">
-      <h3 class="fund-name">U.S.–Africa Exchange</h3>
-      <p class="fund-body">Fund cross-continental dialogue, cultural exchange programs, and policy forums that strengthen the U.S.–Africa partnership.</p>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- Stewardship -->
-<section class="section">
-  <div class="steward-row">
-    <div>
-      <div class="section-label">How We Use Your Gift</div>
-      <h2 class="section-title">We Steward Every Gift with <em>Faith</em> and Accountability</h2>
-      <div class="section-body"><p>We pledge full financial transparency and responsible stewardship of every dollar entrusted to us.</p></div>
-      <ul class="steward-list" style="margin-top:32px">
-        <li>Program delivery, expansion, and sustainability</li>
-        <li>Scholarships and educational services</li>
-        <li>Women's empowerment and vocational training</li>
-        <li>Youth leadership development</li>
-        <li>Humanitarian aid and crisis response</li>
-        <li>Operational excellence and compliance</li>
-      </ul>
-    </div>
-    <div>
-      <div class="section-label">Our Commitment to Donors</div>
-      <h2 class="section-title">You Can <em>Trust</em> Us</h2>
-      <ul class="steward-list" style="margin-top:32px">
-        <li>Full financial transparency and annual impact reports</li>
-        <li>Responsible stewardship of every dollar</li>
-        <li>Compliance with U.S. nonprofit standards</li>
-        <li>Ethical and dignified outreach practices</li>
-        <li>Clear program reporting and regular updates</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="donate-cta">
-  <h2>Your Gift Has<br/><em style="color:#C9A227;font-style:italic;font-family:'Playfair Display',serif">Generational Impact</em></h2>
-  <p>When you give, you plant seeds that outlive you. You invest in leaders who will strengthen families, uplift communities, and shape nations for decades to come.</p>
-  <a href="mailto:daniel.edah@usafricaallies.org?subject=Donation Inquiry" class="btn-gold-lg">Give Today</a>
-  <a href="contact.html" class="btn-ghost">Ask a Question</a>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="close-row"><span class="mono-mark">Menu</span><button aria-label="Close" onclick="document.getElementById('mobileDrawer').classList.remove('open')"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M6 18L18 6"/></svg></button></div>
+  <nav><a href="index.html">Home</a><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="strategic-plan.html">Strategic Plan</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a><a href="contact.html">Contact</a><a href="donate.html">Donate</a></nav>
 </div>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand"><img src="assets/logo1.gif" alt="Logo"/><div class="brand-name" style="font-size:13px;margin-top:8px">U.S.–Africa Allies<br/><span style="color:#C9A227">Foundation</span></div><p>Building strong families, forming principled leaders, and strengthening the U.S.–Africa partnership.</p><div class="social-row" style="margin-top:20px"><a href="#" class="social-btn">f</a><a href="#" class="social-btn">t</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">ig</a></div></div>
-    <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="founders-message.html">Founder's Message</a></li><li><a href="programs-initiatives.html">Programs</a></li><li><a href="get-involved.html">Get Involved</a></li><li><a href="donate.html">Donate</a></li></ul></div>
-    <div><div class="footer-heading">Resources</div><ul class="footer-links"><li><a href="leadership-board.html">Leadership &amp; Board</a></li><li><a href="resources-publications.html">Publications</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
-    <div><div class="footer-heading">Contact</div><div class="footer-contact-item">300 Independence Ave SE<br/>Washington, DC 20003</div><div class="footer-contact-item"><a href="tel:+12406787500">+1 (240) 678-7500</a></div><div class="footer-contact-item"><a href="mailto:daniel.edah@usafricaallies.org">daniel.edah@usafricaallies.org</a></div></div>
+<section class="frontispiece">
+  <div class="sheet">
+    <div class="vol mono-mark">Folio VI &nbsp;·&nbsp; Subscriptions &amp; Endowments &nbsp;·&nbsp; Open Subscription</div>
+    <h1 class="display" style="max-width:14ch;margin-top:32px">Underwrite the<br>Founding Work.</h1>
+    <p class="subtitle">The Foundation is built by its subscribers. Each tier below is a standing commitment to the work — recorded in the public ledger and acknowledged in our annual report.</p>
   </div>
-  <div class="footer-bottom"><p>&copy; 2025 U.S.–Africa Allies Foundation. All rights reserved.</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Safeguarding</a></div></div>
+</section>
+
+<section class="heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="section-head"><div class="num">§ I &nbsp; Founding Subscriptions</div><h2>Five tiers of standing support.</h2><p class="lede">Subscriptions are annual. Each tier carries its own privileges and its own published place in the Foundation's record.</p></div>
+
+    <div class="grid-4" style="margin-top:64px;gap:20px;grid-template-columns:repeat(5,1fr)">
+      <style>@media(max-width:1100px){.grid-4{grid-template-columns:repeat(2,1fr)!important}}@media(max-width:520px){.grid-4{grid-template-columns:1fr!important}}</style>
+      <div class="tier">
+        <div class="rank">Tier I</div>
+        <div class="amount">$25</div>
+        <div class="amount-sub">/ year</div>
+        <div class="name">Citizen</div>
+        <ul>
+          <li>Annual report</li>
+          <li>Public archive access</li>
+          <li>Convening invitations</li>
+        </ul>
+        <a href="#pay" class="pick" onclick="selectAmt(this,25,event)">Subscribe</a>
+      </div>
+
+      <div class="tier">
+        <div class="rank">Tier II</div>
+        <div class="amount">$100</div>
+        <div class="amount-sub">/ year</div>
+        <div class="name">Correspondent</div>
+        <ul>
+          <li>All of the above</li>
+          <li>Quarterly briefings</li>
+          <li>Named in annual report</li>
+        </ul>
+        <a href="#pay" class="pick" onclick="selectAmt(this,100,event)">Subscribe</a>
+      </div>
+
+      <div class="tier tier-featured">
+        <div class="rank">Tier III</div>
+        <div class="amount">$500</div>
+        <div class="amount-sub">/ year</div>
+        <div class="name">Founding Member</div>
+        <ul>
+          <li>All of the above</li>
+          <li>Founding Member roster</li>
+          <li>Two annual convenings</li>
+          <li>Inscribed certificate</li>
+        </ul>
+        <a href="#pay" class="pick" onclick="selectAmt(this,500,event)">Subscribe</a>
+      </div>
+
+      <div class="tier">
+        <div class="rank">Tier IV</div>
+        <div class="amount">$2,500</div>
+        <div class="amount-sub">/ year</div>
+        <div class="name">Patron</div>
+        <ul>
+          <li>All of the above</li>
+          <li>All convenings</li>
+          <li>Direct line to the Founder</li>
+          <li>Named program citation</li>
+        </ul>
+        <a href="#pay" class="pick" onclick="selectAmt(this,2500,event)">Subscribe</a>
+      </div>
+
+      <div class="tier">
+        <div class="rank">Tier V</div>
+        <div class="amount">$10,000+</div>
+        <div class="amount-sub">/ year · Endowed</div>
+        <div class="name">Underwriter</div>
+        <ul>
+          <li>Underwrite a full convening</li>
+          <li>Permanent recognition</li>
+          <li>Bespoke arrangements</li>
+        </ul>
+        <a href="contact.html" class="pick">Correspond</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-parchment-d heavy-top heavy-bottom" id="pay">
+  <div class="sheet">
+    <div class="column">
+      <div class="section-head"><div class="num">§ II &nbsp; Make Your Subscription</div><h2>Choose an amount.</h2><p class="lede">All gifts are tax-deductible to the extent permitted by law. The Foundation is a 501(c)(3) public charity (status pending).</p></div>
+
+      <div class="pay-panel">
+        <h3 style="font-size:20px;margin-bottom:10px">One-time or recurring</h3>
+        <p style="color:var(--ink-soft);font-size:14px;margin-bottom:8px">Select an amount, or enter a custom value.</p>
+        <div class="amt-row">
+          <button class="amt-btn" onclick="selectAmt(this,25)">$25</button>
+          <button class="amt-btn" onclick="selectAmt(this,50)">$50</button>
+          <button class="amt-btn" onclick="selectAmt(this,100)">$100</button>
+          <button class="amt-btn amt-active" onclick="selectAmt(this,250)">$250</button>
+          <button class="amt-btn" onclick="selectAmt(this,500)">$500</button>
+          <button class="amt-btn" onclick="selectAmt(this,1000)">$1,000</button>
+          <input type="number" id="amtCustom" placeholder="Other amount" style="padding:10px 14px;border:1px solid var(--ink-soft);background:transparent;font-family:'JetBrains Mono',monospace;font-size:12px;width:140px" oninput="setCustom(this.value)">
+        </div>
+
+        <div class="pay-methods">
+          <a href="https://www.paypal.com/donate?business=contact@usafricaallies.org&amount=250&currency_code=USD&item_name=US-Africa+Allies+Foundation" id="paypalBtn" target="_blank" rel="noopener" class="btn" style="justify-content:center">Give via PayPal &nbsp;→</a>
+          <a href="contact.html" class="btn btn-outline" style="justify-content:center">Bank Transfer Instructions →</a>
+        </div>
+        <p style="margin-top:18px;font-size:12px;color:var(--ink-muted);font-family:'JetBrains Mono',monospace;letter-spacing:0.06em">All transactions processed via PayPal · Funds applied to operating endowment unless otherwise designated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="heavy-top heavy-bottom">
+  <div class="sheet">
+    <div class="column">
+      <div class="section-head"><div class="num">§ III &nbsp; Other Forms of Support</div><h2>Beyond the annual subscription.</h2></div>
+      <ul class="ledger">
+        <li><span class="label">Endow a Named Convening</span><span class="leader"></span><span class="value">Inquire →</span></li>
+        <li><span class="label">Establish a Fellowship</span><span class="leader"></span><span class="value">Inquire →</span></li>
+        <li><span class="label">Corporate Sponsorship</span><span class="leader"></span><span class="value"><a href="partner-with-us.html" class="pen-link">Read →</a></span></li>
+        <li><span class="label">Planned Giving · Bequest</span><span class="leader"></span><span class="value">Correspond →</span></li>
+        <li><span class="label">Donor-Advised Fund</span><span class="leader"></span><span class="value">EIN on request</span></li>
+        <li><span class="label">In-Kind Contribution</span><span class="leader"></span><span class="value"><a href="contact.html" class="pen-link">Write →</a></span></li>
+      </ul>
+      <div class="hr-ornament-wrap" style="margin-top:64px"><span>❦</span></div>
+      <p class="text-center mono-mark" style="margin-top:24px">Subscribers of record are listed annually under the seal of the Foundation.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="colophon-inner">
+    <div class="brand-block"><img src="assets/seal.svg" alt="" style="width:62px;height:62px;margin-bottom:18px;filter:invert(1) sepia(1) saturate(0.7) hue-rotate(15deg)"><div class="name">U.S.–Africa Allies Foundation</div><div class="tag">Convening · Policy · Partnership</div><p>An institution dedicated to the deliberate work of partnership between the United States and the nations of the African continent.</p></div>
+    <div><h4>The Foundation</h4><a href="about.html">About</a><a href="founders-message.html">Founder's Message</a><a href="leadership-board.html">Leadership Board</a><a href="strategic-council.html">Strategic Council</a><a href="strategic-plan.html">Strategic Plan</a></div>
+    <div><h4>Engage</h4><a href="programs-initiatives.html">Programs &amp; Initiatives</a><a href="opportunities.html">Opportunities</a><a href="resources-publications.html">Resources</a><a href="partner-with-us.html">Partner With Us</a><a href="get-involved.html">Get Involved</a></div>
+    <div><h4>Correspond</h4><a href="contact.html">Contact</a><a href="donate.html">Donate</a><a href="mailto:contact@usafricaallies.org">contact@usafricaallies.org</a><a href="https://usafricaallies.org">usafricaallies.org</a></div>
+  </div>
+  <div class="colophon-bottom"><span>© MMXXVI · U.S.–Africa Allies Foundation · All rights reserved.</span><span>Set in Libre Caslon &amp; JetBrains Mono · Washington, D.C.</span></div>
 </footer>
-<script>const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('solid',window.scrollY>50)},{passive:true});</script>
+
+<script>
+  let currentAmount = 250;
+  function selectAmt(btn, val, ev){
+    if(ev) ev.preventDefault && ev.preventDefault();
+    currentAmount = val;
+    document.querySelectorAll('.amt-btn').forEach(b=>b.classList.remove('amt-active'));
+    if(btn && btn.classList.contains('amt-btn')) btn.classList.add('amt-active');
+    const custom = document.getElementById('amtCustom'); if(custom) custom.value='';
+    updatePayPal(val);
+    if(ev){ document.getElementById('pay').scrollIntoView({behavior:'smooth'}); }
+  }
+  function setCustom(val){
+    if(!val) return;
+    currentAmount = parseInt(val,10);
+    document.querySelectorAll('.amt-btn').forEach(b=>b.classList.remove('amt-active'));
+    updatePayPal(currentAmount);
+  }
+  function updatePayPal(amt){
+    const link = document.getElementById('paypalBtn');
+    link.href = `https://www.paypal.com/donate?business=contact@usafricaallies.org&amount=${amt}&currency_code=USD&item_name=US-Africa+Allies+Foundation`;
+  }
+  (function(){const path=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.mast-nav a, .mobile-drawer nav a').forEach(a=>{if(a.getAttribute('href')===path)a.classList.add('active');});})();
+  document.querySelectorAll('.mobile-drawer nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileDrawer').classList.remove('open')));
+</script>
+
 </body>
 </html>
