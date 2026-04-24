@@ -100,11 +100,11 @@ export default function Colophon() {
       <div className={styles.legal}>
         <span>© MMXXVI · U.S.–Africa Allies Foundation</span>
         <span className={styles.legalLinks}>
-          <a href="#" className="pen">Privacy Policy</a>
+          <a href="/privacy-policy" className="pen">Privacy Policy</a>
           <span className={styles.dot} aria-hidden="true">·</span>
-          <a href="#" className="pen">Terms of Use</a>
+          <a href="/terms" className="pen">Terms of Use</a>
           <span className={styles.dot} aria-hidden="true">·</span>
-          <a href="#" className="pen">Safeguarding</a>
+          <a href="/refund-policy" className="pen">Refund Policy</a>
         </span>
       </div>
     </footer>

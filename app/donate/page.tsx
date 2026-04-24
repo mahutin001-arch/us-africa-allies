@@ -16,6 +16,10 @@ export default function DonatePage() {
 
   const payPalUrl = `https://www.paypal.com/donate?business=daniel.edah@usafricaallies.org&amount=${amount}&currency_code=USD&item_name=US-Africa+Allies+Foundation`;
 
+  // TODO: swap to production Revere form URL before public launch
+  // (current URL is on merchant.reverepayments.dev — Revere sandbox).
+  const revereUrl = 'https://merchant.reverepayments.dev/forms/0M0hCjKf-xd-udiuJneBRuy1Jo9FSJ0r9qXqBAWTiwA=';
+
   return (
     <>
       <Band ground="navy">
@@ -118,10 +122,17 @@ export default function DonatePage() {
             <a href={payPalUrl} target="_blank" rel="noopener" className={styles.methodBtn}>
               Give via PayPal →
             </a>
+            <a href={revereUrl} target="_blank" rel="noopener" className={styles.methodBtn}>
+              Give via Card →
+            </a>
             <a href="/contact" className={`${styles.methodBtn} ${styles.methodOutline}`}>
               Bank Transfer Instructions →
             </a>
           </div>
+
+          <p className="sans" style={{ marginTop: '0.9rem', fontSize: '0.62rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--ink-muted)' }}>
+            The card form opens a secure payment page hosted by our processor. You may be asked to re-enter the amount.
+          </p>
 
           <p className="sans" style={{ marginTop: '1.2rem', fontSize: '0.66rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--ink-muted)' }}>
             Funds support programs, outreach, and humanitarian work unless otherwise designated.
