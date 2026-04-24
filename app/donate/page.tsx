@@ -14,8 +14,6 @@ export default function DonatePage() {
   const [custom, setCustom] = useState('');
   const presets = [25, 50, 100, 250, 500, 1000];
 
-  const payPalUrl = `https://www.paypal.com/donate?business=daniel.edah@usafricaallies.org&amount=${amount}&currency_code=USD&item_name=US-Africa+Allies+Foundation`;
-
   // TODO: swap to production Revere form URL before public launch
   // (current URL is on merchant.reverepayments.dev — Revere sandbox).
   const revereUrl = 'https://merchant.reverepayments.dev/forms/0M0hCjKf-xd-udiuJneBRuy1Jo9FSJ0r9qXqBAWTiwA=';
@@ -119,9 +117,6 @@ export default function DonatePage() {
           </div>
 
           <div className={styles.methods}>
-            <a href={payPalUrl} target="_blank" rel="noopener" className={styles.methodBtn}>
-              Give via PayPal →
-            </a>
             <a href={revereUrl} target="_blank" rel="noopener" className={styles.methodBtn}>
               Give via Card →
             </a>

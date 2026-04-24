@@ -65,9 +65,8 @@ export default function RefundPolicyPage() {
           </p>
           <p>
             <strong>Processor error</strong> &mdash; the payment processor
-            (PayPal or Revere Payments) completed a transaction in error or
-            in a manner inconsistent with the donor&rsquo;s stated
-            instructions.
+            (Revere Payments) completed a transaction in error or in a manner
+            inconsistent with the donor&rsquo;s stated instructions.
           </p>
         </div>
       </Band>

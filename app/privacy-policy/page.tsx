@@ -59,7 +59,7 @@ export default function PrivacyPolicyPage() {
             <strong>Donation information</strong> — amount, frequency,
             designation, and payment method. Payment card details are
             collected and processed by our third-party payment processors
-            (PayPal and Revere Payments) and are never stored on our servers.
+            (Revere Payments) and are never stored on our servers.
           </p>
           <p>
             <strong>Correspondence</strong> — the content of messages you

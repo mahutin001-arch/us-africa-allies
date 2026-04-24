@@ -96,10 +96,10 @@ export default function TermsPage() {
             unlawful activity.
           </p>
           <p>
-            Donations are processed by our third-party payment processors
-            (PayPal and Revere Payments). By donating, you also agree to those
-            processors&rsquo; terms and privacy policies, available on their
-            respective websites.
+            Donations are processed by our third-party payment processor
+            (Revere Payments). By donating, you also agree to that
+            processor&rsquo;s terms and privacy policy, available on its
+            website.
           </p>
           <p>
             Donors will receive a written acknowledgment from the Foundation
