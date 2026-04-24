@@ -1,0 +1,35 @@
+.framed {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.ring,
+.ringInner {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--brand-gold);
+  pointer-events: none;
+}
+
+.ring {
+  inset: 0;
+}
+
+.ringInner {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.img {
+  display: block;
+  object-fit: contain;
+}
+
+.ghosted {
+  opacity: 0.08;
+}

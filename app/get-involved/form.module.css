@@ -1,0 +1,54 @@
+.form {
+  display: grid;
+  gap: 1.4rem;
+  max-width: 36rem;
+  margin: 3rem auto 0;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--hair);
+  background: transparent;
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--navy);
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit {
+  justify-self: start;
+  padding: 14px 36px;
+  background: var(--brand-gold);
+  color: var(--navy);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 280ms var(--ease-ink), color 280ms var(--ease-ink);
+}
+
+.submit:hover {
+  background: var(--navy);
+  color: var(--brand-gold);
+}

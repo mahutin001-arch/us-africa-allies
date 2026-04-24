@@ -1,0 +1,71 @@
+/* ============================================================
+   PILLAR BLOCK — two compositions
+   Mobile (< 960px)  : single column, numeral above body
+   Desktop (>= 960px): 8rem numeral gutter, body right
+   ============================================================ */
+
+/* ---------- default : MOBILE composition ---------- */
+.pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--hair);
+  max-width: var(--measure-wide);
+  margin: 0 auto;
+}
+.pillar:last-child { border-bottom: 1px solid var(--hair); }
+
+:global(section.ground-navy) .pillar { border-color: rgba(203, 165, 78, 0.22); }
+:global(section.ground-gold) .pillar { border-color: rgba(4, 34, 72, 0.22); }
+
+.numeral {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--brand-gold);
+  font-size: 2.2rem;
+  line-height: 0.9;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 4.4vw, 1.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.008em;
+  margin-top: 0.2rem;
+}
+
+.text {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 40rem;
+  color: var(--ink-soft);
+}
+
+:global(section.ground-navy) .text { color: rgba(244, 236, 214, 0.82); }
+:global(section.ground-gold) .text { color: rgba(4, 34, 72, 0.82); }
+
+/* ---------- DESKTOP override : >= 960px ---------- */
+@media (min-width: 960px) {
+  .pillar {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 0;
+    padding: 2.8rem 0;
+  }
+
+  .numeral { font-size: 3rem; padding-top: 0.1em; }
+
+  .body { gap: 0.9rem; }
+
+  .title { font-size: clamp(1.4rem, 2.2vw, 1.8rem); margin-top: 0.4rem; }
+
+  .text { font-size: 1.05rem; }
+}

@@ -1,0 +1,188 @@
+.colophon {
+  background: var(--navy);
+  color: rgba(244, 236, 214, 0.82);
+  padding: clamp(64px, 10vh, 120px) 1.5rem 32px;
+}
+
+/* Mobile : single column */
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1320px;
+  margin: 0 auto 48px;
+}
+
+/* Desktop : 4-column at 880px */
+@media (min-width: 880px) {
+  .colophon { padding: clamp(72px, 10vh, 120px) clamp(32px, 4vw, 56px) 36px; }
+  .inner {
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: clamp(32px, 4vw, 64px);
+  }
+}
+
+@media (min-width: 1520px) {
+  .colophon { padding-inline: clamp(56px, 6vw, 96px); }
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.wordTop {
+  font-family: var(--serif);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ivory);
+}
+.wordBottom {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--brand-gold);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.col a {
+  font-family: var(--serif);
+  font-size: 0.96rem;
+  color: rgba(244, 236, 214, 0.82);
+  line-height: 1.4;
+  width: fit-content;
+}
+.col a:hover { color: var(--ivory); }
+
+.colHead {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+  margin-bottom: 4px;
+}
+
+.address {
+  font-family: var(--serif);
+  font-style: normal;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: rgba(244, 236, 214, 0.82);
+  margin-bottom: 4px;
+}
+
+.registryLink {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  color: rgba(244, 236, 214, 0.82);
+  line-height: 1.4;
+  width: fit-content;
+}
+.registryLink:hover { color: var(--ivory); }
+
+.muted {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(203, 165, 78, 0.78);
+  margin-top: 10px;
+}
+
+.hair {
+  border: 0;
+  border-top: 1px solid rgba(203, 165, 78, 0.22);
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1320px;
+  margin: 24px auto 0;
+  font-family: var(--sans);
+  font-size: 0.64rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(203, 165, 78, 0.75);
+  font-weight: 500;
+}
+.meta > :nth-child(1) { text-align: left; }
+.meta > :nth-child(2) { text-align: center; }
+.meta > :nth-child(3) { text-align: right; }
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.socialLink {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(203, 165, 78, 0.35);
+  color: rgba(203, 165, 78, 0.78);
+  transition: border-color 280ms var(--ease-ink), color 280ms var(--ease-ink), background 280ms var(--ease-ink);
+}
+.socialLink:hover,
+.socialLink:focus-visible {
+  border-color: var(--brand-gold);
+  color: var(--navy);
+  background: var(--brand-gold);
+}
+
+.legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1320px;
+  margin: 28px auto 0;
+  padding-top: 18px;
+  border-top: 1px dotted rgba(203, 165, 78, 0.22);
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(203, 165, 78, 0.65);
+  font-weight: 500;
+}
+
+.legalLinks {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+.legalLinks a { color: rgba(203, 165, 78, 0.7); }
+.legalLinks a:hover { color: var(--brand-gold); }
+.dot { color: rgba(203, 165, 78, 0.35); }
+
+@media (max-width: 560px) {
+  .meta { grid-template-columns: 1fr; gap: 10px; }
+  .meta > * { text-align: center !important; }
+  .legal { flex-direction: column; justify-content: center; gap: 10px; text-align: center; }
+}

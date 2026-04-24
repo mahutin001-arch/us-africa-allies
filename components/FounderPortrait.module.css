@@ -1,0 +1,34 @@
+.frame {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.ringOuter,
+.ringInner {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--brand-gold);
+  pointer-events: none;
+}
+
+.ringOuter {
+  inset: 0;
+}
+
+.ringInner {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+}
+
+.img {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--navy);
+}

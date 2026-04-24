@@ -1,0 +1,102 @@
+.stamp {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 520ms var(--ease-ink), background-color 380ms var(--ease-ink), color 380ms var(--ease-ink);
+  will-change: transform;
+  isolation: isolate;
+}
+
+.outerRing,
+.innerRing {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: border-color 380ms var(--ease-ink);
+}
+
+.outerRing {
+  inset: 0;
+  border: 1.5px solid var(--brand-gold);
+}
+
+.innerRing {
+  inset: 6px;
+  border: 1px solid var(--brand-gold);
+  opacity: 0.5;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0 12%;
+  z-index: 1;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.label {
+  font-family: var(--sans);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+}
+
+.sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+}
+
+/* ---------- filled ---------- */
+.filled {
+  background: var(--brand-gold);
+  color: var(--navy);
+}
+.filled .outerRing { border-color: var(--navy); opacity: 0.35; }
+.filled .innerRing { border-color: var(--navy); opacity: 0.2; }
+.filled:hover,
+.filled:focus-visible {
+  background: var(--navy);
+  color: var(--brand-gold);
+  transform: rotate(-2deg);
+}
+.filled:hover .outerRing,
+.filled:focus-visible .outerRing { border-color: var(--brand-gold); opacity: 1; }
+.filled:hover .innerRing,
+.filled:focus-visible .innerRing { border-color: var(--brand-gold); opacity: 0.6; }
+
+/* ---------- outline (for darker sections) ---------- */
+.outline {
+  background: transparent;
+  color: var(--ivory);
+}
+.outline .outerRing { border-color: var(--ivory); }
+.outline .innerRing { border-color: var(--ivory); opacity: 0.5; }
+.outline:hover,
+.outline:focus-visible {
+  background: var(--brand-gold);
+  color: var(--navy);
+  transform: rotate(-2deg);
+}
+.outline:hover .outerRing,
+.outline:focus-visible .outerRing { border-color: var(--navy); opacity: 0.4; }
+.outline:hover .innerRing,
+.outline:focus-visible .innerRing { border-color: var(--navy); opacity: 0.25; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp { transition: none !important; }
+  .stamp:hover { transform: none !important; }
+}
+
+@media (max-width: 640px) {
+  .label { font-size: 0.65rem; letter-spacing: 0.18em; }
+  .sub { font-size: 0.78rem; }
+}

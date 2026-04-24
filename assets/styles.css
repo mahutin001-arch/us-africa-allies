@@ -302,15 +302,11 @@ p{max-width:var(--measure)}
 }
 .doc-card h3{margin-bottom:14px}
 
-/* ---------- 11. PHOTOGRAPHY — ARCHIVAL DUOTONE ---------- */
-.duotone{filter:url(#duotone-navy-brass) contrast(1.05);position:relative}
+/* ---------- 11. PHOTOGRAPHY ---------- */
+.duotone{position:relative}
 .duotone-wrap{position:relative;overflow:hidden;background:var(--navy-deep)}
-.duotone-wrap img{filter:url(#duotone-navy-brass) contrast(1.05);transition:transform 1.2s ease}
+.duotone-wrap img{transition:transform 1.2s ease}
 .duotone-wrap:hover img{transform:scale(1.04)}
-.duotone-wrap::after{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(180deg,transparent 60%,rgba(6,24,69,.4) 100%);
-}
 .photo-cap{
   font-family:'JetBrains Mono',monospace;
   font-size:10px;letter-spacing:0.18em;text-transform:uppercase;

@@ -1,0 +1,364 @@
+/* =================================================================
+   U.S. Africa Allies Foundation — Founding Document Design System
+   ================================================================= */
+
+/* ---------- 1. TOKENS ---------- */
+:root {
+  /* Palette — locked to brand kit */
+  --oxblood: #891C28;
+  --navy: #042248;
+  --navy-2: #0a2f5e;
+  --navy-3: #1a3f6e;
+  --brand-gold: #CBA54E;
+  --gold-light: #e2c274;
+  --gold-dark: #9a7529;
+  --ivory: #f4ecd6;
+  --cream: #e9dfc1;
+
+  /* Derived */
+  --ink: var(--navy);
+  --ink-soft: rgba(4, 34, 72, 0.82);
+  --ink-muted: rgba(4, 34, 72, 0.58);
+  --hair: rgba(4, 34, 72, 0.16);
+  --hair-gold: rgba(203, 165, 78, 0.35);
+
+  /* Type scale */
+  --serif: 'Tinos', 'Times New Roman', Times, serif;
+  --sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Measure */
+  --measure: 36rem;
+  --measure-wide: 52rem;
+  --sheet-max: 1320px;
+  --gutter: clamp(1.5rem, 5vw, 6rem);
+
+  /* Timing */
+  --ease-ink: cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+/* ---------- 2. RESET ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html.js body { }  /* hook for reveal gating */
+body { min-height: 100vh; }
+img, svg { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ---------- 3. BASE TYPE ---------- */
+body {
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+p + p { margin-top: 1em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.012em;
+  color: var(--navy);
+}
+
+h1 { font-size: clamp(2.4rem, 5.4vw, 4.4rem); }
+h2 { font-size: clamp(1.9rem, 3.6vw, 3rem); letter-spacing: -0.014em; }
+h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); letter-spacing: -0.008em; }
+
+em, i { font-style: italic; }
+
+/* ---------- 4. MONTSERRAT UTILITY CLASSES ---------- */
+.sans { font-family: var(--sans); }
+
+.tracked {
+  font-family: var(--sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  color: var(--brand-gold);
+}
+
+.tracked--sm { font-size: 0.68rem; letter-spacing: 0.24em; }
+.tracked--md { font-size: 0.78rem; letter-spacing: 0.2em; }
+.tracked--on-navy { color: var(--gold-light); }
+
+/* ---------- 5. EYEBROW ---------- */
+.eyebrow {
+  font-family: var(--sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.75rem;
+  color: var(--brand-gold);
+  display: inline-block;
+}
+
+/* On navy sections, eyebrow uses lighter gold */
+.on-navy .eyebrow { color: var(--gold-light); }
+
+/* ---------- 6. DROP CAP ---------- */
+.dropcap::first-letter {
+  font-family: var(--serif);
+  font-size: 4.8em;
+  line-height: 0.82;
+  float: left;
+  padding-top: 0.08em;
+  padding-right: 0.12em;
+  padding-left: 0;
+  color: var(--oxblood);
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ---------- 7. FOUNTAIN-PEN LINK ---------- */
+a.pen {
+  color: currentColor;
+  position: relative;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1.5px;
+  background-repeat: no-repeat;
+  background-position: left 98%;
+  transition: background-size 520ms var(--ease-ink);
+}
+a.pen:hover,
+a.pen:focus-visible {
+  background-size: 100% 1.5px;
+}
+
+/* Gold pen on ivory ground */
+.on-ivory a.pen,
+main a.pen {
+  background-image: linear-gradient(var(--brand-gold), var(--brand-gold));
+}
+/* Ivory pen on navy ground */
+.on-navy a.pen {
+  background-image: linear-gradient(var(--ivory), var(--ivory));
+}
+/* Navy pen on gold ground */
+.on-gold a.pen {
+  background-image: linear-gradient(var(--navy), var(--navy));
+}
+
+/* ---------- 8. REVEAL (IntersectionObserver-gated) ---------- */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 900ms var(--ease-ink), transform 900ms var(--ease-ink);
+}
+html.js .reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- 9. A11Y ---------- */
+:focus-visible {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  background: var(--navy);
+  color: var(--ivory);
+  padding: 10px 16px;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  z-index: 9999;
+}
+.skip:focus {
+  left: 10px;
+  top: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html.js .reveal { opacity: 1 !important; transform: none !important; }
+  a.pen { background-size: 100% 1.5px !important; }
+}
+
+/* ---------- 10. SECTION GROUNDS ---------- */
+section.ground-ivory { background: var(--ivory); color: var(--ink); }
+
+/* Navy ground with subtle woven texture · never flat end-to-end */
+section.ground-navy {
+  background-color: var(--navy);
+  background-image:
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(45deg, rgba(203,165,78,0.022) 0 1px, transparent 1px 7px);
+  color: var(--ivory);
+}
+section.ground-navy h1,
+section.ground-navy h2,
+section.ground-navy h3 { color: var(--ivory); }
+section.ground-navy p { color: rgba(244, 236, 214, 0.88); }
+
+/* Brand gold ground with subtle crosshatch weave */
+section.ground-gold {
+  background-color: var(--gold-dark);
+  background-image:
+    repeating-linear-gradient(135deg, rgba(0,0,0,0.07) 0 2px, transparent 2px 6px),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 6px);
+  color: var(--navy);
+}
+section.ground-gold h1,
+section.ground-gold h2,
+section.ground-gold h3 { color: var(--navy); }
+
+/* ---------- 11. SECTION SPACING ---------- */
+/* Mobile padding starts at 1.5rem; desktop adds breathing room up to 6rem. */
+section.band {
+  padding: clamp(64px, 12vh, 160px) 1.5rem;
+}
+@media (min-width: 960px) {
+  section.band { padding-inline: clamp(48px, 5vw, 96px); }
+}
+@media (min-width: 1520px) {
+  section.band { padding-inline: clamp(72px, 6vw, 120px); }
+}
+
+/* ---------- 12. CONTAINERS ---------- */
+.sheet {
+  max-width: var(--sheet-max);
+  margin-inline: auto;
+}
+
+.column {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
+.column-wide {
+  max-width: var(--measure-wide);
+  margin-inline: auto;
+}
+
+/* ---------- 13. HAIRLINE RULES ---------- */
+.hair {
+  border: 0;
+  border-top: 1px solid var(--hair);
+  margin: 0;
+}
+.on-navy .hair,
+section.ground-navy .hair { border-top-color: rgba(203, 165, 78, 0.25); }
+
+/* ---------- 14. META MARK (Vol. I · No. 1 · MMXXVI) ---------- */
+.volmark {
+  font-family: var(--sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  color: rgba(203, 165, 78, 0.78);
+}
+
+/* ---------- 15. SECTION NUMERAL ---------- */
+.sect-num {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--brand-gold);
+  font-size: clamp(2rem, 4.6vw, 3.4rem);
+  line-height: 1;
+  white-space: nowrap;
+}
+.sect-num::before { content: '§\00A0'; font-style: normal; }
+
+/* ---------- 16. BODY RHYTHM WITHIN SECTIONS ---------- */
+.prose p { max-width: var(--measure); }
+.prose p + p { margin-top: 1.2em; }
+.prose h3 { margin-top: 2em; margin-bottom: 0.6em; }
+
+/* ---------- 17. ORNAMENT HOLDER ---------- */
+.ornament-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5em 0;
+}
+
+/* ---------- 18. JUSTIFIED BODY EDGE CASE ---------- */
+/* Short paragraphs should not be stretched */
+.no-just, .no-just p { text-align: left; hyphens: manual; }
+
+/* ---------- 19. HOME · WHAT-WE-DO GRID (mobile-first) ---------- */
+.what-we-do {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+.what-we-do > article {
+  padding: 1.6rem 0.4rem;
+  border-top: 1px solid var(--hair);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.what-we-do > article:first-child { border-top: 0; }
+.what-we-do > article h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-top: 0.3rem;
+  letter-spacing: -0.006em;
+}
+.what-we-do > article p {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  text-align: left;
+  hyphens: manual;
+  margin: 0;
+}
+
+/* Tablet 2x2 at 720px */
+@media (min-width: 720px) {
+  .what-we-do { grid-template-columns: 1fr 1fr; }
+  .what-we-do > article {
+    padding: 1.8rem 1.4rem;
+    border-top: 1px solid var(--hair);
+    border-left: 1px solid var(--hair);
+  }
+  .what-we-do > article:nth-child(odd) { border-left: 0; }
+  .what-we-do > article:nth-child(-n+2) { border-top: 0; }
+}
+
+/* Desktop 4-col at 960px */
+@media (min-width: 960px) {
+  .what-we-do { grid-template-columns: repeat(4, 1fr); }
+  .what-we-do > article {
+    padding: 2rem 1.6rem;
+    border-top: 0;
+    border-left: 1px solid var(--hair);
+  }
+  .what-we-do > article:first-child { border-left: 0; }
+  .what-we-do > article h3 { font-size: 1.2rem; }
+}

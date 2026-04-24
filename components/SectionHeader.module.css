@@ -1,0 +1,74 @@
+/* ============================================================
+   SECTION HEADER — two compositions
+   Mobile (< 960px)  : § numeral stacked above title, left-aligned
+   Desktop (>= 960px): § numeral in gutter beside title block
+   ============================================================ */
+
+/* ---------- default : MOBILE composition ---------- */
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: var(--measure-wide);
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--hair);
+  text-align: left;
+}
+
+:global(section.ground-navy) .head { border-bottom-color: rgba(203, 165, 78, 0.24); }
+:global(section.ground-gold) .head { border-bottom-color: rgba(4, 34, 72, 0.22); }
+
+.numeral {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--brand-gold);
+  font-size: clamp(1.8rem, 8vw, 2.4rem);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25em;
+  white-space: nowrap;
+}
+
+.numeralGlyph { font-style: normal; }
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.title { margin-top: 0.2rem; line-height: 1.05; }
+
+.lede {
+  max-width: 60ch;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  text-align: left;
+  hyphens: manual;
+}
+
+:global(section.ground-navy) .lede { color: rgba(244, 236, 214, 0.82); }
+:global(section.ground-gold) .lede { color: rgba(4, 34, 72, 0.82); }
+
+/* ---------- DESKTOP override : >= 960px ---------- */
+@media (min-width: 960px) {
+  .head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding-bottom: 2.5rem;
+    text-align: left;
+  }
+
+  .numeral { font-size: clamp(2.4rem, 4.6vw, 3.4rem); }
+
+  .titleBlock { gap: 0.9rem; }
+
+  .title { margin-top: 0.4rem; }
+
+  .lede { font-size: 1.1rem; max-width: var(--measure); }
+}

@@ -1,0 +1,91 @@
+.panel {
+  background: var(--ivory);
+  border: 1px solid var(--hair);
+  padding: clamp(28px, 4vw, 48px);
+  margin: 3rem auto 0;
+  max-width: 48rem;
+  position: relative;
+}
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid var(--hair);
+  pointer-events: none;
+}
+
+.amountRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.2rem 0 1.8rem;
+  position: relative;
+}
+
+.amountBtn {
+  padding: 12px 22px;
+  border: 1px solid var(--ink-muted);
+  background: transparent;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  cursor: pointer;
+  transition: border-color 200ms var(--ease-ink), background 200ms var(--ease-ink), color 200ms var(--ease-ink);
+}
+.amountBtn:hover { border-color: var(--brand-gold); }
+
+.amountActive {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--brand-gold);
+}
+
+.customInput {
+  padding: 12px 14px;
+  border: 1px solid var(--ink-muted);
+  background: transparent;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  width: 160px;
+}
+.customInput:focus { outline: 2px solid var(--brand-gold); outline-offset: 2px; }
+
+.methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 0.6rem;
+  position: relative;
+}
+@media (max-width: 600px) { .methods { grid-template-columns: 1fr; } }
+
+.methodBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  background: var(--brand-gold);
+  color: var(--navy);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 280ms var(--ease-ink), color 280ms var(--ease-ink);
+}
+.methodBtn:hover { background: var(--navy); color: var(--brand-gold); }
+
+.methodOutline {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+.methodOutline:hover {
+  background: var(--navy);
+  color: var(--brand-gold);
+}

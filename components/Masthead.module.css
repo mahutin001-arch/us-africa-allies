@@ -1,0 +1,245 @@
+/* ============================================================
+   MASTHEAD — two compositions
+   Mobile (< 880px)  : burger → full-screen centered overlay
+   Desktop (>= 880px): inline horizontal nav, no hamburger
+   ============================================================ */
+
+/* ---------- default : MOBILE composition ---------- */
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--navy);
+  color: var(--ivory);
+  border-bottom: 1px solid rgba(203, 165, 78, 0.18);
+  transition: background 380ms var(--ease-ink), box-shadow 380ms var(--ease-ink);
+}
+
+.solid {
+  background: rgba(4, 34, 72, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 1.25rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.wordTop {
+  font-family: var(--serif);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ivory);
+  font-weight: 400;
+}
+
+.wordBottom {
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--brand-gold);
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+/* Mobile: inline nav hidden, volmark hidden, donate + burger visible */
+.nav { display: none; }
+.volmark { display: none; }
+
+.donate {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--brand-gold);
+  padding: 9px 16px;
+  white-space: nowrap;
+  transition: background 280ms var(--ease-ink), color 280ms var(--ease-ink), transform 280ms var(--ease-ink);
+}
+.donate:hover,
+.donate:focus-visible {
+  background: var(--ivory);
+  color: var(--navy);
+  transform: translateY(-1px);
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  position: relative;
+  z-index: 110;
+}
+.burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--ivory);
+  transition: transform 280ms var(--ease-ink);
+}
+
+/* Full-screen centered overlay (mobile) */
+.drawer {
+  position: fixed;
+  inset: 0;
+  background: var(--navy);
+  padding: 32px 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 380ms var(--ease-ink), visibility 380ms var(--ease-ink);
+  z-index: 105;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.drawerOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawerHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+  padding-top: 40px;
+  position: relative;
+}
+.drawerSeal {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  opacity: 0.94;
+}
+.drawerClose {
+  position: absolute;
+  top: -8px;
+  right: 0;
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--ivory);
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.drawerNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 3.4vh, 30px);
+  flex: 1;
+  padding: 40px 0;
+}
+.drawerNav a {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(0.84rem, 2.6vw, 1rem);
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(244, 236, 214, 0.82);
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 280ms var(--ease-ink), letter-spacing 280ms var(--ease-ink);
+}
+.drawerNav a:hover,
+.drawerNav a:focus-visible {
+  color: var(--brand-gold);
+  letter-spacing: 0.3em;
+}
+
+.drawerFoot {
+  padding-bottom: 20px;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(203, 165, 78, 0.7);
+  text-align: center;
+}
+
+/* ---------- DESKTOP override : >= 880px ---------- */
+@media (min-width: 880px) {
+  .inner {
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: clamp(20px, 2.4vw, 36px);
+    padding: 18px clamp(32px, 4vw, 56px);
+  }
+
+  .wordTop { font-size: 0.95rem; }
+  .wordBottom { font-size: 0.68rem; }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: clamp(14px, 2vw, 28px);
+  }
+
+  .navLink {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(244, 236, 214, 0.78);
+    transition: color 280ms var(--ease-ink);
+    padding: 6px 0;
+    white-space: nowrap;
+  }
+  .navLink:hover,
+  .navLink:focus-visible { color: var(--brand-gold); }
+
+  .volmark {
+    display: inline-block;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(203, 165, 78, 0.78);
+    white-space: nowrap;
+  }
+
+  .donate {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    padding: 11px 22px;
+  }
+
+  .burger { display: none; }
+
+  /* Drawer stays hidden at desktop widths */
+  .drawer { display: none; }
+}
+
+/* Ultra-wide: cap at 1320px, let outer margin breathe at 1920px */
+@media (min-width: 1520px) {
+  .inner { padding: 20px clamp(56px, 6vw, 96px); }
+}

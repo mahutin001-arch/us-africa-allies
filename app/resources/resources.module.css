@@ -1,0 +1,104 @@
+.row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px dotted var(--hair-gold);
+  align-items: start;
+  font-family: var(--serif);
+}
+
+:global(section.ground-navy) .row { border-bottom-color: rgba(203, 165, 78, 0.3); }
+
+.meta { padding-top: 6px; }
+
+.year {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+}
+
+.metaLabel {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 4px;
+}
+
+:global(section.ground-navy) .metaLabel { color: rgba(244, 236, 214, 0.6); }
+
+.title {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+:global(section.ground-navy) .title { color: var(--ivory); }
+
+.desc {
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  margin-top: 0.5rem;
+  line-height: 1.55;
+  text-align: left;
+  hyphens: manual;
+}
+
+:global(section.ground-navy) .desc { color: rgba(244, 236, 214, 0.76); }
+
+.link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brand-gold);
+}
+
+.input {
+  padding: 12px 14px;
+  border: 1px solid var(--hair);
+  background: transparent;
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--navy);
+  width: 100%;
+}
+.input:focus {
+  outline: 2px solid var(--brand-gold);
+  outline-offset: 2px;
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  background: var(--navy);
+  color: var(--brand-gold);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-self: start;
+  transition: background 280ms var(--ease-ink), color 280ms var(--ease-ink);
+}
+.submit:hover { background: var(--brand-gold); color: var(--navy); }
+
+@media (max-width: 580px) {
+  .row { grid-template-columns: 1fr; gap: 6px; }
+  .year { display: inline-block; margin-right: 10px; }
+  .metaLabel { display: inline-block; margin-top: 0; }
+}
