@@ -9,7 +9,7 @@ import StampButton from '@/components/StampButton';
 export const metadata = {
   title: 'Founding Summit · U.S.–Africa Allies Foundation',
   description:
-    'Founding Summit of the U.S.–Africa Strategic Council, June 11–12, 2026 at the United States Capitol — bringing together leaders from the U.S., African nations, Israel, and the global African Diaspora.',
+    'Founding Summit of the U.S.–Africa Strategic Council at the United States Capitol — bringing together leaders from the U.S., African nations, Israel, and the global African Diaspora. Date to be announced.',
 };
 
 export default function SummitPage() {
@@ -18,7 +18,7 @@ export default function SummitPage() {
       {/* Title band — navy */}
       <Band ground="navy">
         <div className="reveal" style={{ textAlign: 'center', maxWidth: '52rem', margin: '0 auto' }}>
-          <span className="eyebrow" style={{ color: 'var(--gold-light)' }}>Foundation Announcement · MMXXVI</span>
+          <span className="eyebrow" style={{ color: 'var(--gold-light)' }}>Foundation Announcement</span>
           <h1 style={{ marginTop: '1.5rem', fontSize: 'clamp(2.4rem, 5.6vw, 4.8rem)', lineHeight: 1.02 }}>
             The Founding Summit<br />of the U.S.–Africa<br /><em style={{ color: 'var(--brand-gold)' }}>Strategic Council.</em>
           </h1>
@@ -30,7 +30,7 @@ export default function SummitPage() {
           <div style={{ marginTop: '3rem' }}>
             <Ledger
               items={[
-                { name: 'Date', value: 'June 11–12, MMXXVI', italic: true },
+                { name: 'Date', value: 'To be announced', italic: true },
                 { name: 'Venue', value: 'United States Capitol · Washington, D.C.', italic: true },
                 { name: 'Format', value: 'By invitation', italic: true },
               ]}
@@ -48,10 +48,10 @@ export default function SummitPage() {
         />
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p className="dropcap">
-            We are pleased to announce that on June 11–12, 2026, at the United
-            States Capitol in Washington, D.C., the U.S.–Africa Allies
-            Foundation will host the Founding Summit of the U.S.–Africa
-            Strategic Council.
+            We are pleased to announce that the U.S.–Africa Allies Foundation
+            will host the Founding Summit of the U.S.–Africa Strategic Council
+            at the United States Capitol in Washington, D.C. The convening
+            date will be announced.
           </p>
           <p>
             The Council is envisioned as a values-based platform bringing
@@ -135,12 +135,12 @@ export default function SummitPage() {
         <SectionHeader
           numeral="V"
           eyebrow="Register Your Interest"
-          title="Join us at the U.S. Capitol on 11–12 June MMXXVI."
+          title="Join us at the U.S. Capitol — date to be announced."
           lede="Register your interest today to receive Summit updates and participation details."
         />
         <Ornament />
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="mailto:daniel.edah@usafricaallies.org?subject=Strategic Council Summit" variant="filled" label="Register" subLabel="Interest →" />
+          <StampButton href="mailto:info@usafricaallies.org?subject=Strategic Council Summit" variant="filled" label="Register" subLabel="Interest →" />
           <StampButton href="/council" variant="filled" label="The Council" subLabel="Ongoing work →" />
         </div>
       </Band>

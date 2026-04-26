@@ -145,8 +145,8 @@ export default function PlatformPage() {
         />
         <Ornament color="rgba(203,165,78,.8)" />
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="mailto:daniel.edah@usafricaallies.org?subject=Opportunities Platform" variant="filled" label="Submit Profile" subLabel="Begin →" />
-          <StampButton href="/summit" variant="outline" label="The Summit" subLabel="June MMXXVI" />
+          <StampButton href="mailto:info@usafricaallies.org?subject=Opportunities Platform" variant="filled" label="Submit Profile" subLabel="Begin →" />
+          <StampButton href="/summit" variant="outline" label="The Summit" subLabel="Date TBA" />
         </div>
       </Band>
     </>

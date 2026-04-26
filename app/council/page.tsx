@@ -102,13 +102,13 @@ export default function CouncilPage() {
       <Band ground="navy">
         <SectionHeader
           numeral="IV"
-          eyebrow="Founding Summit · MMXXVI"
+          eyebrow="Founding Summit"
           title="The Council is inaugurated at the Capitol."
-          lede="The Council's permanent work begins with the Founding Summit at the United States Capitol, 11–12 June 2026."
+          lede="The Council's permanent work begins with the Founding Summit at the United States Capitol — date to be announced."
         />
         <Ornament color="rgba(203,165,78,.8)" />
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="/summit" variant="filled" label="The Summit" subLabel="June MMXXVI →" />
+          <StampButton href="/summit" variant="filled" label="The Summit" subLabel="Date TBA →" />
           <StampButton href="/platform" variant="outline" label="The Platform" subLabel="Partnerships →" />
         </div>
       </Band>

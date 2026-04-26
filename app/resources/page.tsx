@@ -144,7 +144,7 @@ export default function ResourcesPage() {
           lede="The latest articles, policy perspectives, program updates, and news from the U.S.–Africa Allies Foundation — delivered when published."
         />
         <form
-          action="mailto:daniel.edah@usafricaallies.org?subject=Newsletter Subscription"
+          action="mailto:info@usafricaallies.org?subject=Newsletter Subscription"
           method="post"
           encType="text/plain"
           className="reveal"

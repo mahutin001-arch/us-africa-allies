@@ -72,7 +72,7 @@ export default function GetInvolvedPage() {
           lede="We respond to every inquiry within 48 hours."
         />
         <form
-          action="mailto:daniel.edah@usafricaallies.org"
+          action="mailto:info@usafricaallies.org"
           method="post"
           encType="text/plain"
           className={`${styles.form} reveal`}

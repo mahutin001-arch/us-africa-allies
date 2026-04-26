@@ -123,7 +123,7 @@ export default function PartnersPage() {
           lede="Partnerships begin with a conversation. We will write back to schedule the first call."
         />
         <form
-          action="mailto:daniel.edah@usafricaallies.org"
+          action="mailto:info@usafricaallies.org"
           method="post"
           encType="text/plain"
           className={`${styles.form} reveal`}
@@ -162,7 +162,7 @@ export default function PartnersPage() {
         <Ornament />
 
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="/summit" variant="filled" label="The Summit" subLabel="June MMXXVI" />
+          <StampButton href="/summit" variant="filled" label="The Summit" subLabel="Date TBA" />
           <StampButton href="/platform" variant="filled" label="The Platform" subLabel="Partnerships →" />
         </div>
       </Band>

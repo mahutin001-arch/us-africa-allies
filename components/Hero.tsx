@@ -37,7 +37,7 @@ export default function Hero() {
               href="/summit"
               variant="filled"
               label="Founding Summit"
-              subLabel="June MMXXVI"
+              subLabel="Date TBA"
               size={156}
             />
             <StampButton
@@ -51,7 +51,7 @@ export default function Hero() {
 
           <ul className={`${styles.metaStrip} reveal`}>
             <li><span aria-hidden="true" className={styles.sect}>§</span>&nbsp;United States Capitol</li>
-            <li><span aria-hidden="true" className={styles.sect}>§</span>&nbsp;11–12 June MMXXVI</li>
+            <li><span aria-hidden="true" className={styles.sect}>§</span>&nbsp;Date to be announced</li>
             <li><span aria-hidden="true" className={styles.sect}>§</span>&nbsp;By Invitation</li>
           </ul>
         </div>

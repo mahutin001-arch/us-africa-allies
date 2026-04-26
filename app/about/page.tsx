@@ -166,7 +166,7 @@ export default function AboutPage() {
         </div>
         <Ornament color="rgba(203,165,78,.8)" />
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="/summit" variant="outline" label="The Summit" subLabel="June MMXXVI" />
+          <StampButton href="/summit" variant="outline" label="The Summit" subLabel="Date TBA" />
           <StampButton href="/platform" variant="outline" label="The Platform" subLabel="Partnerships →" />
         </div>
       </Band>
@@ -182,8 +182,8 @@ export default function AboutPage() {
           <p>
             For interviews, press statements, or media requests, correspond
             with the Foundation&rsquo;s office at{' '}
-            <a href="mailto:daniel.edah@usafricaallies.org" className="pen">
-              daniel.edah@usafricaallies.org
+            <a href="mailto:info@usafricaallies.org" className="pen">
+              info@usafricaallies.org
             </a>
             . We respond within five business days.
           </p>

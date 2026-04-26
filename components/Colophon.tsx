@@ -42,8 +42,8 @@ export default function Colophon() {
             Washington,&nbsp;D.C.&nbsp;20003<br />
             United&nbsp;States&nbsp;of&nbsp;America
           </address>
-          <a href="mailto:daniel.edah@usafricaallies.org" className={`${styles.registryLink} pen`}>
-            daniel.edah@usafricaallies.org
+          <a href="mailto:info@usafricaallies.org" className={`${styles.registryLink} pen`}>
+            info@usafricaallies.org
           </a>
           <a href="tel:+12406787500" className={`${styles.registryLink} pen`}>
             +1 (240) 678-7500

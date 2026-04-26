@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
             United States of America
           </p>
           <p>
-            Email: <a href="mailto:daniel.edah@usafricaallies.org" className="pen">daniel.edah@usafricaallies.org</a><br />
+            Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a><br />
             Telephone: <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a>
           </p>
         </div>

@@ -35,7 +35,7 @@ export default function ContactPage() {
             <h2 style={{ margin: '0.8rem 0 2rem', fontSize: '2rem' }}>Reach the Foundation directly.</h2>
 
             <form
-              action="mailto:daniel.edah@usafricaallies.org"
+              action="mailto:info@usafricaallies.org"
               method="post"
               encType="text/plain"
               className={styles.form}
@@ -80,7 +80,7 @@ export default function ContactPage() {
 
             <Ledger
               items={[
-                { name: 'Email', value: <a href="mailto:daniel.edah@usafricaallies.org" className="pen">daniel.edah@usafricaallies.org</a> },
+                { name: 'Email', value: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a> },
                 { name: 'Phone', value: <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a> },
                 { name: 'Website', value: <a href="https://usafricaallies.org" className="pen">usafricaallies.org</a> },
               ]}

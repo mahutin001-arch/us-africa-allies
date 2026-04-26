@@ -76,7 +76,7 @@ export default function RefundPolicyPage() {
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p>
             To request a refund, please contact us by email at{' '}
-            <a href="mailto:daniel.edah@usafricaallies.org" className="pen">daniel.edah@usafricaallies.org</a>
+            <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a>
             {' '}or by telephone at{' '}
             <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a>.
             Include in your request:
@@ -113,7 +113,7 @@ export default function RefundPolicyPage() {
             Donors who have established a recurring (monthly, quarterly, or
             annual) gift may modify or cancel future contributions at any
             time by contacting us at{' '}
-            <a href="mailto:daniel.edah@usafricaallies.org" className="pen">daniel.edah@usafricaallies.org</a>
+            <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a>
             {' '}or through the donor portal of the payment processor that
             handled the original gift.
           </p>
@@ -157,7 +157,7 @@ export default function RefundPolicyPage() {
             United States of America
           </p>
           <p>
-            Email: <a href="mailto:daniel.edah@usafricaallies.org" className="pen">daniel.edah@usafricaallies.org</a><br />
+            Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a><br />
             Telephone: <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a>
           </p>
         </div>

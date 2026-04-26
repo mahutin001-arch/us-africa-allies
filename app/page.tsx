@@ -123,7 +123,7 @@ export default function HomePage() {
         <div className="sheet" style={{ marginTop: '3rem' }}>
           <Ledger
             items={[
-              { name: 'Date', value: 'June 11–12, MMXXVI', italic: true },
+              { name: 'Date', value: 'To be announced', italic: true },
               { name: 'Venue', value: 'United States Capitol · Washington, D.C.', italic: true },
               { name: 'Convening', value: 'U.S. · African Nations · Israel · Diaspora', italic: true },
               { name: 'Format', value: 'By invitation', italic: true },
@@ -253,7 +253,7 @@ export default function HomePage() {
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
           <StampButton href="/donate" variant="filled" label="Donate" subLabel="Support →" />
           <StampButton href="/about" variant="filled" label="About" subLabel="The Foundation →" />
-          <StampButton href="mailto:daniel.edah@usafricaallies.org?subject=Partnership" variant="filled" label="Partner" subLabel="Inquire →" />
+          <StampButton href="mailto:info@usafricaallies.org?subject=Partnership" variant="filled" label="Partner" subLabel="Inquire →" />
         </div>
       </Band>
     </>
