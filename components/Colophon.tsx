@@ -17,6 +17,7 @@ export default function Colophon() {
         <div className={styles.col}>
           <h4 className={styles.colHead}>The Work</h4>
           <a href="/platform" className="pen">Platform</a>
+          <a href="/network" className="pen">Business Leaders Network</a>
           <a href="/summit" className="pen">Founding Summit</a>
           <a href="/council" className="pen">Strategic Council</a>
           <a href="/programs" className="pen">Programs</a>
