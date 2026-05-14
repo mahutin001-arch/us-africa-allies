@@ -15,21 +15,17 @@ export default function Colophon() {
         </div>
 
         <div className={styles.col}>
-          <h4 className={styles.colHead}>The Work</h4>
-          <a href="/platform" className="pen">Platform</a>
-          <a href="/network" className="pen">Business Leaders Network</a>
-          <a href="/summit" className="pen">Founding Summit</a>
-          <a href="/council" className="pen">Strategic Council</a>
-          <a href="/programs" className="pen">Programs</a>
-          <a href="/strategic-plan" className="pen">Strategic Plan</a>
-          <a href="/resources" className="pen">Resources</a>
+          <h4 className={styles.colHead}>Signature Initiatives</h4>
+          <a href="/network" className="pen">Transatlantic Business Leaders Network (TBLN)</a>
+          <a href="/council" className="pen">U.S.&ndash;Africa Strategic Council</a>
+          <a href="/adca" className="pen">Africa Digital &amp; Cybersecurity Academy (ADCA)</a>
         </div>
 
         <div className={styles.col}>
           <h4 className={styles.colHead}>Institution</h4>
           <a href="/about" className="pen">About</a>
-          <a href="/founders-message" className="pen">Founder's Message</a>
-          <a href="/leadership" className="pen">Leadership Board</a>
+          <a href="/founders-message" className="pen">Founder&rsquo;s Message</a>
+          <a href="/leadership" className="pen">Leadership &amp; Board</a>
           <a href="/partners" className="pen">Partner With Us</a>
           <a href="/get-involved" className="pen">Get Involved</a>
           <a href="/contact" className="pen">Contact</a>
@@ -37,7 +33,7 @@ export default function Colophon() {
         </div>
 
         <div className={styles.col}>
-          <h4 className={styles.colHead}>Registry</h4>
+          <h4 className={styles.colHead}>Headquarters</h4>
           <address className={styles.address}>
             300&nbsp;Independence&nbsp;Ave&nbsp;SE<br />
             Washington,&nbsp;D.C.&nbsp;20003<br />
@@ -49,7 +45,7 @@ export default function Colophon() {
           <a href="tel:+12406787500" className={`${styles.registryLink} pen`}>
             +1 (240) 678-7500
           </a>
-          <span className={styles.muted}>501(c)(3) Public Charity</span>
+          <span className={styles.muted}>501(C)(3) Public Charity</span>
         </div>
       </div>
 

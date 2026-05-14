@@ -1,259 +1,163 @@
-import Hero from '@/components/Hero';
 import Band from '@/components/Band';
 import SectionHeader from '@/components/SectionHeader';
 import Pillar from '@/components/Pillar';
 import Pullquote from '@/components/Pullquote';
-import Ledger from '@/components/Ledger';
-import StampButton from '@/components/StampButton';
 import Ornament from '@/components/Ornament';
-import FounderPortrait from '@/components/FounderPortrait';
+import StampButton from '@/components/StampButton';
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      {/* Hero — navy */}
+      <Band ground="navy">
+        <div className="reveal" style={{ textAlign: 'center', maxWidth: '52rem', margin: '0 auto' }}>
+          <h1
+            style={{
+              fontFamily: 'var(--sans)',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.06em',
+              fontSize: 'clamp(2rem, 4.6vw, 3.6rem)',
+              lineHeight: 1.12,
+              color: 'var(--ivory)',
+            }}
+          >
+            U.S.&ndash;Africa Allies Foundation
+          </h1>
+          <p
+            style={{
+              fontFamily: 'var(--sans)',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              fontSize: 'clamp(0.95rem, 1.8vw, 1.4rem)',
+              color: 'var(--brand-gold)',
+              marginTop: '1.6rem',
+              lineHeight: 1.4,
+            }}
+          >
+            Building Leaders. Strengthening Families. Advancing Partnerships.
+          </p>
+          <p
+            style={{
+              marginTop: '2rem',
+              fontStyle: 'italic',
+              fontSize: '1.08rem',
+              maxWidth: '46rem',
+              marginInline: 'auto',
+            }}
+          >
+            Fostering strategic, values-based cooperation between the United
+            States and Africa to create a future grounded in dignity,
+            opportunity, and hope.
+          </p>
+          <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3rem' }}>
+            <StampButton href="/partners" variant="filled" label="Partner" subLabel="With Us &rarr;" />
+            <StampButton href="/about" variant="outline" label="Learn Our" subLabel="Mission &rarr;" />
+          </div>
+        </div>
+      </Band>
 
-      {/* §I The Foundation — ivory */}
+      {/* Who We Are — ivory */}
       <Band ground="ivory">
         <SectionHeader
           numeral="I"
-          eyebrow="The Foundation"
-          title="Values before programs."
+          eyebrow="Who We Are"
+          title="A Washington, D.C.-based nonprofit organization."
         />
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p className="dropcap">
-            The U.S.–Africa Allies Foundation is a transcontinental movement
-            dedicated to strengthening families, uplifting nations, and
-            glorifying God through service-driven leadership. We believe that
-            when families are empowered, communities flourish — and when
-            communities flourish, nations rise.
+            The U.S.&ndash;Africa Allies Foundation is a Washington, D.C.-based nonprofit organization dedicated to strengthening the bond between nations through principled leadership and meaningful international collaboration. We believe that sustainable progress is built on four pillars: strong families, ethical leadership, investment in human capital, and mutual respect.
           </p>
-          <p>
-            Across the United States and Africa, we serve families, empower
-            youth, uplift women, expand education, and support civil society
-            through programs that restore dignity, expand opportunity, and
-            cultivate leaders rooted in integrity and compassion.
-          </p>
-          <p>We are more than an organization — we are a bridge.</p>
         </div>
-        <Ornament />
       </Band>
 
-      {/* §II Three Convictions — navy, with pillars */}
-      <Band ground="navy" id="pillars">
+      {/* Our Focus Areas — navy */}
+      <Band ground="navy">
         <SectionHeader
           numeral="II"
-          eyebrow="Three Convictions"
-          title="Leadership. Family. Partnership."
-          lede="Every initiative flows from three foundational convictions about how nations rise."
+          eyebrow="Our Focus Areas"
+          title="We transform vision into impact through five strategic domains."
+        />
+        <div style={{ marginTop: '2rem' }}>
+          <Pillar numeral="I"   title="Principled Leadership" body="Cultivating character-driven service." />
+          <Pillar numeral="II"  title="Human Capital" body="Expanding technical and vocational excellence." />
+          <Pillar numeral="III" title="Strategic Partnerships" body="Connecting global institutions and enterprise." />
+          <Pillar numeral="IV"  title="Community Resilience" body="Restoring hope to families and vulnerable populations." />
+          <Pillar numeral="V"   title="Transatlantic Dialogue" body="Bridging cultures and governments for stability." />
+        </div>
+      </Band>
+
+      {/* Signature Initiatives — ivory */}
+      <Band ground="ivory">
+        <SectionHeader
+          numeral="III"
+          eyebrow="Signature Initiatives"
+          title="Direct access to our flagship platforms for global change."
         />
         <div style={{ marginTop: '2rem' }}>
           <Pillar
             numeral="I"
-            eyebrow="Leadership"
-            title="Values before programs."
-            body="Every initiative begins with character. We train ethical leaders who transform families, communities, and nations across the U.S.–Africa corridor — from youth academies to executive forums."
+            title="Transatlantic Business Leaders Network (TBLN)"
+            body="An economic corridor uniting Africa, the United States, and Israel."
           />
           <Pillar
             numeral="II"
-            eyebrow="Family"
-            title="Families first."
-            body="The family unit is the bedrock of every strong society. We invest in families to create lasting generational change — from Washington to Accra, from Lagos to Los Angeles."
+            title="U.S.&ndash;Africa Strategic Council"
+            body="The premier forum for high-level governance and the Annual Partnership Summit."
           />
           <Pillar
             numeral="III"
-            eyebrow="Partnership"
-            title="Partnership, not dependency."
-            body="Strategic alliances built on mutual respect and shared purpose. America and Africa rise together — united by values, enterprise, and a long-term vision for human dignity."
+            title="Africa Digital &amp; Cybersecurity Academy (ADCA)"
+            body="Training the next generation of elite technical leaders."
           />
         </div>
-      </Band>
-
-      {/* §III Founder — ivory, portrait + quote */}
-      <Band ground="ivory">
-        <SectionHeader
-          numeral="III"
-          eyebrow="From the Founder"
-          title="Leadership is not a position — it is a calling."
-        />
-        <div
-          className="sheet reveal"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'auto 1fr',
-            gap: 'clamp(2rem, 5vw, 5rem)',
-            alignItems: 'center',
-            marginTop: '3rem',
-          }}
-        >
-          <FounderPortrait size={220} />
-          <div className="prose" style={{ margin: 0, maxWidth: '44rem' }}>
-            <p style={{ fontStyle: 'italic', fontSize: '1.25rem', color: 'var(--oxblood)', lineHeight: 1.4, textAlign: 'left', hyphens: 'manual' }}>
-              &ldquo;The strength of a nation is built on the strength of its
-              families — and the strength of its alliances.&rdquo;
-            </p>
-            <p>
-              Daniel Edah leads the Foundation with a vision of principled
-              partnership between the United States and Africa — built not on
-              charity, but on collaboration, dignity, and shared purpose.
-            </p>
-            <p style={{ marginTop: '1.5rem' }}>
-              <a href="/founders-message" className="pen">Read the full message →</a>
-            </p>
-          </div>
+        <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3rem' }}>
+          <StampButton href="/network" variant="filled" label="TBLN" subLabel="Explore &rarr;" />
+          <StampButton href="/council" variant="filled" label="The Council" subLabel="View &rarr;" />
+          <StampButton href="/adca" variant="filled" label="ADCA" subLabel="Learn &rarr;" />
         </div>
       </Band>
 
-      {/* §IV Pullquote — gold ground */}
+      {/* Pullquote — gold */}
       <Band ground="gold">
         <Pullquote>
-          In strengthening families, we uplift nations — and in serving people,
-          we glorify God.
+          At the heart of our work is the conviction that true leadership is rooted in character.
         </Pullquote>
       </Band>
 
-      {/* §V Summit announcement — navy */}
+      {/* A Message From our Founder — navy */}
       <Band ground="navy">
+        <SectionHeader
+          numeral="IV"
+          eyebrow="A Message From our Founder"
+          title="True leadership is rooted in character."
+        />
+        <div className="column prose reveal" style={{ marginTop: '3rem' }}>
+          <p style={{ fontStyle: 'italic', fontSize: '1.1rem', lineHeight: 1.6 }}>
+            &ldquo;At the heart of our work is the conviction that true leadership is rooted in character. It is measured not only by success, but by the willingness to serve others, uplift communities, and leave a positive legacy for future generations. We believe Africa and the United States can accomplish great things together through mutual respect, shared responsibility, and enduring partnership.&rdquo;
+          </p>
+          <p style={{ textAlign: 'right', marginTop: '1.5rem' }}>
+            &mdash; Daniel Edah
+          </p>
+        </div>
+      </Band>
+
+      {/* Join the Mission — ivory */}
+      <Band ground="ivory">
         <SectionHeader
           numeral="V"
-          eyebrow="Foundation Announcement"
-          title={<>The Founding Summit<br />of the U.S.–Africa Strategic Council.</>}
-          lede="Hosted by the U.S.–Africa Allies Foundation at the United States Capitol, Washington, D.C."
+          eyebrow="Join the Mission"
+          title="We invite leaders from business, academia, and public service to join us in building a future of shared prosperity."
         />
-        <div className="sheet" style={{ marginTop: '3rem' }}>
-          <Ledger
-            items={[
-              { name: 'Date', value: 'To be announced', italic: true },
-              { name: 'Venue', value: 'United States Capitol · Washington, D.C.', italic: true },
-              { name: 'Convening', value: 'U.S. · African Nations · Israel · Diaspora', italic: true },
-              { name: 'Format', value: 'By invitation', italic: true },
-            ]}
-          />
-          <div className="column prose reveal" style={{ marginTop: '3rem' }}>
-            <p>
-              The Council is envisioned as a values-based platform bringing
-              together leaders from the United States, all African nations,
-              Israel, and the global African Diaspora to advance trade,
-              investment, leadership cooperation, and long-term economic
-              stability grounded in shared ethical principles.
-            </p>
-            <p>
-              Rooted in family-centered, country-centered, and God-centered
-              values, the Council affirms the importance of strong families,
-              national sovereignty, democratic governance, and strategic
-              partnership as the foundation for lasting prosperity and security
-              across both continents.
-            </p>
-          </div>
-          <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '4rem' }}>
-            <StampButton href="/summit" variant="filled" label="Summit Details" subLabel="Read →" />
-            <StampButton href="/council" variant="outline" label="The Council" subLabel="Mandate →" />
-          </div>
+        <div style={{ marginTop: '2rem' }}>
+          <Pillar numeral="I"   title="Partner" body="Align your organization with our strategic goals." />
+          <Pillar numeral="II"  title="Mentor" body="Shape the trajectory of emerging African leaders." />
+          <Pillar numeral="III" title="Invest" body="Support initiatives that create measurable, long-term impact." />
         </div>
-      </Band>
-
-      {/* §VI Measurable Impact + Platform teaser — ivory */}
-      <Band ground="ivory">
-        <SectionHeader
-          numeral="VI"
-          eyebrow="Measurable Impact"
-          title="Real lives. Real results."
-        />
-        <div className="column-wide" style={{ marginTop: '3rem' }}>
-          <Ledger
-            items={[
-              { name: 'Leaders Trained', value: 'I,000+', italic: true },
-              { name: 'Partner Organizations', value: 'XL+', italic: true },
-              { name: 'Core Programs', value: 'VII', italic: true },
-              { name: 'Nations Engaged', value: 'XX+', italic: true },
-            ]}
-          />
-        </div>
-
         <Ornament />
-
-        <div className="column prose reveal" style={{ marginTop: '2rem' }}>
-          <p className="dropcap">
-            The Foundation&rsquo;s <em>Opportunities &amp; Strategic Connections
-            Platform</em> facilitates practical partnerships between individuals,
-            entrepreneurs, companies, investors, and institutions across the
-            United States, Africa, and Israel.
-          </p>
-          <p>
-            The Platform exists to make those connections possible — building
-            bridges for trade, investment, and strategic partnership between
-            three regions with deep historical, cultural, and economic ties.
-          </p>
-          <p style={{ marginTop: '1.8em' }}>
-            <a href="/platform" className="pen">Explore the Platform →</a>
-          </p>
-        </div>
-      </Band>
-
-      {/* §VII Eight Values — navy */}
-      <Band ground="navy">
-        <SectionHeader
-          numeral="VII"
-          eyebrow="Eight Values"
-          title="One foundation."
-        />
-        <div className="sheet" style={{ marginTop: '3rem' }}>
-          <Ledger
-            numbered
-            items={[
-              { name: 'Faith-Centered', value: 'Grounded in moral conviction', italic: true },
-              { name: 'Family First', value: 'Bedrock of strong nations', italic: true },
-              { name: 'Patriotism', value: 'Service before status', italic: true },
-              { name: 'Integrity', value: 'Highest ethical standards', italic: true },
-              { name: 'Mutual Respect', value: 'Dignity across continents', italic: true },
-              { name: 'Service', value: 'Community before self', italic: true },
-              { name: 'Innovation', value: 'Enterprise and creativity', italic: true },
-              { name: 'Human Dignity', value: 'The worth of every person', italic: true },
-            ]}
-          />
-        </div>
-      </Band>
-
-      {/* §VIII CTA — ivory */}
-      <Band ground="ivory">
-        <SectionHeader
-          numeral="VIII"
-          eyebrow="Stand With the Alliance"
-          title="Principled leaders. Prosperous nations."
-          lede="Join a growing movement of families, leaders, and institutions building a stronger future on both sides of the Atlantic."
-        />
-
-        <div className="sheet reveal" style={{ marginTop: '4rem' }}>
-          <div className="what-we-do">
-            <article>
-              <span className="eyebrow">I. Leadership</span>
-              <h3>Leadership Development</h3>
-              <p>Ethical training academies and youth empowerment programs across the corridor.</p>
-            </article>
-            <article>
-              <span className="eyebrow">II. Family</span>
-              <h3>Family Strengthening</h3>
-              <p>Reinforcing the family unit as the bedrock of healthy societies and nations.</p>
-            </article>
-            <article>
-              <span className="eyebrow">III. Economy</span>
-              <h3>Economic Partnership</h3>
-              <p>Strategic alliances between American and African enterprises with real market access.</p>
-            </article>
-            <article>
-              <span className="eyebrow">IV. Dialogue</span>
-              <h3>Policy &amp; Dialogue</h3>
-              <p>High-level forums shaping the future of U.S.–Africa diplomatic and civic relations.</p>
-            </article>
-          </div>
-        </div>
-
-        <Ornament />
-
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
-          <StampButton href="/donate" variant="filled" label="Donate" subLabel="Support →" />
-          <StampButton href="/about" variant="filled" label="About" subLabel="The Foundation →" />
-          <StampButton href="mailto:info@usafricaallies.org?subject=Partnership" variant="filled" label="Partner" subLabel="Inquire →" />
+          <StampButton href="/get-involved" variant="filled" label="Get Involved" subLabel="Today &rarr;" />
         </div>
       </Band>
     </>

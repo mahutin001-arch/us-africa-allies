@@ -1,178 +1,178 @@
-'use client';
-
-import { useState } from 'react';
 import Band from '@/components/Band';
 import SectionHeader from '@/components/SectionHeader';
 import Pillar from '@/components/Pillar';
-import Ledger from '@/components/Ledger';
-import Pullquote from '@/components/Pullquote';
 import Ornament from '@/components/Ornament';
-import styles from './donate.module.css';
+import StampButton from '@/components/StampButton';
+
+export const metadata = {
+  title: 'Invest in Impact · U.S.–Africa Allies Foundation',
+  description:
+    'Strategic investment in human capital and global partnership. Direct your contribution to one of six designated funds advancing U.S.–Africa cooperation.',
+};
+
+// TODO: swap to production Revere form URL before public launch
+// (current URL is on merchant.reverepayments.dev — Revere sandbox).
+const revereUrl = 'https://merchant.reverepayments.dev/forms/0M0hCjKf-xd-udiuJneBRuy1Jo9FSJ0r9qXqBAWTiwA=';
 
 export default function DonatePage() {
-  const [amount, setAmount] = useState(250);
-  const [custom, setCustom] = useState('');
-  const presets = [25, 50, 100, 250, 500, 1000];
-
-  // TODO: swap to production Revere form URL before public launch
-  // (current URL is on merchant.reverepayments.dev — Revere sandbox).
-  const revereUrl = 'https://merchant.reverepayments.dev/forms/0M0hCjKf-xd-udiuJneBRuy1Jo9FSJ0r9qXqBAWTiwA=';
-
   return (
     <>
+      {/* Hero — navy */}
       <Band ground="navy">
         <div className="reveal" style={{ textAlign: 'center', maxWidth: '52rem', margin: '0 auto' }}>
-          <span className="eyebrow" style={{ color: 'var(--gold-light)' }}>Give &middot; Investment in People &middot; Investment in Nations</span>
+          <span className="eyebrow" style={{ color: 'var(--gold-light)' }}>Invest in Impact</span>
           <h1 style={{ marginTop: '1.5rem', fontSize: 'clamp(2.4rem, 5.4vw, 4.8rem)', lineHeight: 1.02 }}>
-            More than<br /><em style={{ color: 'var(--brand-gold)' }}>charity.</em>
+            Invest in <em style={{ color: 'var(--brand-gold)' }}>Impact.</em>
           </h1>
-          <p style={{ marginTop: '1.6rem', fontStyle: 'italic', fontSize: '1.08rem', maxWidth: '44rem', marginInline: 'auto' }}>
-            A donation to the U.S.–Africa Allies Foundation is more than
-            charity — it is an investment in God&rsquo;s work through people.
+          <p style={{ marginTop: '1.6rem', fontStyle: 'italic', fontSize: '1.08rem', maxWidth: '46rem', marginInline: 'auto' }}>
+            Your support enables the U.S.&ndash;Africa Allies Foundation to build a future grounded in dignity, opportunity, and hope. By investing in our initiatives, you are not simply giving a gift&mdash;you are fueling the development of principled leaders and the creation of sustainable economic corridors between Africa, the United States, and Israel.
+          </p>
+          <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3rem' }}>
+            <StampButton href={revereUrl} variant="filled" label="Make a Secure" subLabel="Donation &rarr;" />
+          </div>
+          <p className="sans" style={{ marginTop: '1.2rem', fontSize: '0.62rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(244, 236, 214, 0.6)' }}>
+            Secured by SSL &middot; Processed by Revere Payments
           </p>
         </div>
       </Band>
 
+      {/* §I Where Your Investment Goes — ivory */}
       <Band ground="ivory">
         <SectionHeader
           numeral="I"
-          eyebrow="Lasting Impact"
-          title="Every contribution creates lasting impact."
+          eyebrow="Where Your Investment Goes"
+          title="Strategic Investment in Human Capital and Global Partnership."
         />
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p className="dropcap">
-            Your generosity fuels programs that create lasting, measurable
-            impact across the United States and Africa. When you give, you
-            join a faith-driven movement dedicated to human dignity,
-            opportunity, and long-term transformation.
+            Every contribution is strategically allocated to our three core pillars of transformation.
+          </p>
+          <p>
+            The U.S.&ndash;Africa Allies Foundation provides donors and partners with the opportunity to direct their contributions to specific, high-impact initiatives. Our designated funds ensure that your resources are applied directly to the pillars of development most critical to our shared mission.
           </p>
         </div>
-        <div className="sheet" style={{ marginTop: '2rem' }}>
-          <Ledger
-            items={[
-              { name: 'Scholarships for underserved students', value: 'Education · Leadership', italic: true },
-              { name: 'Leadership Development Programs', value: 'Youth · Emerging leaders', italic: true },
-              { name: "Women's Empowerment & Entrepreneurship", value: 'Initiatives', italic: true },
-              { name: 'Humanitarian Relief', value: 'Families in crisis', italic: true },
-              { name: 'Community Development', value: 'Outreach programs', italic: true },
-              { name: 'U.S.–Africa Civic, Cultural & Faith Exchange', value: 'Initiatives', italic: true },
-            ]}
+      </Band>
+
+      {/* §II Designated Funds — navy */}
+      <Band ground="navy">
+        <SectionHeader
+          numeral="II"
+          eyebrow="Designated Funds"
+          title="Six pathways to direct your investment."
+        />
+        <div style={{ marginTop: '2rem' }}>
+          <Pillar
+            numeral="I"
+            title="Education &amp; Scholarship Fund: Investing in the Future of African Youth."
+            body="This fund provides direct educational access by covering tuition, technology, and mentorship for high-potential students. Your support removes the financial barriers to excellence, ensuring that talent is never limited by circumstance."
+          />
+          <Pillar
+            numeral="II"
+            title="Africa Digital &amp; Cybersecurity Academy (ADCA) Fund: Building the Next Generation of Tech Leaders."
+            body="Direct your support to our flagship technical residency programs. This fund finances advanced laboratory equipment, specialized cybersecurity curriculum development, and technical certifications for elite African youth."
+          />
+          <Pillar
+            numeral="III"
+            title="Women&rsquo;s Leadership &amp; Enterprise Fund: Empowering Families Through Economic Sovereignty."
+            body="Focused on entrepreneurship and professional development, this fund supports women-owned businesses and leadership training. We believe that empowering a woman is the most effective way to strengthen a family and uplift an entire community."
+          />
+          <Pillar
+            numeral="IV"
+            title="Principled Leadership Academy Fund: Cultivating Character-Driven Governance."
+            body="Help us train the next generation of ethical, faith-driven leaders. This fund supports our curriculum across academic, civic, and religious institutions, focusing on the character pillars essential for responsible stewardship."
+          />
+          <Pillar
+            numeral="V"
+            title="Humanitarian &amp; Community Resilience Fund: Restoring Dignity in Times of Need."
+            body="This fund provides critical support to families and communities facing displacement, food insecurity, or regional instability. Your contribution goes directly to initiatives that provide immediate relief while building long-term resilience."
+          />
+          <Pillar
+            numeral="VI"
+            title="Transatlantic Dialogue &amp; Strategic Exchange Fund: Strengthening the Africa&ndash;U.S.&ndash;Israel Partnership."
+            body="Support high-level policy forums, the Annual Strategic Summit, and cultural exchange programs. This fund facilitates the dialogue necessary to bridge continents and build lasting, values-based international alliances."
           />
         </div>
       </Band>
 
-      <Band ground="navy">
-        <SectionHeader
-          numeral="II"
-          eyebrow="Ways to Give"
-          title="Four ways to support the work."
-        />
-        <div style={{ marginTop: '2rem' }}>
-          <Pillar numeral="I"   eyebrow="Option I"   title="One-Time."            body="A single contribution that immediately supports programs, outreach, and humanitarian assistance wherever it is needed most." />
-          <Pillar numeral="II"  eyebrow="Option II"  title="Monthly."             body="Monthly partners sustain our long-term mission. Even modest recurring gifts create continuous impact, allowing us to expand programs with stability and confidence." />
-          <Pillar numeral="III" eyebrow="Option III" title="Annual."              body="Annual donors support large-scale initiatives and provide the foundation with the strength to plan, grow, and develop new leadership and education programs." />
-          <Pillar numeral="IV"  eyebrow="Option IV"  title="Corporate & Foundation." body="We welcome grants, sponsorships, CSR partnerships, and corporate philanthropic support. Organizations may sponsor programs, events, or trainings." />
-        </div>
-      </Band>
-
-      <Band ground="ivory" id="give">
-        <SectionHeader
-          numeral="III"
-          eyebrow="Make a Gift"
-          title="Choose an amount."
-          lede="All gifts support the Foundation's programs across the United States and Africa."
-        />
-
-        <div className={`${styles.panel} reveal`}>
-          <h3 style={{ fontSize: '1.25rem', marginBottom: '0.6rem' }}>One-time or recurring</h3>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '0.95rem', marginBottom: '1.2rem', textAlign: 'left', hyphens: 'manual' }}>
-            Select an amount, or enter a custom value.
-          </p>
-
-          <div className={styles.amountRow}>
-            {presets.map((v) => (
-              <button
-                key={v}
-                type="button"
-                className={`${styles.amountBtn} ${amount === v && !custom ? styles.amountActive : ''}`}
-                onClick={() => {
-                  setAmount(v);
-                  setCustom('');
-                }}
-              >
-                ${v.toLocaleString()}
-              </button>
-            ))}
-            <input
-              type="number"
-              placeholder="Other amount"
-              value={custom}
-              onChange={(e) => {
-                setCustom(e.target.value);
-                const parsed = parseInt(e.target.value, 10);
-                if (!Number.isNaN(parsed) && parsed > 0) setAmount(parsed);
-              }}
-              className={styles.customInput}
-            />
-          </div>
-
-          <div className={styles.methods}>
-            <a href={revereUrl} target="_blank" rel="noopener" className={styles.methodBtn}>
-              Give via Card →
-            </a>
-            <a href="/contact" className={`${styles.methodBtn} ${styles.methodOutline}`}>
-              Bank Transfer Instructions →
-            </a>
-          </div>
-
-          <p className="sans" style={{ marginTop: '0.9rem', fontSize: '0.62rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--ink-muted)' }}>
-            The card form opens a secure payment page hosted by our processor. You may be asked to re-enter the amount.
-          </p>
-
-          <p className="sans" style={{ marginTop: '1.2rem', fontSize: '0.66rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--ink-muted)' }}>
-            Funds support programs, outreach, and humanitarian work unless otherwise designated.
-          </p>
-        </div>
-      </Band>
-
-      <Band ground="navy">
-        <SectionHeader
-          numeral="IV"
-          eyebrow="Designated Funds"
-          title="Direct your gift to a specific cause."
-          lede="Donors may designate gifts to one of the Foundation's standing funds."
-        />
-        <div style={{ marginTop: '2rem' }}>
-          <Pillar numeral="I"   eyebrow="Fund I"   title="Scholarship Sponsorship."     body="Provide direct educational access by covering tuition, books, mentoring, technology, or program participation. Your sponsorship changes a life forever." />
-          <Pillar numeral="II"  eyebrow="Fund II"  title="Women's Empowerment Fund."    body="Support women-owned businesses, entrepreneurship training, and micro-grant programs. Empower a woman, uplift a family, strengthen a community." />
-          <Pillar numeral="III" eyebrow="Fund III" title="Leadership Academy Fund."     body="Help train the next generation of ethical, faith-driven leaders across schools, churches, civic institutions, and communities." />
-          <Pillar numeral="IV"  eyebrow="Fund IV"  title="Humanitarian Relief Fund."    body="Provide direct support to families facing crisis, food insecurity, displacement, or instability. Your gift restores dignity and hope in times of need." />
-          <Pillar numeral="V"   eyebrow="Fund V"   title="Community Development."       body="Support neighborhood outreach programs, civic engagement, and infrastructure that builds lasting community resilience." />
-          <Pillar numeral="VI"  eyebrow="Fund VI"  title="U.S.–Africa Exchange."        body="Fund cross-continental dialogue, cultural exchange programs, and policy forums that strengthen the U.S.–Africa partnership." />
-        </div>
-      </Band>
-
-      <Band ground="gold">
-        <Pullquote>
-          When you give, you plant seeds that outlive you.
-        </Pullquote>
-      </Band>
-
+      {/* §III Philanthropic Engagement — ivory */}
       <Band ground="ivory">
         <SectionHeader
-          numeral="V"
-          eyebrow="Stewardship Pledge"
-          title="We steward every gift with faith and accountability."
+          numeral="III"
+          eyebrow="Philanthropic Engagement"
+          title="Transparency and institutional accountability."
         />
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p>
-            We pledge full financial transparency and responsible stewardship
-            of every dollar entrusted to us — compliance with U.S. nonprofit
-            standards, clear program reporting, annual impact reports, and
-            ethical, dignified outreach in every program we run.
+            The U.S.&ndash;Africa Allies Foundation is a registered nonprofit organization. All contributions are utilized with the highest standards of transparency and institutional accountability.
+          </p>
+        </div>
+        <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3rem' }}>
+          <StampButton href={revereUrl} variant="filled" label="Contribute to a" subLabel="Designated Fund &rarr;" />
+          <StampButton href="mailto:info@usafricaallies.org?subject=Strategic Grant Inquiry" variant="outline" label="Discuss a" subLabel="Strategic Grant &rarr;" />
+        </div>
+      </Band>
+
+      {/* §IV Ways to Give — navy */}
+      <Band ground="navy">
+        <SectionHeader
+          numeral="IV"
+          eyebrow="Ways to Give"
+          title="Several pathways for individuals and institutions to partner with us."
+        />
+        <div style={{ marginTop: '2rem' }}>
+          <Pillar
+            numeral="I"
+            title="Direct Financial Support"
+            body="Make a one-time or recurring tax-deductible contribution to sustain our ongoing operations and field projects."
+          />
+          <Pillar
+            numeral="II"
+            title="Institutional Partnerships"
+            body="Corporations and foundations can sponsor specific cohorts, hubs, or summits. These partnerships offer unique opportunities for high-level engagement and brand alignment."
+          />
+          <Pillar
+            numeral="III"
+            title="Leadership &amp; Mentorship"
+            body="In addition to financial resources, we value the investment of time and expertise. Share your professional experience with our emerging leaders."
+          />
+        </div>
+        <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '3rem' }}>
+          <StampButton href={revereUrl} variant="filled" label="Make a Secure" subLabel="Donation &rarr;" />
+        </div>
+      </Band>
+
+      {/* §V Our Commitment to Stewardship — ivory */}
+      <Band ground="ivory">
+        <SectionHeader
+          numeral="V"
+          eyebrow="Our Commitment to Stewardship"
+          title="Integrity is our cornerstone."
+        />
+        <div className="column prose reveal" style={{ marginTop: '3rem' }}>
+          <p>
+            At the U.S.&ndash;Africa Allies Foundation, integrity is our cornerstone. We ensure that every dollar is managed with transparency and directed toward initiatives that yield measurable, long-term impact for families and nations.
+          </p>
+          <p style={{ fontStyle: 'italic', marginTop: '2rem', textAlign: 'center' }}>
+            Together, we are building a legacy of excellence.
           </p>
         </div>
         <Ornament />
+      </Band>
+
+      {/* §VI Contact the Finance & Development Office — navy */}
+      <Band ground="navy">
+        <SectionHeader
+          numeral="VI"
+          eyebrow="Contact the Finance &amp; Development Office"
+          title="For major gifts, institutional grants, or wire transfers."
+        />
+        <div className="column prose reveal" style={{ marginTop: '3rem', textAlign: 'center' }}>
+          <p style={{ textAlign: 'center', hyphens: 'manual' }}>
+            Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a><br />
+            Phone: <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a><br />
+            Address: Washington, DC, USA
+          </p>
+        </div>
       </Band>
     </>
   );
