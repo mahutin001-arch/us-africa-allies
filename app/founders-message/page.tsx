@@ -166,7 +166,6 @@ export default function FoundersMessagePage() {
         <Ornament />
 
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="/strategic-plan" variant="filled" label="Strategic Plan" subLabel="Read →" />
           <StampButton href="/get-involved" variant="filled" label="Join" subLabel="The Movement →" />
           <StampButton href="/contact" variant="filled" label="Write" subLabel="To the Founder →" />
         </div>

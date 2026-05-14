@@ -160,11 +160,6 @@ export default function PartnersPage() {
         </form>
 
         <Ornament />
-
-        <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="/summit" variant="filled" label="The Summit" subLabel="Date TBA" />
-          <StampButton href="/platform" variant="filled" label="The Platform" subLabel="Partnerships →" />
-        </div>
       </Band>
     </>
   );

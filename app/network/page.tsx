@@ -250,7 +250,6 @@ export default function NetworkPage() {
 
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
           <StampButton href="mailto:info@usafricaallies.org?subject=Transatlantic Business Leaders Network — Inquiry" variant="filled" label="Contact" subLabel="Secretariat →" />
-          <StampButton href="/platform" variant="outline" label="The Platform" subLabel="Partnerships →" />
         </div>
       </Band>
     </>

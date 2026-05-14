@@ -107,10 +107,6 @@ export default function CouncilPage() {
           lede="The Council's permanent work begins with the Founding Summit at the United States Capitol — date to be announced."
         />
         <Ornament color="rgba(203,165,78,.8)" />
-        <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="/summit" variant="filled" label="The Summit" subLabel="Date TBA →" />
-          <StampButton href="/platform" variant="outline" label="The Platform" subLabel="Partnerships →" />
-        </div>
       </Band>
 
     </>
