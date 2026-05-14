@@ -225,6 +225,10 @@ export default function NetworkPage() {
             </select>
           </label>
           <label className={styles.field}>
+            <span className="eyebrow">Specify Country &middot; State</span>
+            <input type="text" name="location" placeholder="e.g. Nigeria · California · Tel Aviv · São Paulo" />
+          </label>
+          <label className={styles.field}>
             <span className="eyebrow">Business Sector</span>
             <input type="text" name="sector" placeholder="e.g. Agriculture · Fintech · Manufacturing · Energy" required />
           </label>
