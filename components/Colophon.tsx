@@ -59,37 +59,27 @@ export default function Colophon() {
 
       <div className={styles.socials} aria-label="Social channels">
         <a
-          href="https://www.linkedin.com/company/us-africa-allies-foundation"
+          href="https://www.facebook.com/share/1iv8qXb5Ep/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialLink}
-          aria-label="LinkedIn"
-          title="LinkedIn"
+          aria-label="Facebook"
+          title="Facebook"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.24 8h4.5v14H.24V8zm7.5 0h4.32v1.92h.06c.6-1.14 2.07-2.34 4.26-2.34 4.56 0 5.4 3 5.4 6.9V22h-4.5v-6.24c0-1.49-.03-3.4-2.07-3.4-2.07 0-2.4 1.62-2.4 3.3V22H7.74V8z" />
+            <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/>
           </svg>
         </a>
         <a
-          href="#"
+          href="https://x.com/USAfricaAllies"
+          target="_blank"
+          rel="noopener noreferrer"
           className={styles.socialLink}
           aria-label="X (Twitter)"
           title="X"
         >
           <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-        <a
-          href="#"
-          className={styles.socialLink}
-          aria-label="Instagram"
-          title="Instagram"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <rect x="2" y="2" width="20" height="20" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
           </svg>
         </a>
       </div>

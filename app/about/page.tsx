@@ -28,6 +28,10 @@ export default function AboutPage() {
               fontSize: 'clamp(2rem, 4.6vw, 3.6rem)',
               lineHeight: 1.12,
               color: 'var(--ivory)',
+              hyphens: 'manual',
+              WebkitHyphens: 'manual',
+              wordBreak: 'keep-all',
+              overflowWrap: 'normal',
             }}
           >
             U.S.&ndash;Africa Allies Foundation
@@ -42,6 +46,11 @@ export default function AboutPage() {
               color: 'var(--brand-gold)',
               marginTop: '1.6rem',
               lineHeight: 1.4,
+              hyphens: 'manual',
+              WebkitHyphens: 'manual',
+              wordBreak: 'keep-all',
+              overflowWrap: 'normal',
+              textAlign: 'center',
             }}
           >
             Building Leaders. Strengthening Families. Advancing Partnerships.
@@ -75,7 +84,7 @@ export default function AboutPage() {
         />
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p className="dropcap">
-            The U.S.&ndash;Africa Allies Foundation is a Washington, D.C.-based nonprofit organization dedicated to strengthening the bond between nations through principled leadership and meaningful international collaboration. We believe that sustainable progress is built on four pillars: strong families, ethical leadership, investment in human capital, and mutual respect.
+            The U.S.&ndash;Africa Allies Foundation is a Washington, D.C.-based nonprofit organization dedicated to strengthening the bond between nations through principled leadership and meaningful international collaboration. We believe that sustainable progress is built on strong families, principled leadership, investment in human capital, and mutual respect.
           </p>
         </div>
       </Band>

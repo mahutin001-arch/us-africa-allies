@@ -5,7 +5,7 @@ import Ledger from '@/components/Ledger';
 import Pullquote from '@/components/Pullquote';
 import Ornament from '@/components/Ornament';
 import StampButton from '@/components/StampButton';
-import styles from '../get-involved/form.module.css';
+import NetworkApplicationForm from './NetworkApplicationForm';
 
 export const metadata = {
   title: 'Transatlantic Business Leaders Network · U.S.–Africa Allies Foundation',
@@ -197,58 +197,7 @@ export default function NetworkPage() {
           title="Join. Build across borders. Scale globally."
           lede="Submit your application below. The Secretariat will review and respond within five business days."
         />
-        <form
-          action="mailto:info@usafricaallies.org?subject=Transatlantic Business Leaders Network — Membership Application"
-          method="post"
-          encType="text/plain"
-          className={`${styles.form} reveal`}
-        >
-          <label className={styles.field}>
-            <span className="eyebrow">Full Name</span>
-            <input type="text" name="name" required />
-          </label>
-          <label className={styles.field}>
-            <span className="eyebrow">Company &middot; Organization</span>
-            <input type="text" name="company" required />
-          </label>
-          <label className={styles.field}>
-            <span className="eyebrow">Email</span>
-            <input type="email" name="email" required />
-          </label>
-          <label className={styles.field}>
-            <span className="eyebrow">Country &middot; Region</span>
-            <select name="region" defaultValue="Africa">
-              <option>Africa</option>
-              <option>United States</option>
-              <option>Israel</option>
-              <option>Diaspora &middot; Other</option>
-            </select>
-          </label>
-          <label className={styles.field}>
-            <span className="eyebrow">Specify Country &middot; State</span>
-            <input type="text" name="location" placeholder="e.g. Nigeria · California · Tel Aviv · São Paulo" />
-          </label>
-          <label className={styles.field}>
-            <span className="eyebrow">Business Sector</span>
-            <input type="text" name="sector" placeholder="e.g. Agriculture · Fintech · Manufacturing · Energy" required />
-          </label>
-          <label className={styles.field}>
-            <span className="eyebrow">Partnership Needs</span>
-            <select name="needs" defaultValue="Buyers &amp; suppliers">
-              <option>Buyers &amp; suppliers</option>
-              <option>Investors &amp; capital</option>
-              <option>Technology &amp; innovation partners</option>
-              <option>Joint venture co-founders</option>
-              <option>Distribution &amp; market entry</option>
-              <option>Multiple of the above</option>
-            </select>
-          </label>
-          <label className={styles.field}>
-            <span className="eyebrow">Business Description</span>
-            <textarea name="description" rows={6} placeholder="In one paragraph, describe your business and the partnerships you are seeking." required></textarea>
-          </label>
-          <button type="submit" className={styles.submit}>Submit Application →</button>
-        </form>
+        <NetworkApplicationForm />
 
         <Ornament color="rgba(203,165,78,.8)" />
 

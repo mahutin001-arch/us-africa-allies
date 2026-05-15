@@ -20,6 +20,10 @@ export default function HomePage() {
               fontSize: 'clamp(2rem, 4.6vw, 3.6rem)',
               lineHeight: 1.12,
               color: 'var(--ivory)',
+              hyphens: 'manual',
+              WebkitHyphens: 'manual',
+              wordBreak: 'keep-all',
+              overflowWrap: 'normal',
             }}
           >
             U.S.&ndash;Africa Allies Foundation
@@ -34,6 +38,11 @@ export default function HomePage() {
               color: 'var(--brand-gold)',
               marginTop: '1.6rem',
               lineHeight: 1.4,
+              hyphens: 'manual',
+              WebkitHyphens: 'manual',
+              wordBreak: 'keep-all',
+              overflowWrap: 'normal',
+              textAlign: 'center',
             }}
           >
             Building Leaders. Strengthening Families. Advancing Partnerships.
@@ -67,7 +76,7 @@ export default function HomePage() {
         />
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p className="dropcap">
-            The U.S.&ndash;Africa Allies Foundation is a Washington, D.C.-based nonprofit organization dedicated to strengthening the bond between nations through principled leadership and meaningful international collaboration. We believe that sustainable progress is built on four pillars: strong families, ethical leadership, investment in human capital, and mutual respect.
+            The U.S.&ndash;Africa Allies Foundation is a Washington, D.C.-based nonprofit organization dedicated to strengthening the bond between nations through principled leadership and meaningful international collaboration. We believe that sustainable progress is built on strong families, principled leadership, investment in human capital, and mutual respect.
           </p>
         </div>
       </Band>
@@ -80,11 +89,11 @@ export default function HomePage() {
           title="We transform vision into impact through five strategic domains."
         />
         <div style={{ marginTop: '2rem' }}>
-          <Pillar numeral="I"   title="Principled Leadership" body="Cultivating character-driven service." />
-          <Pillar numeral="II"  title="Human Capital" body="Expanding technical and vocational excellence." />
-          <Pillar numeral="III" title="Strategic Partnerships" body="Connecting global institutions and enterprise." />
-          <Pillar numeral="IV"  title="Community Resilience" body="Restoring hope to families and vulnerable populations." />
-          <Pillar numeral="V"   title="Transatlantic Dialogue" body="Bridging cultures and governments for stability." />
+          <Pillar numeral="I"   title="Principled Leadership" body="Equipping emerging leaders with the character, vision, and skills needed to serve with integrity." />
+          <Pillar numeral="II"  title="Human Capital &amp; Education" body="Expanding access to technical training, mentorship, and opportunities that empower the next generation." />
+          <Pillar numeral="III" title="Strategic Partnerships" body="Connecting governments, businesses, and civil society to drive sustainable development and innovation." />
+          <Pillar numeral="IV"  title="Humanitarian Resilience" body="Supporting families and vulnerable communities through initiatives that restore dignity and hope." />
+          <Pillar numeral="V"   title="Transatlantic Engagement" body="Promoting stronger ties through cultural exchange, institutional collaboration, and shared initiatives." />
         </div>
       </Band>
 
