@@ -362,3 +362,29 @@ section.ground-navy .hair { border-top-color: rgba(203, 165, 78, 0.25); }
   .what-we-do > article:first-child { border-left: 0; }
   .what-we-do > article h3 { font-size: 1.2rem; }
 }
+
+/* ---------- 20. BIO GRID · portrait + prose, responsive ---------- */
+/* Mobile: single column, portrait centered, prose stacked below.
+   Desktop (>=720px): side-by-side, portrait left, prose right. */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: start;
+  gap: 1.6rem;
+}
+.bio-grid > .prose,
+.bio-grid > div {
+  max-width: 100%;
+}
+@media (min-width: 720px) {
+  .bio-grid {
+    grid-template-columns: auto 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    justify-items: start;
+  }
+  .bio-grid > .prose,
+  .bio-grid > div {
+    max-width: 44rem;
+  }
+}

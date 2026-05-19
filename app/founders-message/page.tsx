@@ -26,7 +26,7 @@ export default function FoundersMessagePage() {
       </Band>
 
       <Band ground="ivory">
-        <div className="column-wide reveal" style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '3rem', alignItems: 'center', paddingBottom: '3rem', borderBottom: '1px solid var(--hair)' }}>
+        <div className="column-wide reveal bio-grid" style={{ alignItems: 'center', paddingBottom: '3rem', borderBottom: '1px solid var(--hair)' }}>
           <FounderPortrait size={180} />
           <div className="prose" style={{ margin: 0 }}>
             <h3 style={{ fontSize: '1.6rem', margin: '0 0 0.3rem' }}>Daniel Edah</h3>

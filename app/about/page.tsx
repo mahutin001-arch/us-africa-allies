@@ -167,18 +167,9 @@ export default function AboutPage() {
         />
 
         {/* Daniel Edah bio */}
-        <div
-          className="sheet reveal"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'auto 1fr',
-            gap: 'clamp(2rem, 5vw, 4rem)',
-            alignItems: 'start',
-            marginTop: '3rem',
-          }}
-        >
+        <div className="sheet reveal bio-grid" style={{ marginTop: '3rem' }}>
           <FounderPortrait size={220} />
-          <div className="prose" style={{ margin: 0, maxWidth: '44rem' }}>
+          <div className="prose" style={{ margin: 0 }}>
             <h3 style={{ marginBottom: '0.3rem', textAlign: 'left' }}>Daniel Edah</h3>
             <p className="sans" style={{ fontSize: '0.66rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--brand-gold)', marginBottom: '1.5rem', textAlign: 'left', hyphens: 'manual' }}>
               Founder &amp; President

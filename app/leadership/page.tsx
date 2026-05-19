@@ -37,16 +37,7 @@ export default function LeadershipPage() {
           eyebrow="Founder & President"
           title="Daniel Edah."
         />
-        <div
-          className="column-wide reveal"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'auto 1fr',
-            gap: 'clamp(2rem, 5vw, 4rem)',
-            alignItems: 'center',
-            marginTop: '3rem',
-          }}
-        >
+        <div className="column-wide reveal bio-grid" style={{ alignItems: 'center', marginTop: '3rem' }}>
           <FounderPortrait size={220} />
           <div className="prose" style={{ margin: 0 }}>
             <span className="eyebrow">The Founder</span>
