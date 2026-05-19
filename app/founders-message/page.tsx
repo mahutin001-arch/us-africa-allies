@@ -29,8 +29,7 @@ export default function FoundersMessagePage() {
         <div className="column-wide reveal" style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '3rem', alignItems: 'center', paddingBottom: '3rem', borderBottom: '1px solid var(--hair)' }}>
           <FounderPortrait size={180} />
           <div className="prose" style={{ margin: 0 }}>
-            <span className="eyebrow">The Author</span>
-            <h3 style={{ fontSize: '1.6rem', margin: '0.4rem 0 0.3rem' }}>Daniel Edah</h3>
+            <h3 style={{ fontSize: '1.6rem', margin: '0 0 0.3rem' }}>Daniel Edah</h3>
             <p className="sans" style={{ fontSize: '0.75rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--ink-muted)', margin: '0 0 1rem' }}>Founder · President</p>
             <p>
               Daniel Edah leads the U.S.–Africa Allies Foundation with a
@@ -166,7 +165,7 @@ export default function FoundersMessagePage() {
         <Ornament />
 
         <div className="reveal" style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-          <StampButton href="/get-involved" variant="filled" label="Join" subLabel="The Movement →" />
+          <StampButton href="/get-involved" variant="filled" label="Join" subLabel="Us →" />
           <StampButton href="/contact" variant="filled" label="Write" subLabel="To the Founder →" />
         </div>
       </Band>
