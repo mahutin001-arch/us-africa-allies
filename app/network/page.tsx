@@ -90,10 +90,10 @@ export default function NetworkPage() {
         <div className="sheet" style={{ marginTop: '3rem' }}>
           <Ledger
             items={[
-              { name: 'Entrepreneurs &amp; business owners', value: 'Founders · Operators', italic: true },
+              { name: 'Entrepreneurs & business owners', value: 'Founders · Operators', italic: true },
               { name: 'Corporate executives', value: 'Leadership · Strategy', italic: true },
-              { name: 'Investors &amp; venture capital groups', value: 'Capital · Funds', italic: true },
-              { name: 'Technology innovators &amp; startups', value: 'Africa · U.S. · Israel', italic: true },
+              { name: 'Investors & venture capital groups', value: 'Capital · Funds', italic: true },
+              { name: 'Technology innovators & startups', value: 'Africa · U.S. · Israel', italic: true },
               { name: 'Import / export operators', value: 'Trade · Distribution', italic: true },
               { name: 'Industry professionals with active business activity', value: 'Verified', italic: true },
             ]}
@@ -165,7 +165,7 @@ export default function NetworkPage() {
               { name: 'Existing business or investment activity', value: 'Africa · U.S. · Israel', italic: true },
               { name: 'Active partnership, market, supplier, or capital sought', value: 'Required', italic: true },
               { name: 'Commitment to cross-border business collaboration', value: 'Required', italic: true },
-              { name: 'Annual Membership Fee', value: 'Supports platform &amp; programming', italic: true },
+              { name: 'Annual Membership Fee', value: 'Supports platform & programming', italic: true },
             ]}
           />
         </div>

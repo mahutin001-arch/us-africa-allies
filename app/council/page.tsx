@@ -88,9 +88,9 @@ export default function CouncilPage() {
         <div className="sheet" style={{ marginTop: '3rem' }}>
           <Ledger
             items={[
-              { name: 'Annual Summit', value: 'Rotational · Washington &amp; Africa', italic: true },
+              { name: 'Annual Summit', value: 'Rotational · Washington & Africa', italic: true },
               { name: 'Working Groups', value: 'Thematic · Year-round', italic: true },
-              { name: 'Policy Dialogues', value: 'AUDA-NEPAD &amp; Agenda 2063', italic: true },
+              { name: 'Policy Dialogues', value: 'AUDA-NEPAD & Agenda 2063', italic: true },
               { name: 'Member Composition', value: 'U.S. · Africa · Israel · Diaspora', italic: true },
               { name: 'Output', value: 'Briefs · Communiqués · Roadmaps', italic: true },
             ]}
