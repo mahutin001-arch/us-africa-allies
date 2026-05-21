@@ -44,7 +44,8 @@ export default function Masthead() {
   }, [open]);
 
   return (
-    <header className={`${styles.masthead} ${scrolled ? styles.solid : ''}`}>
+    <>
+      <header className={`${styles.masthead} ${scrolled ? styles.solid : ''}`}>
       <div className={styles.inner}>
         <a href="/" className={styles.brand} aria-label="U.S.–Africa Allies Foundation — Home">
           <Seal size={44} decorative />
@@ -79,6 +80,7 @@ export default function Masthead() {
           <span />
         </button>
       </div>
+      </header>
 
       <div className={`${styles.drawer} ${open ? styles.drawerOpen : ''}`} aria-hidden={!open}>
         <div className={styles.drawerHead}>
@@ -102,6 +104,6 @@ export default function Masthead() {
 
         <div className={styles.drawerFoot}>Vol.&nbsp;I · No.&nbsp;1 · MMXXVI</div>
       </div>
-    </header>
+    </>
   );
 }
