@@ -9,23 +9,16 @@ type NavItem = { label: string; href: string };
 const NAV: NavItem[] = [
   { label: 'About', href: '/about' },
   { label: 'Founder', href: '/founders-message' },
-  { label: 'Programs', href: '/programs' },
   { label: 'Leadership', href: '/leadership' },
-  { label: 'Plan', href: '/strategic-plan' },
-  { label: 'Engage', href: '/get-involved' },
+  { label: 'Get Involved', href: '/get-involved' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const DRAWER_NAV: NavItem[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: "Founder's Message", href: '/founders-message' },
-  { label: 'Programs & Initiatives', href: '/programs' },
-  { label: 'Strategic Plan', href: '/strategic-plan' },
-  { label: 'Leadership Board', href: '/leadership' },
-  { label: 'Strategic Council', href: '/council' },
-  { label: 'Founding Summit', href: '/summit' },
-  { label: 'Platform', href: '/platform' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Leadership & Board', href: '/leadership' },
   { label: 'Partner With Us', href: '/partners' },
   { label: 'Get Involved', href: '/get-involved' },
   { label: 'Contact', href: '/contact' },
