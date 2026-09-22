@@ -42,9 +42,6 @@ export default function Colophon() {
           <a href="mailto:info@usafricaallies.org" className={`${styles.registryLink} pen`}>
             info@usafricaallies.org
           </a>
-          <a href="tel:+12406787500" className={`${styles.registryLink} pen`}>
-            +1 (240) 678-7500
-          </a>
           <span className={styles.muted}>501(C)(3) Public Charity</span>
         </div>
       </div>

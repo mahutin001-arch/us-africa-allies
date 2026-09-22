@@ -169,7 +169,6 @@ export default function DonatePage() {
         <div className="column prose reveal" style={{ marginTop: '3rem', textAlign: 'center' }}>
           <p style={{ textAlign: 'center', hyphens: 'manual' }}>
             Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a><br />
-            Phone: <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a><br />
             Address: Washington, DC, USA
           </p>
         </div>

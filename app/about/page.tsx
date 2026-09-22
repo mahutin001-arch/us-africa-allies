@@ -322,8 +322,7 @@ export default function AboutPage() {
             United States of America
           </p>
           <p style={{ marginTop: '2rem', textAlign: 'center', hyphens: 'manual' }}>
-            Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a><br />
-            <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a>
+            Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a>
           </p>
         </div>
         <Ornament />

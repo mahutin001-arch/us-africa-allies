@@ -76,9 +76,7 @@ export default function RefundPolicyPage() {
         <div className="column prose reveal" style={{ marginTop: '3rem' }}>
           <p>
             To request a refund, please contact us by email at{' '}
-            <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a>
-            {' '}or by telephone at{' '}
-            <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a>.
+            <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a>.
             Include in your request:
           </p>
           <p>
@@ -157,8 +155,7 @@ export default function RefundPolicyPage() {
             United States of America
           </p>
           <p>
-            Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a><br />
-            Telephone: <a href="tel:+12406787500" className="pen">+1 (240) 678-7500</a>
+            Email: <a href="mailto:info@usafricaallies.org" className="pen">info@usafricaallies.org</a>
           </p>
         </div>
         <Ornament color="rgba(203,165,78,.8)" />
