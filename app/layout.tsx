@@ -26,11 +26,39 @@ export const metadata: Metadata = {
   icons: { icon: '/assets/logo1.png' },
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'NGO',
+  '@id': 'https://usafricaallies.org/#organization',
+  name: 'U.S. Africa Allies Foundation',
+  url: 'https://usafricaallies.org/',
+  logo: 'https://usafricaallies.org/assets/logo1.png',
+  description:
+    'A foundation committed to principled leadership, family empowerment, and transformative cooperation between the United States and the nations of Africa.',
+  email: 'info@usafricaallies.org',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '300 Independence Ave SE',
+    addressLocality: 'Washington',
+    addressRegion: 'DC',
+    postalCode: '20003',
+    addressCountry: 'US',
+  },
+  sameAs: [
+    'https://www.facebook.com/share/1iv8qXb5Ep/?mibextid=wwXIfr',
+    'https://x.com/USAfricaAllies',
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${tinos.variable} ${montserrat.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body>
         <script

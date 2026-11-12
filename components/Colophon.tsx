@@ -89,6 +89,8 @@ export default function Colophon() {
           <a href="/terms" className="pen">Terms of Use</a>
           <span className={styles.dot} aria-hidden="true">·</span>
           <a href="/refund-policy" className="pen">Refund Policy</a>
+          <span className={styles.dot} aria-hidden="true">·</span>
+          <a href="https://emeraldedge.net/" className="pen">Website by Emerald Edge</a>
         </span>
       </div>
     </footer>
