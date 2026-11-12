@@ -8,9 +8,9 @@ import Pullquote from '@/components/Pullquote';
 import FounderPortrait from '@/components/FounderPortrait';
 
 export const metadata = {
-  title: 'About · U.S.–Africa Allies Foundation',
+  title: 'About · U.S. Africa Allies Foundation',
   description:
-    'A Washington, D.C.-based nonprofit organization dedicated to strengthening the bond between nations through principled leadership and meaningful international collaboration.',
+    'A Washington, D.C. based nonprofit organization dedicated to strengthening the bond between nations through principled leadership and meaningful international collaboration.',
 };
 
 export default function AboutPage() {

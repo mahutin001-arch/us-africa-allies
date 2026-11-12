@@ -7,9 +7,9 @@ import Ornament from '@/components/Ornament';
 import StampButton from '@/components/StampButton';
 
 export const metadata = {
-  title: 'Strategic Council · U.S.–Africa Allies Foundation',
+  title: 'Strategic Council · U.S. Africa Allies Foundation',
   description:
-    'A permanent platform for high-level dialogue, strategic cooperation, and practical partnership between the United States, African nations, Israel, and the global African Diaspora.',
+    'A permanent platform for high level dialogue, strategic cooperation, and practical partnership between the United States, African nations, Israel, and the global African Diaspora.',
 };
 
 export default function CouncilPage() {

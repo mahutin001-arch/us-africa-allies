@@ -8,9 +8,9 @@ import StampButton from '@/components/StampButton';
 import NetworkApplicationForm from './NetworkApplicationForm';
 
 export const metadata = {
-  title: 'Transatlantic Business Leaders Network · U.S.–Africa Allies Foundation',
+  title: 'Transatlantic Business Leaders Network · U.S. Africa Allies Foundation',
   description:
-    'A curated international business network connecting African, American, and Israeli entrepreneurs, executives, and investors. Initiated by the U.S.–Africa Allies Foundation.',
+    'A curated international business network connecting African, American, and Israeli entrepreneurs, executives, and investors. Initiated by the U.S. Africa Allies Foundation.',
 };
 
 export default function NetworkPage() {

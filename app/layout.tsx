@@ -20,9 +20,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'U.S.–Africa Allies Foundation',
+  title: 'U.S. Africa Allies Foundation',
   description:
-    'A values-based foundation committed to principled leadership, family empowerment, and transformative cooperation between the United States and the nations of Africa.',
+    'A values based foundation committed to principled leadership, family empowerment, and transformative cooperation between the United States and the nations of Africa.',
   icons: { icon: '/assets/logo1.png' },
 };
 
@@ -34,7 +34,7 @@ const organizationJsonLd = {
   url: 'https://usafricaallies.org/',
   logo: 'https://usafricaallies.org/assets/logo1.png',
   description:
-    'A foundation committed to principled leadership, family empowerment, and transformative cooperation between the United States and the nations of Africa.',
+    'A values based foundation committed to principled leadership, family empowerment, and transformative cooperation between the United States and the nations of Africa.',
   email: 'info@usafricaallies.org',
   address: {
     '@type': 'PostalAddress',

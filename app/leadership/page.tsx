@@ -8,9 +8,9 @@ import StampButton from '@/components/StampButton';
 import FounderPortrait from '@/components/FounderPortrait';
 
 export const metadata = {
-  title: 'Leadership Board · U.S.–Africa Allies Foundation',
+  title: 'Leadership Board · U.S. Africa Allies Foundation',
   description:
-    'The Board of Directors of the U.S.–Africa Allies Foundation — committed to ethical governance, strategic vision, and measurable impact.',
+    'The Board of Directors of the U.S. Africa Allies Foundation, committed to ethical governance, strategic vision, and measurable impact.',
 };
 
 export default function LeadershipPage() {

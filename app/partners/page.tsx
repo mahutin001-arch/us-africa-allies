@@ -8,9 +8,9 @@ import StampButton from '@/components/StampButton';
 import styles from '../get-involved/form.module.css';
 
 export const metadata = {
-  title: 'Partner With Us · U.S.–Africa Allies Foundation',
+  title: 'Partner With Us · U.S. Africa Allies Foundation',
   description:
-    'Partnership is not transactional — it is transformational. Strategic, institutional, corporate, funding, government, and international partnerships with the U.S.–Africa Allies Foundation.',
+    'Partnership is not transactional, it is transformational. Strategic, institutional, corporate, funding, government, and international partnerships with the U.S. Africa Allies Foundation.',
 };
 
 export default function PartnersPage() {

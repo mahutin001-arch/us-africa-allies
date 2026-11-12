@@ -3,9 +3,9 @@ import SectionHeader from '@/components/SectionHeader';
 import Ornament from '@/components/Ornament';
 
 export const metadata = {
-  title: 'Terms of Use · U.S.–Africa Allies Foundation',
+  title: 'Terms of Use · U.S. Africa Allies Foundation',
   description:
-    'The terms that govern use of the U.S.–Africa Allies Foundation website, donation services, and programs.',
+    'The terms that govern use of the U.S. Africa Allies Foundation website, donation services, and programs.',
 };
 
 export default function TermsPage() {

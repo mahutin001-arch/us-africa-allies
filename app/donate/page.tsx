@@ -5,9 +5,9 @@ import Ornament from '@/components/Ornament';
 import StampButton from '@/components/StampButton';
 
 export const metadata = {
-  title: 'Invest in Impact · U.S.–Africa Allies Foundation',
+  title: 'Invest in Impact · U.S. Africa Allies Foundation',
   description:
-    'Strategic investment in human capital and global partnership. Direct your contribution to one of six designated funds advancing U.S.–Africa cooperation.',
+    'Strategic investment in human capital and global partnership. Direct your contribution to one of six designated funds advancing U.S. Africa cooperation.',
 };
 
 // TODO: swap to production Revere form URL before public launch

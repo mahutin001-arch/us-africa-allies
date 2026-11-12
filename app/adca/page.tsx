@@ -4,7 +4,7 @@ import Ornament from '@/components/Ornament';
 import StampButton from '@/components/StampButton';
 
 export const metadata = {
-  title: 'Africa Digital & Cybersecurity Academy (ADCA) · U.S.–Africa Allies Foundation',
+  title: 'Africa Digital & Cybersecurity Academy (ADCA) · U.S. Africa Allies Foundation',
   description:
     'A premier technical training initiative designed to equip African youth with elite skills in cybersecurity and digital economy management.',
 };

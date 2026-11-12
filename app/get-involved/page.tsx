@@ -7,9 +7,9 @@ import StampButton from '@/components/StampButton';
 import styles from './form.module.css';
 
 export const metadata = {
-  title: 'Get Involved · U.S.–Africa Allies Foundation',
+  title: 'Get Involved · U.S. Africa Allies Foundation',
   description:
-    'Six pathways to join the U.S.–Africa Allies Foundation — volunteers, mentors, committee members, ambassadors, donors, and interns.',
+    'Six pathways to join the U.S. Africa Allies Foundation: volunteers, mentors, committee members, ambassadors, donors, and interns.',
 };
 
 export default function GetInvolvedPage() {

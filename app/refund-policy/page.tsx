@@ -3,9 +3,9 @@ import SectionHeader from '@/components/SectionHeader';
 import Ornament from '@/components/Ornament';
 
 export const metadata = {
-  title: 'Refund Policy · U.S.–Africa Allies Foundation',
+  title: 'Refund Policy · U.S. Africa Allies Foundation',
   description:
-    'How the U.S.–Africa Allies Foundation handles refund requests, duplicate transactions, and cancellation of recurring donations.',
+    'How the U.S. Africa Allies Foundation handles refund requests, duplicate transactions, and cancellation of recurring donations.',
 };
 
 export default function RefundPolicyPage() {

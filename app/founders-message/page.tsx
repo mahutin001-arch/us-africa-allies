@@ -5,9 +5,9 @@ import StampButton from '@/components/StampButton';
 import FounderPortrait from '@/components/FounderPortrait';
 
 export const metadata = {
-  title: "Founder's Message · U.S.–Africa Allies Foundation",
+  title: "Founder's Message · U.S. Africa Allies Foundation",
   description:
-    "A message from Daniel Edah, founder and president of the U.S.–Africa Allies Foundation: leadership is not a position — it is a calling.",
+    "A message from Daniel Edah, founder and president of the U.S. Africa Allies Foundation: leadership is not a position, it is a calling.",
 };
 
 export default function FoundersMessagePage() {

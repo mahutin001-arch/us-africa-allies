@@ -3,9 +3,9 @@ import SectionHeader from '@/components/SectionHeader';
 import Ornament from '@/components/Ornament';
 
 export const metadata = {
-  title: 'Privacy Policy · U.S.–Africa Allies Foundation',
+  title: 'Privacy Policy · U.S. Africa Allies Foundation',
   description:
-    'How the U.S.–Africa Allies Foundation collects, uses, and protects the personal information of donors, visitors, and program participants.',
+    'How the U.S. Africa Allies Foundation collects, uses, and protects the personal information of donors, visitors, and program participants.',
 };
 
 export default function PrivacyPolicyPage() {

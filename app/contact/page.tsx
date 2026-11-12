@@ -5,9 +5,9 @@ import Ornament from '@/components/Ornament';
 import styles from '../get-involved/form.module.css';
 
 export const metadata = {
-  title: 'Contact · U.S.–Africa Allies Foundation',
+  title: 'Contact · U.S. Africa Allies Foundation',
   description:
-    'Every message matters. Every request is important. Every voice deserves to be heard. Contact the U.S.–Africa Allies Foundation.',
+    'Every message matters. Every request is important. Every voice deserves to be heard. Contact the U.S. Africa Allies Foundation.',
 };
 
 export default function ContactPage() {
